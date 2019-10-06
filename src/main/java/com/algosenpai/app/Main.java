@@ -11,7 +11,8 @@ import java.io.IOException;
 /**
  * A GUI for Duke using FXML.
  */
-public class Main extends Application {
+public class
+Main extends Application {
 
     public static void main(String[] args) {
         launch();
