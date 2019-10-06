@@ -19,7 +19,7 @@ shadowJar {
 
 javafx {
     version = "11.0.2"
-    modules = [ 'javafx.controls', 'javafx.fxml' ]
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.media' ]
 }
 
 group 'com.algosenpai.app'
@@ -39,6 +39,8 @@ run {
 }
 
 dependencies {
+    implementation 'com.itextpdf:itextpdf:5.5.10'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.56'
     testImplementation 'org.testfx:testfx-core:4.0.16-alpha'
     testImplementation 'org.testfx:testfx-junit5:4.0.16-alpha'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.5.0'
