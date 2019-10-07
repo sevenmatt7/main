@@ -52,7 +52,7 @@ test {
     testLogging {
         exceptionFormat = 'full'
     }
-    /*
+    
     systemProperty 'java.awt.headless', 'true'
     systemProperty 'testfx.robot', 'glass'
     systemProperty 'testfx.headless', 'true'
@@ -60,5 +60,5 @@ test {
     systemProperty 'prism.text', 't2k'
     systemProperty 'testfx.setup.timeout', '2500'
 
-     */
+
 }
