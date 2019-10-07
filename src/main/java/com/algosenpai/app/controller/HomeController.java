@@ -16,7 +16,6 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
-import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -80,24 +79,23 @@ public class HomeController extends SceneController implements Initializable {
 
         //handling the user commands entered
         if (keyEvent.getCode() == KeyCode.ENTER) {
-            switch(userInput.getText()) {
-                case "menu":
-                    sceneText.setText("These are the commands available");
-                    break;
-                case "start":
-                    sceneText.setText("The game is loading....");
-                    int questionNumber = 0;
-                    while (questionNumber < 10) {
-                        Chapter1.generateQuestions();
-                        questionNumber++;
-                    }
-                    break;
-                case "exit":
-                    sceneText.setText("Aww you're leaving already? See you soon!");
-                    break;
-                default:
-                    sceneText.setText("I'm sorry, I don't understand what you mean..");
-
+            switch (userInput.getText()) {
+            case "menu":
+                sceneText.setText("These are the commands available");
+                break;
+            case "start":
+                sceneText.setText("The game is loading....");
+                int questionNumber = 0;
+                while (questionNumber < 10) {
+                    Chapter1.generateQuestions();
+                    questionNumber++;
+                }
+                break;
+            case "exit":
+                sceneText.setText("Aww you're leaving already? See you soon!");
+                break;
+            default:
+                sceneText.setText("I'm sorry, I don't understand what you mean..");
             }
             userInput.setText("");
         }
