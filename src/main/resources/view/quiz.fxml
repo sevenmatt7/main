@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.control.DialogPane?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.algosenpai.app.controller.QuizController" onKeyPressed="#handleKeyPressed" onMouseClicked="#handleMouseClicked">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPressed" onMouseClicked="#handleMouseClicked" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.algosenpai.app.controller.QuizController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -25,6 +25,9 @@
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -46,7 +49,7 @@
      </ImageView>
       <TextField fx:id="userInput" GridPane.columnIndex="2" GridPane.columnSpan="10" GridPane.rowIndex="11" />
       <Label fx:id="sceneTitle" prefHeight="18.0" prefWidth="104.0" text="Quiz Scene" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-     <Label fx:id="sceneText" text="Welcome to AlgoSenpai Adventures!" GridPane.columnIndex="5" GridPane.columnSpan="10" GridPane.rowIndex="9">
+     <Label fx:id="sceneText" text="Welcome to AlgoSenpai Adventures!" GridPane.columnIndex="5" GridPane.columnSpan="12" GridPane.rowIndex="9" GridPane.rowSpan="3" >
        </Label>
    </children>
 </GridPane>
