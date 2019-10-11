@@ -59,6 +59,4 @@ test {
     systemProperty 'prism.order', 'sw'
     systemProperty 'prism.text', 't2k'
     systemProperty 'testfx.setup.timeout', '2500'
-
-
 }
