@@ -15,7 +15,6 @@ import com.algosenpai.app.command.SaveCommand;
 import com.algosenpai.app.command.SelectCommand;
 import com.algosenpai.app.command.StartCommand;
 import com.algosenpai.app.command.UndoCommand;
-import com.algosenpai.app.controller.QuizController;
 import com.algosenpai.app.exceptions.DukeExceptions;
 
 
@@ -38,7 +37,7 @@ public class Parser {
         } else if (firstWord.equals("menu")) {
             return new MenuCommand();
         } else if (firstWord.equals("start")) {
-           return new StartCommand();
+            return new StartCommand();
         } else if (firstWord.equals("select")) {
             return new SelectCommand(num);
         } else if (firstWord.equals("result")) {

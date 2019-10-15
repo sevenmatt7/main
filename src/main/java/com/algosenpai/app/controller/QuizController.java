@@ -76,7 +76,7 @@ public class QuizController extends SceneController implements Initializable {
         //generate the first question and display it
         currQuestion = ChapterSorting.generateQuestions();
         sceneText.setText(currQuestion.getQuestion());
-        setNodePos(sceneText, 360, -170);
+        setNodePos(sceneText, 360, 55);
         setTextStyle(sceneText, 255,255,255, true, 9, "arial");
 
         displayCharacterImage(characterImage, "miku.png", 400, 400);
@@ -153,6 +153,9 @@ public class QuizController extends SceneController implements Initializable {
         }
     }
 
+    /**
+     * Handle the answer input by the user.
+     */
     public void handleAnswer() throws IOException {
         if (questionNumber > 9) {
             changeSceneOnKeyPressed(ViewConstant.endView, ImagesConstant.endImages, SoundConstant.endSound);
