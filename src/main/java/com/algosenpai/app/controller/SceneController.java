@@ -1,5 +1,6 @@
 package com.algosenpai.app.controller;
 
+import com.algosenpai.app.Parser;
 import com.algosenpai.app.constant.ViewConstant;
 import com.algosenpai.app.constant.ImagesConstant;
 import com.algosenpai.app.constant.SoundConstant;
@@ -37,7 +38,7 @@ import java.util.Map;
 public class SceneController extends Application {
 
     @FXML
-    protected Label sceneText;
+    protected Text sceneText;
 
     private static MusicController musicController;
 
