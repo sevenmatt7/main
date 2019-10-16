@@ -11,7 +11,6 @@ import com.algosenpai.app.constant.SoundEnum;
 import com.algosenpai.app.constant.JavaFxConstant;
 import com.algosenpai.app.utility.ResourceRandomUtility;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
@@ -37,7 +36,6 @@ import java.util.Map;
 
 public class SceneController extends Application {
 
-    @FXML
     protected Text sceneText;
 
     private static MusicController musicController;
