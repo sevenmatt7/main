@@ -25,20 +25,20 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class QuizController extends SceneController implements Initializable {
 
-    private Question newQuestion;
-
     private String userAnswer;
 
-    private int questionNumber;
+    private int questionNumber = 0;
 
     private int correctCount = 0;
 
     private Question currQuestion;
+
+    private ArrayList<Question> questionList;
 
     @FXML
     private Text sceneTitle;
@@ -73,7 +73,8 @@ public class QuizController extends SceneController implements Initializable {
         setNodePos(sceneTitle, 50, 400);
         setTextStyle(sceneTitle, 199,21,133, true, 30, "arial");
 
-        //generate the first question and display it
+        //generate the question list for the quiz and display the first question
+//        generateQuiz();
         currQuestion = ChapterSorting.generateQuestions();
         sceneText.setText(currQuestion.getQuestion());
         setNodePos(sceneText, 360, 55);
@@ -157,14 +158,27 @@ public class QuizController extends SceneController implements Initializable {
      * Handle the answer input by the user.
      */
     public void handleAnswer() throws IOException {
-        if (questionNumber > 9) {
+        if ((questionNumber > 9) || (userAnswer.equals("end"))) {
             changeSceneOnKeyPressed(ViewConstant.endView, ImagesConstant.endImages, SoundConstant.endSound);
             backgroundSceneTimer.stop();
         }
         if (userAnswer.equals(currQuestion.getAnswer())) {
             correctCount++;
         }
-        currQuestion = ChapterSorting.generateQuestions();
+        if (userAnswer.equals("back")) {
+            questionNumber += 1;
+        }
         questionNumber++;
+        currQuestion = ChapterSorting.generateQuestions();
+                //questionList.get(questionNumber);
+    }
+
+    /**
+     * Generates the questions to be included in the quiz.
+     */
+    void generateQuiz() {
+        for (int i = 0; i < 10; i++) {
+            this.questionList.set(i, ChapterSorting.generateQuestions());
+        }
     }
 }
