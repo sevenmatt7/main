@@ -1,26 +1,59 @@
 package com.algosenpai.app;
 
-import com.algosenpai.app.command.BackCommand;
-import com.algosenpai.app.command.ClearCommand;
-import com.algosenpai.app.command.Command;
-import com.algosenpai.app.command.ConvertStringToIntegerArrayCommand;
-import com.algosenpai.app.command.ExitCommand;
-import com.algosenpai.app.command.HelpCommand;
-import com.algosenpai.app.command.HistoryCommand;
-import com.algosenpai.app.command.MenuCommand;
-import com.algosenpai.app.command.ReportCommand;
-import com.algosenpai.app.command.ResetCommand;
-import com.algosenpai.app.command.ResultCommand;
-import com.algosenpai.app.command.SaveCommand;
-import com.algosenpai.app.command.SelectCommand;
-import com.algosenpai.app.command.StartCommand;
-import com.algosenpai.app.command.UndoCommand;
+//import com.algosenpai.app.command.BackCommand;
+import com.algosenpai.app.command.*;
 import com.algosenpai.app.exceptions.DukeExceptions;
 
+import java.io.IOException;
 import java.util.Arrays;
 
 
 public class Parser {
+
+    /**
+     * Handle string entered by user.
+     * @param input the raw user input
+     * @return the Command with the relevant type and parameter.
+     */
+    public Command parseInput(String input) {
+        input = input.toLowerCase();
+        String[] parsedInput = input.split(" ");
+
+        switch (parsedInput[0]) {
+            case "menu":
+                return new Command(CommandEnum.MENU, 0);
+            case "start":
+                return new Command(CommandEnum.START, 0);
+            case "select":
+                return new Command(CommandEnum.SELECT, 0);
+            case "result":
+                return new Command(CommandEnum.RESULT, 0);
+            case "report":
+                return new Command(CommandEnum.REPORT, 0);
+            case "back":
+                return new Command(CommandEnum.BACK, 0);
+            case "history":
+                return new Command(CommandEnum.HISTORY, 0);
+            case "undo":
+                return new Command(CommandEnum.UNDO, 0);
+            case "clear":
+                return new Command(CommandEnum.CLEAR, 0);
+            case "reset":
+                return new Command(CommandEnum.RESET, 0);
+            case "save":
+                return new Command(CommandEnum.SAVE, 0);
+            case "help":
+                return new Command(CommandEnum.HELP, 0);
+            case "exit":
+                return new Command(CommandEnum.EXIT, 0);
+            case "print":
+                return new Command(CommandEnum.PRINT, 0);
+            case "archive":
+                return new Command(CommandEnum.ARCHIVE, 0);
+            default:
+                return new Command(CommandEnum.INVALID, 0);
+        }
+    }
 
     /**
      * Returns command to execute after parsing the user input.
@@ -29,81 +62,80 @@ public class Parser {
      * @return command to execute
      * @throws DukeExceptions if user input is invalid or in the wrong format
      */
-    public static Command parse(String userInput) {
-        userInput = userInput.toLowerCase();
-
-        String[] outputs = userInput.split(" "); //for commands
-
-        try {
-            DukeExceptions.checkUserInput(userInput);
-            if (userInput.contains("exit")) {
-                return new ExitCommand();
-            } else if (userInput.contains("menu")) {
-                return new MenuCommand();
-            } else if (userInput.contains("start")) {
-                return new StartCommand();
-            } else if (userInput.contains("select")) {
-                try {
-                    DukeExceptions.checkArgument(userInput);
-                    int num = Integer.parseInt(outputs[1].trim());
-                    return new SelectCommand(num);
-                } catch (DukeExceptions e) {
-                    System.out.println("error\n" + e);
-                }
-            } else if (userInput.contains("result")) {
-                try {
-                    DukeExceptions.checkArgument(userInput);
-                    int num = Integer.parseInt(outputs[1].trim());
-                    return new ResultCommand(num);
-                } catch (DukeExceptions e) {
-                    System.out.println("error\n" + e);
-                }
-            } else if (userInput.contains("report")) {
-                return new ReportCommand();
-            } else if (userInput.contains("back")) {
-                return new BackCommand();
-            } else if (userInput.contains("history")) {
-                try {
-                    DukeExceptions.checkArgument(userInput);
-                    int num = Integer.parseInt(outputs[1].trim());
-                    return new HistoryCommand(num);
-                } catch (DukeExceptions e) {
-                    System.out.println("error\n" + e);
-                }
-            } else if (userInput.contains("undo")) {
-                return new UndoCommand();
-            } else if (userInput.contains("clear")) {
-                try {
-                    DukeExceptions.checkArgument(userInput);
-                    int num = Integer.parseInt(outputs[1].trim());
-                    return new ClearCommand(num);
-                } catch (DukeExceptions e) {
-                    System.out.println("error\n" + e);
-                }
-            } else if (userInput.contains("reset")) {
-                return new ResetCommand();
-            } else if (userInput.contains("save")) {
-                return new SaveCommand();
-            } else if (userInput.contains("help")) {
-                return new HelpCommand();
-            } else {
-                if (hasDigit(outputs[0])) {
-                    try {
-                        DukeExceptions.checkAnswer(userInput);
-                        return new ConvertStringToIntegerArrayCommand(userInput);
-                    } catch (DukeExceptions e) {
-                        System.out.println("error\n" + e);
-                    }
-                }
-            }
-        } catch (DukeExceptions e) {
-            String closestCommand = possibleCommand(userInput);
-            System.out.println(e + "Did you mean" + closestCommand);
-
-        }
-        return null;
-    }
-
+//    public static Command parse(String userInput) {
+//        userInput = userInput.toLowerCase();
+//
+//        String[] outputs = userInput.split(" "); //for commands
+//
+//        try {
+//            DukeExceptions.checkUserInput(userInput);
+//            if (userInput.contains("exit")) {
+//                return new ExitCommand();
+//            } else if (userInput.contains("menu")) {
+//                return new MenuCommand();
+//            } else if (userInput.contains("start")) {
+//                return new StartCommand();
+//            } else if (userInput.contains("select")) {
+//                try {
+//                    DukeExceptions.checkArgument(userInput);
+//                    int num = Integer.parseInt(outputs[1].trim());
+//                    return new SelectCommand(num);
+//                } catch (DukeExceptions e) {
+//                    System.out.println("error\n" + e);
+//                }
+//            } else if (userInput.contains("result")) {
+//                try {
+//                    DukeExceptions.checkArgument(userInput);
+//                    int num = Integer.parseInt(outputs[1].trim());
+//                    return new ResultCommand(num);
+//                } catch (DukeExceptions e) {
+//                    System.out.println("error\n" + e);
+//                }
+//            } else if (userInput.contains("report")) {
+//                return new ReportCommand();
+//            } else if (userInput.contains("back")) {
+//                return new BackCommand();
+//            } else if (userInput.contains("history")) {
+//                try {
+//                    DukeExceptions.checkArgument(userInput);
+//                    int num = Integer.parseInt(outputs[1].trim());
+//                    return new HistoryCommand(num);
+//                } catch (DukeExceptions e) {
+//                    System.out.println("error\n" + e);
+//                }
+//            } else if (userInput.contains("undo")) {
+//                return new UndoCommand();
+//            } else if (userInput.contains("clear")) {
+//                try {
+//                    DukeExceptions.checkArgument(userInput);
+//                    int num = Integer.parseInt(outputs[1].trim());
+//                    return new ClearCommand(num);
+//                } catch (DukeExceptions e) {
+//                    System.out.println("error\n" + e);
+//                }
+//            } else if (userInput.contains("reset")) {
+//                return new ResetCommand();
+//            } else if (userInput.contains("save")) {
+//                return new SaveCommand();
+//            } else if (userInput.contains("help")) {
+//                return new HelpCommand();
+//            } else {
+//                if (hasDigit(outputs[0])) {
+//                    try {
+//                        DukeExceptions.checkAnswer(userInput);
+//                        return new ConvertStringToIntegerArrayCommand(userInput);
+//                    } catch (DukeExceptions e) {
+//                        System.out.println("error\n" + e);
+//                    }
+//                }
+//            }
+//        } catch (DukeExceptions e) {
+//            String closestCommand = possibleCommand(userInput);
+//            System.out.println(e + "Did you mean" + closestCommand);
+//
+//        }
+//        return null;
+//    }
 
     /**
      * Returns command to execute after parsing the user input.

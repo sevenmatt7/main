@@ -388,7 +388,7 @@ class ChapterLinkedList {
     }
 
     /**
-     * Prints the instruction given by the list on seperate new lines.
+     * Prints the instruction given by the list on separate new lines.
      * 
      * @param instructions The list of instructions provided.
      */

@@ -37,6 +37,8 @@ import java.util.Map;
 
 public class SceneController extends Application {
 
+    protected Parser parser;
+
     protected Text sceneText;
 
     private static MusicController musicController;

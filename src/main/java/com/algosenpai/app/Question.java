@@ -4,7 +4,8 @@ import com.algosenpai.app.model.ReviewTracingListModel;
 
 public class Question {
     private String question;
-    private String answer;
+    private String correctAnswer;
+    private String userAnswer;
     private ReviewTracingListModel rtlm = new ReviewTracingListModel();
 
     /**
@@ -15,7 +16,7 @@ public class Question {
      */
     public Question(String question,String answer, ReviewTracingListModel rtlm) {
         this.question = question;
-        this.answer = answer;
+        this.correctAnswer = answer;
         this.rtlm = rtlm;
     }
 
@@ -24,7 +25,7 @@ public class Question {
     }
 
     public String getAnswer() {
-        return answer;
+        return correctAnswer;
     }
 
     public ReviewTracingListModel getRtlm() {
@@ -32,6 +33,6 @@ public class Question {
     }
 
     public boolean isAnswerEqual(String userInput) {
-        return userInput.equals(answer);
+        return userInput.equals(correctAnswer);
     }
 }

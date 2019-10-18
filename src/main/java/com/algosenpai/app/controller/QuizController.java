@@ -3,6 +3,7 @@ package com.algosenpai.app.controller;
 import com.algosenpai.app.Parser;
 import com.algosenpai.app.Question;
 import com.algosenpai.app.chapters.ChapterSorting;
+import com.algosenpai.app.chapters.QuestionGenerator;
 import com.algosenpai.app.constant.CommandsConstant;
 import com.algosenpai.app.constant.JavaFxConstant;
 import com.algosenpai.app.constant.ImagesConstant;
@@ -36,9 +37,11 @@ public class QuizController extends SceneController implements Initializable {
 
     private int correctCount = 0;
 
+    private QuestionGenerator generator;
+
     private Question currQuestion;
 
-    private ArrayList<Question> questionList;
+    private ArrayList questionList;
 
     @FXML
     private Text sceneTitle;
@@ -74,8 +77,8 @@ public class QuizController extends SceneController implements Initializable {
         setTextStyle(sceneTitle, 199,21,133, true, 30, "arial");
 
         //generate the question list for the quiz and display the first question
-//        generateQuiz();
-        currQuestion = ChapterSorting.generateQuestions();
+        questionList = generator.generateQuiz(1);
+        currQuestion = (Question) questionList.get(questionNumber);
         sceneText.setText(currQuestion.getQuestion());
         setNodePos(sceneText, 360, 55);
         setTextStyle(sceneText, 255,255,255, true, 9, "arial");
@@ -97,6 +100,7 @@ public class QuizController extends SceneController implements Initializable {
         userInput.setOnKeyPressed(ke -> {
             if (ke.getCode().equals(KeyCode.ENTER)) {
                 userAnswer = userInput.getText();
+//                parser.parse(userAnswer);
                 try {
                     handleAnswer();
                 } catch (IOException e) {
@@ -169,16 +173,7 @@ public class QuizController extends SceneController implements Initializable {
             questionNumber += 1;
         }
         questionNumber++;
-        currQuestion = ChapterSorting.generateQuestions();
-                //questionList.get(questionNumber);
+        currQuestion = (Question) questionList.get(questionNumber);
     }
 
-    /**
-     * Generates the questions to be included in the quiz.
-     */
-    void generateQuiz() {
-        for (int i = 0; i < 10; i++) {
-            this.questionList.set(i, ChapterSorting.generateQuestions());
-        }
-    }
 }
