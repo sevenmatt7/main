@@ -37,11 +37,12 @@ public class QuizController extends SceneController implements Initializable {
 
     private int correctCount = 0;
 
-    private QuestionGenerator generator;
+    private QuestionGenerator generator = new QuestionGenerator();
 
     private Question currQuestion;
 
-    private ArrayList questionList;
+    private ArrayList<Question> questionList;
+
 
     @FXML
     private Text sceneTitle;
@@ -77,9 +78,9 @@ public class QuizController extends SceneController implements Initializable {
         setTextStyle(sceneTitle, 199,21,133, true, 30, "arial");
 
         //generate the question list for the quiz and display the first question
-        questionList = generator.generateQuiz(1);
-        currQuestion = (Question) questionList.get(questionNumber);
-        sceneText.setText(currQuestion.getQuestion());
+        generator.generateQuiz(1, this.questionList);
+        currQuestion = questionList.get(questionNumber);
+        sceneText.setText("hello");
         setNodePos(sceneText, 360, 55);
         setTextStyle(sceneText, 255,255,255, true, 9, "arial");
 
