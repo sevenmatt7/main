@@ -7,17 +7,18 @@ import java.util.ArrayList;
 
 public class Logic {
 
-    private static Ui ui;
-    private static Parser parser;
+    private Ui ui;
+    private Parser parser;
     private QuizGenerator quizMaker = new QuizGenerator();
 
     //All variables for the settings of the program
-    private static boolean isNew = true;
-    private static int level = 0;
-    private static String name = "????";
+    private boolean isNew = true;
+    private boolean isSettingUp = false;
+    private int level = 0;
+    private String name;
 
     //All variables for the quiz function
-    private static boolean isQuizMode = false;
+    private boolean isQuizMode = false;
     private ArrayList<Question> quizList;
     private int questionNumber = 0;
 
@@ -37,7 +38,15 @@ public class Logic {
 //    }
 
     public String parseInput(String userString) {
-        if (isQuizMode) {
+        if (isSettingUp) {
+            isSettingUp = false;
+            name = userString;
+            String nameWelcome = "Hi " + name + "! Nice to meet you!"
+            + " You can type 'start' to play the quiz." + " You are now level 0";
+            return nameWelcome;
+        }
+
+        else if (isQuizMode) {
             quizList.get(questionNumber).setAnswer(userString);
             questionNumber++;
 
@@ -55,15 +64,20 @@ public class Logic {
                 }
 
                 String endQuizMessage = "You got " + correctCount + "/10 questions correct!";
+                quizList.clear();
+                questionNumber = 0;
                 return endQuizMessage;
             }
         }
+
         if (userString.equals("start")) {
             isQuizMode = true;
             quizList = makeQuiz(quizList);
             return quizList.get(0).getQuestion();
-        }
-        else {
+        } else if (userString.equals("hello")) {
+            isSettingUp = true;
+            return checkStatus();
+        } else {
             return "NULL";
         }
     }
