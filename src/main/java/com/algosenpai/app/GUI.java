@@ -7,6 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
@@ -18,10 +20,13 @@ public class GUI extends Application {
     private TextField userInput;
     private Button sendButton;
     private Scene scene;
+    private Image user = new Image(this.getClass().getResourceAsStream("/images/unknown.png"));
+    private Image senpai = new Image(this.getClass().getResourceAsStream("/images/miku.png"));
 
     @Override
     public void start(Stage stage) throws Exception {
         //Step 1. Setting up required components
+
 
         //The container for the content of the chat to scroll.
         scrollPane = new ScrollPane();
@@ -102,10 +107,10 @@ public class GUI extends Application {
      */
     private void handleUserInput() {
         Label userText = new Label(userInput.getText());
-        Label dukeText = new Label(getResponse(userInput.getText()));
+        Label senpaiText = new Label(getResponse(userInput.getText()));
         dialogContainer.getChildren().addAll(
-                new DialogBox(userText),
-                new DialogBox(dukeText)
+                DialogBox.getUserDialog(userText, new ImageView(user)),
+                DialogBox.getSenpaiDialog(senpaiText, new ImageView(senpai))
         );
         userInput.clear();
     }
@@ -115,6 +120,6 @@ public class GUI extends Application {
      * Replace this stub with your completed method.
      */
     private String getResponse(String input) {
-        return "Duke heard: " + input;
+        return "Senpai heard: " + input;
     }
 }
