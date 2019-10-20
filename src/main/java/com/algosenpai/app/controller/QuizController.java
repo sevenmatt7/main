@@ -3,7 +3,8 @@ package com.algosenpai.app.controller;
 import com.algosenpai.app.Parser;
 import com.algosenpai.app.Question;
 import com.algosenpai.app.chapters.ChapterSorting;
-import com.algosenpai.app.chapters.QuestionGenerator;
+import com.algosenpai.app.chapters.QuizGenerator;
+import com.algosenpai.app.chapters.QuizGenerator;
 import com.algosenpai.app.constant.CommandsConstant;
 import com.algosenpai.app.constant.JavaFxConstant;
 import com.algosenpai.app.constant.ImagesConstant;
@@ -37,7 +38,7 @@ public class QuizController extends SceneController implements Initializable {
 
     private int correctCount = 0;
 
-    private QuestionGenerator generator = new QuestionGenerator();
+    private QuizGenerator generator = new QuizGenerator();
 
     private Question currQuestion;
 
