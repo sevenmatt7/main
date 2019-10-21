@@ -3,6 +3,7 @@ package com.algosenpai.app.ui.controller;
 import java.io.IOException;
 import java.util.Collections;
 
+import com.algosenpai.app.ui.Ui;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -34,7 +35,7 @@ public class DialogBox extends HBox {
             fxmlPath = "/view/DialogBoxUser.fxml";
         }
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MainWindow.class.getResource(fxmlPath));
+            FXMLLoader fxmlLoader = new FXMLLoader(Ui.class.getResource(fxmlPath));
             fxmlLoader.setController(this);
             fxmlLoader.setRoot(this);
             fxmlLoader.load();

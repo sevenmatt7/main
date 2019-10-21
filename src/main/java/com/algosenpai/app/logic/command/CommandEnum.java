@@ -17,5 +17,6 @@ public enum CommandEnum {
     PRINT,
     ARCHIVE,
     INVALID,
-    QUIZ
+    QUIZ,
+    SETUP
 }

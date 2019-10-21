@@ -1,4 +1,4 @@
-package com.algosenpai.app;
+package com.algosenpai.app.storage;
 
 import java.io.File;
 import java.io.FileNotFoundException;
