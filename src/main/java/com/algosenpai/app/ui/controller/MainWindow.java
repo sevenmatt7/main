@@ -1,10 +1,8 @@
-package com.algosenpai.app.ui;
-
+package com.algosenpai.app.ui.controller;
 
 import com.algosenpai.app.logic.Logic;
 import com.algosenpai.app.logic.command.Command;
 
-import com.algosenpai.app.ui.controller.DialogBox;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -19,7 +17,7 @@ import java.io.IOException;
 /**
  * Controller for MainWindow. Provides the layout for the other controls.
  */
-public class Ui extends AnchorPane {
+public class MainWindow extends AnchorPane {
     @FXML
     private ScrollPane scrollPane;
     @FXML
@@ -37,8 +35,7 @@ public class Ui extends AnchorPane {
     @FXML
     public void initialize() {
         scrollPane.vvalueProperty().bind(dialogContainer.heightProperty());
-        dialogContainer.getChildren().add(DialogBox.getSenpaiDialog(
-                "Welcome to AlgoSenpai Adventures! Type 'hello' to start!", senpaiImage));
+        dialogContainer.getChildren().add(DialogBox.getSenpaiDialog("Welcome to AlgoSenpai Adventures!", senpaiImage));
     }
 
     public void setLogic(Logic l) {
@@ -84,3 +81,4 @@ public class Ui extends AnchorPane {
     }
 
 }
+

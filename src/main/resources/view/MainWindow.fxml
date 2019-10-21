@@ -24,5 +24,4 @@
         -fx-background-color: #ECE5DD;
         -fx-font-family: 'Montserrat';
     </style>
-
 </AnchorPane>

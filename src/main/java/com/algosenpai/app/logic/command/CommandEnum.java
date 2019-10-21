@@ -19,4 +19,5 @@ public enum CommandEnum {
     INVALID,
     QUIZ,
     SETUP
+
 }

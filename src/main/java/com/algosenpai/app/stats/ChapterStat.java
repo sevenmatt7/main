@@ -1,4 +1,4 @@
-package com.algosenpai.app.storage;
+package com.algosenpai.app.stats;
 
 import static java.lang.Integer.parseInt;
 

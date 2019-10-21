@@ -2,7 +2,6 @@ package com.algosenpai.app.logic;
 
 import com.algosenpai.app.logic.command.Command;
 import com.algosenpai.app.logic.command.CommandEnum;
-import com.algosenpai.app.ui.Ui;
 import com.algosenpai.app.logic.chapters.QuizGenerator;
 
 import java.util.ArrayList;
@@ -25,8 +24,6 @@ public class Logic {
     private int questionNumber = 0;
     private int prevResult = 0;
 
-
-
     public Logic(Parser parser) {
         this.parser = parser;
     }
@@ -47,8 +44,6 @@ public class Logic {
         }
 
     }
-
-
 
     /**
      * Executes the command.

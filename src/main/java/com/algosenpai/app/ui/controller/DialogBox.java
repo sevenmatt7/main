@@ -26,6 +26,7 @@ public class DialogBox extends HBox {
     @FXML
     private ImageView displayPicture;
 
+
     private DialogBox(String text, Image img, boolean isUser) {
         String fxmlPath = null;
         if (!isUser) {
@@ -46,7 +47,6 @@ public class DialogBox extends HBox {
         dialog.setText(text);
         displayPicture.setImage(img);
     }
-
 
     /**
      * Flips the dialog box such that the ImageView is on the left and text on the right.
