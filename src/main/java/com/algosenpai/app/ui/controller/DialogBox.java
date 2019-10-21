@@ -25,9 +25,16 @@ public class DialogBox extends HBox {
     @FXML
     private ImageView displayPicture;
 
-    private DialogBox(String text, Image img) {
+    private DialogBox(String text, Image img, boolean isUser) {
+        String fxmlPath = null;
+        if (!isUser) {
+            fxmlPath = "/view/DialogBox.fxml";
+        }
+        if (isUser) {
+            fxmlPath = "/view/DialogBoxUser.fxml";
+        }
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MainWindow.class.getResource("/view/DialogBox.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(MainWindow.class.getResource(fxmlPath));
             fxmlLoader.setController(this);
             fxmlLoader.setRoot(this);
             fxmlLoader.load();
@@ -38,6 +45,7 @@ public class DialogBox extends HBox {
         dialog.setText(text);
         displayPicture.setImage(img);
     }
+
 
     /**
      * Flips the dialog box such that the ImageView is on the left and text on the right.
@@ -55,7 +63,7 @@ public class DialogBox extends HBox {
      * @param text the text to be put into the DialogBox.
      */
     public static DialogBox getUserDialog(String text, Image img) {
-        return new DialogBox(text, img);
+        return new DialogBox(text, img, true);
     }
 
     /**
@@ -64,7 +72,7 @@ public class DialogBox extends HBox {
      * @param text the text to be put into the DialogBox.
      */
     public static DialogBox getSenpaiDialog(String text, Image img) {
-        var db = new DialogBox(text, img);
+        var db = new DialogBox(text, img, false);
         db.flip();
         return db;
     }
