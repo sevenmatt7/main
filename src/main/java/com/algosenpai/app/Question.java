@@ -28,6 +28,18 @@ public class Question {
         return correctAnswer;
     }
 
+    public void setAnswer(String userAnswer) {
+        this.userAnswer = userAnswer;
+    }
+
+    public boolean checkAnswer() {
+        if (this.userAnswer.equals(this.correctAnswer)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public ReviewTracingListModel getRtlm() {
         return rtlm;
     }
