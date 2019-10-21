@@ -1,12 +1,15 @@
 package com.algosenpai.app;
 
 
-import com.algosenpai.app.controller.MainWindow;
+import com.algosenpai.app.ui.controller.MainWindow;
+import com.algosenpai.app.ui.Ui;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import com.algosenpai.app.logic.Logic;
+import com.algosenpai.app.logic.Parser;
 
 import java.io.IOException;
 
@@ -34,4 +37,5 @@ public class GUI extends Application {
             e.printStackTrace();
         }
     }
+
 }
