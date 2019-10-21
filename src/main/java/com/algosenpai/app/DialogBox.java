@@ -50,11 +50,20 @@ public class DialogBox extends HBox {
         setAlignment(Pos.TOP_LEFT);
     }
 
+    /**
+     * Generates a new DialogBox object containing the user inputted text and his profile picture.
+     * @param img the Image of the user.
+     * @param text the text to be put into the DialogBox.
+     */
     public static DialogBox getUserDialog(String text, Image img) {
         return new DialogBox(text, img);
     }
 
-
+    /**
+     * Generates a new DialogBox object containing the program response text and the avatar picture.
+     * @param img the Image of the avatar.
+     * @param text the text to be put into the DialogBox.
+     */
     public static DialogBox getSenpaiDialog(String text, Image img) {
         var db = new DialogBox(text, img);
         db.flip();

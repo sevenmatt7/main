@@ -29,14 +29,18 @@ public class Logic {
         this.ui = ui;
     }
 
-    public Command parseInputCommand(String userString) {
-        return parser.parseInput(userString);
-    }
+//    public Command parseInputCommand(String userString) {
+//        return parser.parseInput(userString);
+//    }
 
 //    public static void executeCommand(Command currCommand) {
 //        if (currCommand.getType().equals()
 //    }
 
+    /**
+     * The main code to parse and execute commands from the user.
+     *
+     */
     public String parseInput(String userString) {
         if (isSettingUp) {
             isSettingUp = false;
@@ -82,7 +86,10 @@ public class Logic {
         }
     }
 
-
+    /**
+     * Checks whether it is the user's first time using the application.
+     * If it is his/her first time, the isSettingUp boolean flag will be set to true.
+     */
     public String checkStatus() {
         if (isNew) {
             isNew = false;
@@ -93,10 +100,19 @@ public class Logic {
         }
     }
 
+    /**
+     * Sets the name of the user.
+     * @param userName the name input by the user.
+     */
     public void setName(String userName) {
         name = userName;
     }
-
+    /**
+     * Generates the quiz according to the chapters specified by the user.
+     * By default, all the chapters will be selected.
+     * @param quiz the ArrayList of Questions to be filled.
+     * @return the ArrayList with all the questions generated
+     */
     public ArrayList<Question> makeQuiz(ArrayList<Question> quiz) {
         return quizMaker.generateQuiz(1, quiz);
     }

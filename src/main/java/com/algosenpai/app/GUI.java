@@ -11,11 +11,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * A GUI for Duke using FXML.
+ * A one scene chatbot GUI.
+ * There are two fxml/controller files, MainWindow and DialogBox.
  */
 public class GUI extends Application {
 
-    //Initialise the different parts here
+    //Initialise the different components here
     private Parser parser = new Parser();
     private Ui ui = new Ui();
     private Logic logic = new Logic(parser, ui);
