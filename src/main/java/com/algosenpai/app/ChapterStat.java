@@ -1,4 +1,4 @@
-package com.algosenpai.app.storage;
+package com.algosenpai.app;
 
 /**
  * Chapter Statistics. Holds the data about each chapter.

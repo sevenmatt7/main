@@ -1,4 +1,4 @@
-package com.algosenpai.app.storage;
+package com.algosenpai.app;
 
 import javafx.util.Pair;
 
