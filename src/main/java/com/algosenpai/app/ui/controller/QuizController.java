@@ -97,7 +97,7 @@ public class QuizController extends SceneController implements Initializable {
         userInput.setOnKeyPressed(ke -> {
             if (ke.getCode().equals(KeyCode.ENTER)) {
                 userAnswer = userInput.getText();
-//                parser.parse(userAnswer);
+                //parser.parse(userAnswer);
                 try {
                     handleAnswer();
                 } catch (IOException e) {

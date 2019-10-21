@@ -21,9 +21,11 @@ public class Command {
     public CommandEnum getType() {
         return this.commandType;
     }
+
     public String getUserString() {
         return this.userString;
     }
+
     public int getParameter() {
         return this.commandParameter;
     }

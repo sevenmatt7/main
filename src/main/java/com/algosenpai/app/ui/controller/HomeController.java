@@ -39,7 +39,6 @@ public class HomeController extends SceneController implements Initializable {
 
     private String userString;
 
-//    private Command currCommand;
     /**
      * Initialize home scene.
      */

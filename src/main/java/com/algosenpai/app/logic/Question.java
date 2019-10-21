@@ -14,7 +14,7 @@ public class Question {
      * @param answer    The correct answer to the question
      * @param rtlm      The steps leading to the correct answer
      */
-    public Question(String question,String answer, ReviewTracingListModel rtlm) {
+    public Question(String question, String answer, ReviewTracingListModel rtlm) {
         this.question = question;
         this.correctAnswer = answer;
         this.rtlm = rtlm;
@@ -32,6 +32,10 @@ public class Question {
         this.userAnswer = userAnswer;
     }
 
+    /**
+     * Checks the user answer with the correct answer.
+     * @return a boolean on whether the user answer is equal to the correct answer.
+     */
     public boolean checkAnswer() {
         if (this.userAnswer.equals(this.correctAnswer)) {
             return true;
@@ -44,7 +48,4 @@ public class Question {
         return rtlm;
     }
 
-    public boolean isAnswerEqual(String userInput) {
-        return userInput.equals(correctAnswer);
-    }
 }

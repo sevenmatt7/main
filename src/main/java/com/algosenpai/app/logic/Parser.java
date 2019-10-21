@@ -26,38 +26,38 @@ public class Parser {
         }
 
         switch (commandWord) {
-            case "menu":
-                return new Command(CommandEnum.MENU, 0, input);
-            case "start":
-                return new Command(CommandEnum.START, 0, input);
-            case "select":
-                return new Command(CommandEnum.SELECT, parameter, input);
-            case "result":
-                return new Command(CommandEnum.RESULT, 0, input);
-            case "report":
-                return new Command(CommandEnum.REPORT, 0, input);
-            case "back":
-                return new Command(CommandEnum.BACK, 0, input);
-            case "history":
-                return new Command(CommandEnum.HISTORY, 0, input);
-            case "undo":
-                return new Command(CommandEnum.UNDO, 0, input);
-            case "clear":
-                return new Command(CommandEnum.CLEAR, 0, input);
-            case "reset":
-                return new Command(CommandEnum.RESET, 0, input);
-            case "save":
-                return new Command(CommandEnum.SAVE, 0, input);
-            case "help":
-                return new Command(CommandEnum.HELP, 0, input);
-            case "exit":
-                return new Command(CommandEnum.EXIT, 0, input);
-            case "print":
-                return new Command(CommandEnum.PRINT, 0, input);
-            case "archive":
-                return new Command(CommandEnum.ARCHIVE, 0, input);
-            default:
-                return new Command(CommandEnum.INVALID, 0, input);
+        case "menu":
+            return new Command(CommandEnum.MENU, 0, input);
+        case "start":
+            return new Command(CommandEnum.START, 0, input);
+        case "select":
+            return new Command(CommandEnum.SELECT, parameter, input);
+        case "result":
+            return new Command(CommandEnum.RESULT, 0, input);
+        case "report":
+            return new Command(CommandEnum.REPORT, 0, input);
+        case "back":
+            return new Command(CommandEnum.BACK, 0, input);
+        case "history":
+            return new Command(CommandEnum.HISTORY, 0, input);
+        case "undo":
+            return new Command(CommandEnum.UNDO, 0, input);
+        case "clear":
+            return new Command(CommandEnum.CLEAR, 0, input);
+        case "reset":
+            return new Command(CommandEnum.RESET, 0, input);
+        case "save":
+            return new Command(CommandEnum.SAVE, 0, input);
+        case "help":
+            return new Command(CommandEnum.HELP, 0, input);
+        case "exit":
+            return new Command(CommandEnum.EXIT, 0, input);
+        case "print":
+            return new Command(CommandEnum.PRINT, 0, input);
+        case "archive":
+            return new Command(CommandEnum.ARCHIVE, 0, input);
+        default:
+            return new Command(CommandEnum.INVALID, 0, input);
         }
     }
 
@@ -141,7 +141,7 @@ public class Parser {
 //
 //        }
 //        return null;
-//    }
+    //}
 
     /**
      * Returns command to execute after parsing the user input.

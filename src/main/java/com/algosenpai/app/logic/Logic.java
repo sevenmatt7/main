@@ -28,11 +28,15 @@ public class Logic {
 
 
 
-    public Logic (Parser parser, Ui ui) {
+    public Logic(Parser parser, Ui ui) {
         this.parser = parser;
         this.ui = ui;
     }
-
+    /**
+     * Parses the user input for the command to be created and executed.
+     * @param userString the user input from the GUI.
+     * @return the Command object with the correct attributes to be executed.
+     */
     public Command parseInputCommand(String userString) {
         //if the program is in quiz mode, the input is not parsed
         if (isQuizMode) {
@@ -53,74 +57,73 @@ public class Logic {
     public String executeCommand(Command currCommand) {
         String responseString;
         switch (currCommand.getType()) {
-            case MENU:
-                String allCommands = "These are all the commands available: \n" +
-                        "MENU, " + "START, " + "SELECT, " + "RESULT, " +
-                        "REPORT, " + "BACK, " + "HISTORY, " + "UNDO, \n" +
-                        "CLEAR, " + "RESET, " + "SAVE, " + "HELP, " +
-                        "EXIT, " + "PRINT, " + "ARCHIVE, " + "INVALID";
-                return allCommands;
-            case START:
-                isQuizMode = true;
-                quizList = quizMaker.generateQuiz(selectedChapters, quizList);
-                return quizList.get(0).getQuestion();
-            case SELECT:
-                selectedChapters = currCommand.getParameter();
-                responseString = "You have selected chapter " + currCommand.getParameter() +
+        case MENU:
+            String allCommands = "These are all the commands available: \n" +
+                    "MENU, " + "START, " + "SELECT, " + "RESULT, " +
+                    "REPORT, " + "BACK, " + "HISTORY, " + "UNDO, \n" +
+                    "CLEAR, " + "RESET, " + "SAVE, " + "HELP, " +
+                    "EXIT, " + "PRINT, " + "ARCHIVE, " + "INVALID";
+            return allCommands;
+        case START:
+            isQuizMode = true;
+            quizList = quizMaker.generateQuiz(selectedChapters, quizList);
+            return quizList.get(0).getQuestion();
+        case SELECT:
+            selectedChapters = currCommand.getParameter();
+            responseString = "You have selected chapter " + currCommand.getParameter() +
                         " for the quiz!";
-                return responseString;
-            case RESULT:
-               responseString = "You got " + prevResult + "/10 questions correct for the last attempt";
-               return responseString;
-            case REPORT:
+            return responseString;
+        case RESULT:
+            responseString = "You got " + prevResult + "/10 questions correct for the last attempt";
+            return responseString;
+        case REPORT:
 
-            case BACK:
+        case BACK:
 
-            case HISTORY:
+        case HISTORY:
 
-            case UNDO:
+        case UNDO:
 
-            case CLEAR:
+        case CLEAR:
 
-            case RESET:
+        case RESET:
 
-            case SAVE:
+        case SAVE:
 
-            case HELP:
+        case HELP:
 
-            case EXIT:
-                responseString = "exit";
-                return responseString;
-            case PRINT:
+        case EXIT:
+            responseString = "exit";
+            return responseString;
+        case PRINT:
 
-            case ARCHIVE:
+        case ARCHIVE:
 
-            case QUIZ:
-                quizList.get(questionNumber).setAnswer(currCommand.getUserString());
-                questionNumber++;
+        case QUIZ:
+            quizList.get(questionNumber).setAnswer(currCommand.getUserString());
+            questionNumber++;
 
-                if (questionNumber < 10) {
-                    return quizList.get(questionNumber).getQuestion();
-                } else if (questionNumber == 10) {
-                    isQuizMode = false;
-                    int correctCount = 0;
+            if (questionNumber < 10) {
+                return quizList.get(questionNumber).getQuestion();
+            } else if (questionNumber == 10) {
+                isQuizMode = false;
+                int correctCount = 0;
 
-                    for (int i = 0; i < 10; i++) {
-                        Question currQuestion = quizList.get(i);
-                        if (currQuestion.checkAnswer()) {
-                            correctCount++;
-                        }
+                for (int i = 0; i < 10; i++) {
+                    Question currQuestion = quizList.get(i);
+                    if (currQuestion.checkAnswer()) {
+                        correctCount++;
                     }
-
-                    String endQuizMessage = "You got " + correctCount + "/10 questions correct!";
-                    this.prevResult = correctCount;
-                    quizList.clear();
-                    questionNumber = 0;
-                    return endQuizMessage;
                 }
 
-            default:
-                return "INVALID";
+                this.prevResult = correctCount;
+                quizList.clear();
+                questionNumber = 0;
+                String endQuizMessage = "You got " + correctCount + "/10 questions correct!";
+                return endQuizMessage;
+            }
+        default:
+            return "INVALID";
         }
     }
 
@@ -133,8 +136,7 @@ public class Logic {
         if (isNew) {
             isNew = false;
             return "Oh it seems that it is your first time here! Can I get your name?";
-        }
-        else {
+        } else {
             return " Welcome back " + name + " You are currently level " + level;
         }
     }
