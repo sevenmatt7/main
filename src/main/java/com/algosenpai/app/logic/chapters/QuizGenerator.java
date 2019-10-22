@@ -13,8 +13,6 @@ public class QuizGenerator {
      * @return the ArrayList with all the questions generated
      */
     public ArrayList<Question> generateQuiz(int selectedChapters, ArrayList<Question> questionList) {
-        questionList = new ArrayList<Question>();
-
         if (selectedChapters == 0) {
             for (int i = 0; i < 10; i++) {
                 questionList.add(ChapterSorting.generateQuestions());
@@ -24,7 +22,6 @@ public class QuizGenerator {
                 questionList.add(ChapterSorting.generateQuestions());
             }
         }
-
         return questionList;
     }
 }

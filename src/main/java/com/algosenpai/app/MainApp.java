@@ -1,5 +1,6 @@
 package com.algosenpai.app;
 
+import com.algosenpai.app.logic.chapters.QuizGenerator;
 import com.algosenpai.app.logic.constant.SoundConstant;
 import com.algosenpai.app.ui.Ui;
 import com.algosenpai.app.ui.controller.MusicController;
