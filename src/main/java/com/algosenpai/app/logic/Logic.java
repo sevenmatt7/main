@@ -1,15 +1,23 @@
 package com.algosenpai.app.logic;
 
+import com.algosenpai.app.logic.command.ByeCommand;
 import com.algosenpai.app.logic.command.Command;
+import com.algosenpai.app.logic.command.MenuCommand;
+import com.algosenpai.app.logic.command.PrintCommand;
+import com.algosenpai.app.logic.command.ResultCommand;
 import com.algosenpai.app.logic.command.CommandEnum;
 import com.algosenpai.app.logic.chapters.QuizGenerator;
+import com.algosenpai.app.logic.models.QuestionModel;
+import com.algosenpai.app.logic.parser.Parser;
+import com.algosenpai.app.stats.UserStats;
 
 import java.util.ArrayList;
 
 public class Logic {
 
     private Parser parser;
-    private QuizGenerator quizMaker = new QuizGenerator();
+    private UserStats userStats;
+    private QuizGenerator quizMaker;
 
     //All variables for the settings of the program
     private boolean isNew = true;
@@ -20,12 +28,24 @@ public class Logic {
     //All variables for the quiz function
     private int selectedChapters = 0;
     private boolean isQuizMode = false;
-    private ArrayList<Question> quizList;
+    private ArrayList<QuestionModel> quizList;
     private int questionNumber = 0;
     private int prevResult = 0;
 
-    public Logic(Parser parser) {
+    // Review features;
+    private ArrayList<QuestionModel> reviewList;
+
+    //
+
+    /**
+     * Initializes logic for the application.
+     * @param parser parser for user inputs.
+     * @param userStats user states.
+     */
+    public Logic(Parser parser, UserStats userStats) {
         this.parser = parser;
+        this.userStats = userStats;
+        quizMaker = new QuizGenerator();
     }
 
     /**
@@ -42,7 +62,6 @@ public class Logic {
         } else {
             return parser.parseInput(userString);
         }
-
     }
 
     /**
@@ -62,25 +81,10 @@ public class Logic {
                 isSettingUp = false;
                 return responseString;
             }
+        case HELP:
         case MENU:
-            String allCommands = "These are all the commands available: \n"
-                    + "MENU, "
-                    + "START, "
-                    + "SELECT, "
-                    + "RESULT, "
-                    + "REPORT, "
-                    + "BACK, "
-                    + "HISTORY, "
-                    + "UNDO, \n"
-                    + "CLEAR, "
-                    + "RESET, "
-                    + "SAVE, "
-                    + "HELP, "
-                    + "EXIT, "
-                    + "PRINT, "
-                    + "ARCHIVE, "
-                    + "INVALID";
-            return allCommands;
+            MenuCommand menuCommand = new MenuCommand(currCommand);
+            return menuCommand.execute();
         case START:
             isQuizMode = true;
             quizList = quizMaker.generateQuiz(selectedChapters, quizList);
@@ -92,8 +96,8 @@ public class Logic {
                     + " for the quiz!";
             return responseString;
         case RESULT:
-            responseString = "You got " + prevResult + "/10 questions correct for the last attempt";
-            return responseString;
+            ResultCommand resultCommand = new ResultCommand(currCommand, prevResult);
+            return resultCommand.execute();
         case REPORT:
             responseString = "report";
             return responseString;
@@ -115,15 +119,12 @@ public class Logic {
         case SAVE:
             responseString = "save";
             return responseString;
-        case HELP:
-            responseString = "help";
-            return responseString;
         case EXIT:
-            responseString = "exit";
-            return responseString;
+            ByeCommand byeCommand = new ByeCommand(currCommand);
+            return byeCommand.execute();
         case PRINT:
-            responseString = "print";
-            return responseString;
+            PrintCommand printCommand = new PrintCommand(currCommand, quizList);
+            return printCommand.execute();
         case ARCHIVE:
             responseString = "archive";
             return responseString;
@@ -138,14 +139,11 @@ public class Logic {
                 int correctCount = 0;
 
                 for (int i = 0; i < 10; i++) {
-                    Question currQuestion = quizList.get(i);
+                    QuestionModel currQuestion = quizList.get(i);
                     if (currQuestion.checkAnswer()) {
                         correctCount++;
                     }
                 }
-
-                this.prevResult = correctCount;
-                quizList.clear();
                 questionNumber = 0;
                 String endQuizMessage = "You got " + correctCount + "/10 questions correct!";
                 return endQuizMessage;
