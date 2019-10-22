@@ -4,7 +4,7 @@ package com.algosenpai.app.ui;
 import com.algosenpai.app.logic.Logic;
 import com.algosenpai.app.logic.command.Command;
 
-import com.algosenpai.app.ui.controller.DialogBox;
+import com.algosenpai.app.ui.components.DialogBox;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,8 +13,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-
-import java.io.IOException;
 
 /**
  * Controller for MainWindow. Provides the layout for the other controls.
@@ -34,6 +32,10 @@ public class Ui extends AnchorPane {
     private Image userImage = new Image(this.getClass().getResourceAsStream("/images/unknown.png"));
     private Image senpaiImage = new Image(this.getClass().getResourceAsStream("/images/miku.png"));
 
+
+    /**
+     * Renders the nodes on the GUI.
+     */
     @FXML
     public void initialize() {
         scrollPane.vvalueProperty().bind(dialogContainer.heightProperty());
