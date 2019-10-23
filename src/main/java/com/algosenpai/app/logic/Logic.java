@@ -73,7 +73,6 @@ public class Logic {
         }
 
         switch (inputs.get(0)) {
-            //initiates the setup process
             case "hello":
                 if (!isSettingUp.get()) {
                      isSettingUp.set(true);
@@ -126,29 +125,5 @@ public class Logic {
             default:
                 return new InvalidCommand(inputs);
         }
-    }
-
-    /**
-     * Sets the name of the user.
-     * @param userName the name input by the user.
-     */
-    public void setName(String userName) {
-        name = userName;
-    }
-
-    /**
-     * Gets the name of the user.
-     * @return the String which has the user's name.
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * Gets the level of the user.
-     * @return the int which has the user's level.
-     */
-    public int getLevel() {
-        return this.level;
     }
 }
