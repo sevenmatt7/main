@@ -82,7 +82,7 @@ public class Logic {
                 }
                 return new SetupCommand(inputs, setupStage, isSettingUp);
             case "help":
-                // TODO
+                return new HelpCommand(inputs);
             case "menu":
                 return new MenuCommand(inputs);
             case "select":
