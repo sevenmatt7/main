@@ -52,6 +52,7 @@ public class Ui extends AnchorPane {
         dialogContainer.getChildren().add(DialogBox.getSenpaiDialog(
                 "Welcome to AlgoSenpai Adventures! Type 'hello' to start!", senpaiImage));
         userPic.setImage(userImage);
+        levelProgress.setProgress(0.0);
     }
 
     public void setLogic(Logic l) {
