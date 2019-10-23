@@ -7,7 +7,11 @@ import com.algosenpai.app.ui.components.DialogBox;
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -40,6 +44,7 @@ public class Ui extends AnchorPane {
     private ImageView userPic;
 
     private Logic logic;
+    private double playerExp = 0.0;
 
 
     private Image boyImage = new Image(this.getClass().getResourceAsStream("/images/boyplayer.jpg"));
@@ -61,7 +66,7 @@ public class Ui extends AnchorPane {
         dialogContainer.getChildren().add(DialogBox.getSenpaiDialog(
                 "Welcome to AlgoSenpai Adventures! Type 'hello' to start!", senpaiImage));
         userPic.setImage(userImage);
-        levelProgress.setProgress(0.0);
+        levelProgress.setProgress(playerExp);
         handle();
     }
 
@@ -70,15 +75,14 @@ public class Ui extends AnchorPane {
     }
 
     /**
-     * Changes the user Image
-     * @param input the input of the user,
-     * which will either be "boy" or "girl".
+     * Changes the user Image.
+     * @param input the input of the user which will either be "boy" or "girl".
      */
     public void changeUserImage(String input) {
         if (input.equals("boy")) {
             userImage = boyImage;
             userPic.setImage(userImage);
-        } else if (input.equals("girl")){
+        } else if (input.equals("girl")) {
             userImage = girlImage;
             userPic.setImage(userImage);
         }
@@ -103,12 +107,15 @@ public class Ui extends AnchorPane {
         } else if (response.equals("You're all set! Time to start your journey to become an AlgoSenpai!")) {
             playerLevel.setText("You are Level 1");
             changeUserImage(input);
-            printtoGUI(input, response, userImage, senpaiImage);
+            printtoGui(input, response, userImage, senpaiImage);
         } else if (response.equals("Are you a boy or a girl?")) {
             playerName.setText("Hi, " + input + "!");
-            printtoGUI(input, response, userImage, senpaiImage);
+            printtoGui(input, response, userImage, senpaiImage);
+        } else if (response.startsWith("You got ")) {
+            updateLevelProgress(0.1);
+            printtoGui(input, response, userImage, senpaiImage);
         } else {
-            printtoGUI(input, response, userImage, senpaiImage);
+            printtoGui(input, response, userImage, senpaiImage);
         }
     }
 
@@ -189,8 +196,17 @@ public class Ui extends AnchorPane {
      * @param userImage the profile picture of the user
      * @param senpaiImage the profile picture of the Senpai.
      */
-    private void printtoGUI (String input, String response, Image userImage, Image senpaiImage) {
+    private void printtoGui(String input, String response, Image userImage, Image senpaiImage) {
         printUserText(input, userImage);
         printSenpaiText(response, senpaiImage);
+    }
+
+    /**
+     * Update the EXP Level of the user in the progress bar in the GUI.
+     * @param expGain the double representing the gain in EXP to be reflected.
+     */
+    private void updateLevelProgress(double expGain) {
+        playerExp += expGain;
+        levelProgress.setProgress(playerExp);
     }
 }

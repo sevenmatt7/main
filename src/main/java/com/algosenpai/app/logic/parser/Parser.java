@@ -3,8 +3,7 @@ package com.algosenpai.app.logic.parser;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class
-Parser {
+public class Parser {
 
     /**
      * Handle string entered by user.
@@ -16,4 +15,6 @@ Parser {
         inputs.set(0, inputs.get(0).toLowerCase());
         return inputs;
     }
+
+
 }
