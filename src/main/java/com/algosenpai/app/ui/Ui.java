@@ -8,10 +8,9 @@ import com.algosenpai.app.ui.components.DialogBox;
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
@@ -28,12 +27,21 @@ public class Ui extends AnchorPane {
     private TextField userInput;
     @FXML
     private Button sendButton;
+    @FXML
+    private ProgressBar levelProgress;
+    @FXML
+    private Label playerName;
+    @FXML
+    private Label playerLevel;
+    @FXML
+    private ImageView userPic;
 
     private Logic logic;
 
+    private Image boyImage = new Image(this.getClass().getResourceAsStream("/images/boyplayer.jpg"));
+    private Image girlImage = new Image(this.getClass().getResourceAsStream("/images/girlplayer.png"));
     private Image userImage = new Image(this.getClass().getResourceAsStream("/images/unknown.png"));
     private Image senpaiImage = new Image(this.getClass().getResourceAsStream("/images/miku.png"));
-
 
     /**
      * Renders the nodes on the GUI.
@@ -43,12 +51,26 @@ public class Ui extends AnchorPane {
         scrollPane.vvalueProperty().bind(dialogContainer.heightProperty());
         dialogContainer.getChildren().add(DialogBox.getSenpaiDialog(
                 "Welcome to AlgoSenpai Adventures! Type 'hello' to start!", senpaiImage));
+        userPic.setImage(userImage);
     }
 
     public void setLogic(Logic l) {
         logic = l;
     }
 
+    /**
+     * Changes the user Image
+     */
+    public void changeUserImage(boolean isBoy) {
+        if (isBoy) {
+            userImage = boyImage;
+            userPic.setImage(userImage);
+        } else {
+            userImage = girlImage;
+            userPic.setImage(userImage);
+        }
+
+    }
     /**
      * Handles the input of the user and prints the output of the program
      * onto the GUI.
@@ -60,7 +82,7 @@ public class Ui extends AnchorPane {
         String response = logic.executeCommand(currCommand);
         printUserText(input, userImage);
         printSenpaiText(response, senpaiImage);
-        exit(input);
+        exit(input, response);
     }
 
     /**
@@ -87,13 +109,20 @@ public class Ui extends AnchorPane {
      * Closes the application.
      * @param input user input.
      */
-    private void exit(String input) {
+    private void exit(String input, String response) {
         if (input.equals("exit")) {
             PauseTransition pause = new PauseTransition(Duration.seconds(1));
             pause.setOnFinished(event -> {
                 Platform.exit();
             });
             pause.play();
+        }
+
+        //to finish set up
+        if (response.equals("You have set your profile! Time to start your journey!")) {
+            playerName.setText("Hi, " + logic.getName());
+            playerLevel.setText("You are Level " + logic.getLevel());
+            changeUserImage(logic.isBoy());
         }
     }
 }

@@ -20,9 +20,10 @@ public class Logic {
     private QuizGenerator quizMaker;
 
     //All variables for the settings of the program
-    private boolean isNew = true;
+    private int setupStage = 0;
     private boolean isSettingUp = false;
-    private int level = 0;
+    private int level = 1;
+    private boolean isBoy = true;
     private String name;
 
     //All variables for the quiz function
@@ -46,6 +47,14 @@ public class Logic {
         this.parser = parser;
         this.userStats = userStats;
         quizMaker = new QuizGenerator();
+    }
+
+    /**
+     * Gets the boolean of whether the user is a boy or girl.
+     * @return the boolean value of whether the user is a boy.
+     */
+    public boolean isBoy() {
+        return this.isBoy;
     }
 
     /**
@@ -73,12 +82,25 @@ public class Logic {
         String responseString;
         switch (currCommand.getType()) {
         case SETUP:
-            if (isNew) {
+            if (setupStage == 0) {
                 responseString = checkStatus();
+                setupStage++;
+                return responseString;
+            } else if (setupStage == 1) {
+                setName(currCommand.getUserString());
+                responseString = "Are you a boy or a girl?";
+                setupStage++;
+                return responseString;
+            } else if (setupStage == 2) {
+                if (currCommand.getUserString().equals("girl")) {
+                    isBoy = false;
+                }
+                responseString = "You have set your profile! Time to start your journey!";
+                setupStage++;
+                isSettingUp = false;
                 return responseString;
             } else {
-                responseString = "Are you a boy or a girl?";
-                isSettingUp = false;
+                responseString = checkStatus();
                 return responseString;
             }
         case HELP:
@@ -160,12 +182,11 @@ public class Logic {
      * If it is his/her first time, the isSettingUp boolean flag will be set to true.
      */
     public String checkStatus() {
-        if (isNew) {
+        if (setupStage == 0) {
             isSettingUp = true;
-            isNew = false;
             return "Oh it seems that it is your first time here! Can I get your name?";
         } else {
-            return " Welcome back " + name + " You are currently level " + level;
+            return " Welcome back " + name + " You are currently Level " + level;
         }
     }
 
@@ -177,4 +198,11 @@ public class Logic {
         name = userName;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public int getLevel() {
+        return this.level;
+    }
 }
