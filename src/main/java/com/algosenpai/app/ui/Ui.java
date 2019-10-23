@@ -1,9 +1,8 @@
 package com.algosenpai.app.ui;
 
-
 import com.algosenpai.app.logic.Logic;
 import com.algosenpai.app.logic.command.Command;
-
+import com.algosenpai.app.ui.controller.AnimationTimerController;
 import com.algosenpai.app.ui.components.DialogBox;
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
@@ -19,12 +18,16 @@ import javafx.util.Duration;
  * Controller for MainWindow. Provides the layout for the other controls.
  */
 public class Ui extends AnchorPane {
+
     @FXML
     private ScrollPane scrollPane;
+
     @FXML
     private VBox dialogContainer;
+
     @FXML
     private TextField userInput;
+
     @FXML
     private Button sendButton;
     @FXML
@@ -38,10 +41,16 @@ public class Ui extends AnchorPane {
 
     private Logic logic;
 
+
     private Image boyImage = new Image(this.getClass().getResourceAsStream("/images/boyplayer.jpg"));
     private Image girlImage = new Image(this.getClass().getResourceAsStream("/images/girlplayer.png"));
     private Image userImage = new Image(this.getClass().getResourceAsStream("/images/unknown.png"));
     private Image senpaiImage = new Image(this.getClass().getResourceAsStream("/images/miku.png"));
+
+    int idleMaxMinutes = 180;
+
+    AnimationTimerController animationTimerController;
+
 
     /**
      * Renders the nodes on the GUI.
@@ -53,6 +62,7 @@ public class Ui extends AnchorPane {
                 "Welcome to AlgoSenpai Adventures! Type 'hello' to start!", senpaiImage));
         userPic.setImage(userImage);
         levelProgress.setProgress(0.0);
+        handle();
     }
 
     public void setLogic(Logic l) {
@@ -61,29 +71,49 @@ public class Ui extends AnchorPane {
 
     /**
      * Changes the user Image
+     * @param input the input of the user,
+     * which will either be "boy" or "girl".
      */
-    public void changeUserImage(boolean isBoy) {
-        if (isBoy) {
+    public void changeUserImage(String input) {
+        if (input.equals("boy")) {
             userImage = boyImage;
             userPic.setImage(userImage);
-        } else {
+        } else if (input.equals("girl")){
             userImage = girlImage;
             userPic.setImage(userImage);
         }
-
     }
+
     /**
      * Handles the input of the user and prints the output of the program
      * onto the GUI.
      */
     @FXML
     private void handleUserInput() {
+        resetIdle();
         String input = userInput.getText();
-        Command currCommand = logic.parseInputCommand(input);
-        String response = logic.executeCommand(currCommand);
-        printUserText(input, userImage);
-        printSenpaiText(response, senpaiImage);
-        exit(input, response);
+        Command command = logic.executeCommand(input);
+        String response = command.execute();
+        if (input.equals("undo")) {
+            undoChat();
+        } else if (input.equals("clear")) {
+            clearChat();
+        } else if (input.equals("exit")) {
+            exit();
+        } else if (response.equals("You're all set! Time to start your journey to become an AlgoSenpai!")) {
+            playerLevel.setText("You are Level 1");
+            changeUserImage(input);
+            printtoGUI(input, response, userImage, senpaiImage);
+        } else if (response.equals("Are you a boy or a girl?")) {
+            playerName.setText("Hi, " + input + "!");
+            printtoGUI(input, response, userImage, senpaiImage);
+        } else {
+            printtoGUI(input, response, userImage, senpaiImage);
+        }
+    }
+
+    private void resetIdle() {
+        idleMaxMinutes = 180;
     }
 
     /**
@@ -107,23 +137,60 @@ public class Ui extends AnchorPane {
     }
 
     /**
-     * Closes the application.
-     * @param input user input.
+     * Delete chat messages.
      */
-    private void exit(String input, String response) {
-        if (input.equals("exit")) {
-            PauseTransition pause = new PauseTransition(Duration.seconds(1));
-            pause.setOnFinished(event -> {
-                Platform.exit();
-            });
-            pause.play();
+    private void undoChat() {
+        if (dialogContainer.getChildren().size() > 1) {
+            int messageIndex = dialogContainer.getChildren().size() - 2;
+            dialogContainer.getChildren().remove(messageIndex, messageIndex + 2);
         }
+        userInput.clear();
+    }
 
-        //to finish set up
-        if (response.equals("You have set your profile! Time to start your journey!")) {
-            playerName.setText("Hi, " + logic.getName());
-            playerLevel.setText("You are Level " + logic.getLevel());
-            changeUserImage(logic.isBoy());
-        }
+    /**
+     * Clear chat.
+     */
+    private void clearChat() {
+        int messageIndex = dialogContainer.getChildren().size();
+        dialogContainer.getChildren().remove(0, messageIndex);
+        userInput.clear();
+    }
+
+    /**
+     * Closes the application.
+     */
+    private void exit() {
+        PauseTransition pause = new PauseTransition(Duration.seconds(1));
+        pause.setOnFinished(event -> {
+            Platform.exit();
+        });
+        pause.play();
+    }
+
+    private void handle() {
+        animationTimerController = new AnimationTimerController(1000) {
+            @Override
+            public void handle() {
+                if (idleMaxMinutes > 0) {
+                    idleMaxMinutes--;
+                } else {
+                    dialogContainer.getChildren()
+                            .add(DialogBox.getSenpaiDialog("Hello do you need help?", senpaiImage));
+                }
+            }
+        };
+        animationTimerController.start();
+    }
+
+    /**
+     * Prints the chat bubbles to the GUI.
+     * @param input the user input text.
+     * @param response the text generated by the program
+     * @param userImage the profile picture of the user
+     * @param senpaiImage the profile picture of the Senpai.
+     */
+    private void printtoGUI (String input, String response, Image userImage, Image senpaiImage) {
+        printUserText(input, userImage);
+        printSenpaiText(response, senpaiImage);
     }
 }

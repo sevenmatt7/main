@@ -2,18 +2,18 @@ package com.algosenpai.app.logic.command;
 
 import java.util.ArrayList;
 
-public class ByeCommand extends Command {
+public class UndoCommand extends Command {
 
     /**
      * Create new command.
      * @param inputs input from user.
      */
-    public ByeCommand(ArrayList<String> inputs) {
+    public UndoCommand(ArrayList<String> inputs) {
         super(inputs);
     }
 
     @Override
     public String execute() {
-        return "Bye!";
+        return inputs.toString();
     }
 }

@@ -1,14 +1,8 @@
 package com.algosenpai.app.stats;
 
-
-
-import com.algosenpai.app.stats.ChapterStat;
 import com.algosenpai.app.storage.UserStorageParser;
 import javafx.util.Pair;
-
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -243,6 +237,10 @@ public class UserStats {
     public static UserStats getDefaultUserStats() {
         // TODO Currently it returns an empty object, but it should ideally be a list of all chapters, with 0 attempts.
         return new UserStats("Name", "miku.png", new ArrayList<>());
+    }
+
+    public ArrayList<ChapterStat> getChapterData() {
+        return chapterData;
     }
 
     /**

@@ -2,18 +2,18 @@ package com.algosenpai.app.logic.command;
 
 import java.util.ArrayList;
 
-public class ByeCommand extends Command {
+public class ClearCommand extends Command {
 
     /**
      * Create new command.
      * @param inputs input from user.
      */
-    public ByeCommand(ArrayList<String> inputs) {
+    public ClearCommand(ArrayList<String> inputs) {
         super(inputs);
     }
 
     @Override
     public String execute() {
-        return "Bye!";
+        return "clear";
     }
 }

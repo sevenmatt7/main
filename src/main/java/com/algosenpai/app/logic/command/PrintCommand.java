@@ -1,8 +1,11 @@
 package com.algosenpai.app.logic.command;
 
 import com.algosenpai.app.logic.models.QuestionModel;
+import com.algosenpai.app.stats.ChapterStat;
+import com.algosenpai.app.stats.UserStats;
 import com.algosenpai.app.utility.PdfDocumentWriterUtility;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Paragraph;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -10,54 +13,74 @@ import java.util.Arrays;
 
 public class PrintCommand extends Command {
 
-    ArrayList<QuestionModel> printList;
+    private ArrayList<QuestionModel> printList;
+    private UserStats userStats;
 
-    PdfDocumentWriterUtility pdfWriter = new PdfDocumentWriterUtility();
+    private ArrayList<String> paragraphs;
+
+    private PdfDocumentWriterUtility pdfWriter = new PdfDocumentWriterUtility();
 
     /**
      * Create new command.
-     *
-     * @param commandType type of command.
-     * @param specifier specifier.
-     * @param input input from user.
+     * @param inputs input from user.
      */
-    public PrintCommand(CommandEnum commandType, int specifier, String input) {
-        super(commandType, specifier, input);
+    private PrintCommand(ArrayList<String> inputs) {
+        super(inputs);
+        this.paragraphs = new ArrayList<>();
     }
 
-    private PrintCommand(CommandEnum commandType, int specifier, String input, ArrayList<QuestionModel> printList)  {
-        this(commandType, specifier, input);
+
+
+    /**
+     * Creates print command.
+     * @param inputs user inputs.
+     * @param printList list of questions to write to pdf.
+     */
+    public PrintCommand(ArrayList<String> inputs, ArrayList<QuestionModel> printList) {
+        this(inputs);
         this.printList = printList;
-        this.execute();
+        this.prepareQuestions();
     }
 
-    public PrintCommand(Command command, ArrayList<QuestionModel> printList) {
-        this(command.getType(), command.getParameter(), command.getUserString(), printList);
+    /**
+     * Creates print command.
+     * @param inputs user inputs.
+     * @param userStats user stats to write to pdf.
+     */
+    public PrintCommand(ArrayList<String> inputs, UserStats userStats) {
+        this(inputs);
+        this.userStats = userStats;
+        this.prepareUserStates();
     }
 
-    @Override
-    public ArrayList<String> parser() {
-        return new ArrayList<>(Arrays.asList(userString.split(" ")));
+    /**
+     * Prepares question to write to pdf.
+     */
+    private void prepareQuestions() {
+        int questionCount = 1;
+        for (QuestionModel question: printList) {
+            paragraphs.add("Q" + questionCount++ + ")");
+            paragraphs.add(question.getQuestion());
+            paragraphs.add(question.getUserAnswer());
+            paragraphs.add(question.getAnswer());
+            paragraphs.add(question.checkAnswer() ? "Correct" : "Wrong");
+        }
+    }
+
+    /**
+     * Prepares user stats to write to pdf.
+     */
+    private void prepareUserStates() {
+        paragraphs.add(userStats.toString());
     }
 
     @Override
     public String execute() {
         try {
-            ArrayList<String> paragraphs = new ArrayList<>();
-            int questionCount = 1;
-            for (QuestionModel question: printList) {
-                paragraphs.add("Q" + questionCount++ + ")");
-                paragraphs.add(question.getQuestion());
-                paragraphs.add(question.getUserAnswer());
-                paragraphs.add(question.getAnswer());
-                paragraphs.add(question.checkAnswer() ? "Correct" : "Wrong");
-            }
-            ArrayList<String> parsedInput = parser();
-            pdfWriter.saveToPdf(paragraphs, parsedInput.get(2));
-            return userString;
+            pdfWriter.saveToPdf(paragraphs, inputs.get(1));
+            return "Successfully write to pdf";
         } catch (DocumentException | FileNotFoundException e) {
             return "Error writing to file";
         }
-
     }
 }
