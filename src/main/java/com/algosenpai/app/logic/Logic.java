@@ -84,8 +84,13 @@ public class Logic {
 
         if (isSettingUp.get()) {
             setupStage++;
-            if (setupStage == 3) {
-                isSettingUp.set(false);
+            if (setupStage >= 3) {
+                if (!inputs.get(0).equals("boy") || !inputs.get(0).equals("girl")) {
+                    return new SetupCommand(inputs, setupStage, isSettingUp);
+                } else {
+                    isSettingUp.set(false);
+                    setupStage = 0;
+                }
             }
             return new SetupCommand(inputs, setupStage, isSettingUp);
         }
