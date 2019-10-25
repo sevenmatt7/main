@@ -24,6 +24,8 @@ import com.algosenpai.app.logic.command.UndoCommand;
 import com.algosenpai.app.logic.models.QuestionModel;
 import com.algosenpai.app.logic.parser.Parser;
 import com.algosenpai.app.stats.UserStats;
+
+import java.io.FileNotFoundException;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.ArrayList;
@@ -58,9 +60,9 @@ public class Logic {
      * @param parser parser for user inputs.
      * @param userStats user states.
      */
-    public Logic(Parser parser, UserStats userStats) {
-        this.parser = parser;
-        this.userStats = userStats;
+    public Logic() throws FileNotFoundException {
+        this.parser = new Parser();
+        this.userStats =  new UserStats();
         quizMaker = new QuizGenerator();
         historyList = new ArrayList<>();
         archiveList = new ArrayList<>();

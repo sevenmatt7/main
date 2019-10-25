@@ -24,9 +24,7 @@ import java.net.URISyntaxException;
  */
 public class MainApp extends Application {
     //Initialise the different components here
-    private Parser parser = new Parser();
     private Logic logic;
-    private UserStats userStats;
     private static MusicController musicController;
 
     static {
@@ -55,8 +53,7 @@ public class MainApp extends Application {
 
     private void initialize() {
         try {
-            userStats = new UserStats();
-            logic = new Logic(parser, userStats);
+            logic = new Logic();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

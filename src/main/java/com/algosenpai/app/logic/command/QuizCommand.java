@@ -54,7 +54,7 @@ public class QuizCommand extends Command {
                 QuestionModel currQuestion = quizList.get(i);
                 if (currQuestion.checkAnswer()) {
                     correctCount++;
-                }
+            }
             }
             questionNumber.set(0);
             isQuizMode.set(false);
