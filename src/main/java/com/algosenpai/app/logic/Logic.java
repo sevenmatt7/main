@@ -37,8 +37,6 @@ public class Logic {
     private QuizGenerator quizMaker;
 
     //All variables for the settings of the program
-    private int setupStage = 0;
-    private AtomicBoolean isSettingUp = new AtomicBoolean(false);
     private double playerExp = 0.0;
 
     //All variables for the quiz function
@@ -57,8 +55,6 @@ public class Logic {
 
     /**
      * Initializes logic for the application.
-     * @param parser parser for user inputs.
-     * @param userStats user states.
      */
     public Logic() throws FileNotFoundException {
         this.parser = new Parser();
@@ -86,27 +82,9 @@ public class Logic {
             return new QuizCommand(inputs, quizList, questionNumber, isQuizMode, isNewQuiz);
         }
 
-        if (isSettingUp.get()) {
-            setupStage++;
-            if (setupStage >= 3) {
-                if (!inputs.get(0).equals("boy") || !inputs.get(0).equals("girl")) {
-                    return new SetupCommand(inputs, setupStage, isSettingUp);
-                } else {
-                    isSettingUp.set(false);
-                    setupStage = 0;
-                }
-            }
-            return new SetupCommand(inputs, setupStage, isSettingUp);
-        }
-
         switch (inputs.get(0)) {
         case "hello":
-            if (!isSettingUp.get()) {
-                isSettingUp.set(true);
-                setupStage++;
-                return new SetupCommand(inputs, setupStage, isSettingUp);
-            }
-            return new SetupCommand(inputs, setupStage, isSettingUp);
+            return new SetupCommand(inputs);
         case "help":
             return new HelpCommand(inputs);
         case "menu":

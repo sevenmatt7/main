@@ -1,7 +1,6 @@
 package com.algosenpai.app;
 
 
-import com.algosenpai.app.stats.UserStats;
 import com.algosenpai.app.ui.Ui;
 import com.algosenpai.app.ui.controller.MusicController;
 import javafx.animation.PauseTransition;
@@ -11,7 +10,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import com.algosenpai.app.logic.Logic;
-import com.algosenpai.app.logic.parser.Parser;
 import javafx.util.Duration;
 
 import java.io.FileNotFoundException;
@@ -23,6 +21,7 @@ import java.net.URISyntaxException;
  * There are two fxml files, MainWindow and DialogBox.
  */
 public class MainApp extends Application {
+
     //Initialise the different components here
     private Logic logic;
     private static MusicController musicController;

@@ -104,12 +104,10 @@ public class Ui extends AnchorPane {
             clearChat();
         } else if (input.equals("exit")) {
             exit();
-        } else if (response.equals("You're all set! Time to start your journey to become an AlgoSenpai!")) {
+        } else if (response.startsWith("Hello ")) {
             playerLevel.setText("You are Level 1");
+            playerName.setText("Hi, " + "!");
             changeUserImage(input);
-            printtoGui(input, response, userImage, senpaiImage);
-        } else if (response.equals("Are you a boy or a girl?")) {
-            playerName.setText("Hi, " + input + "!");
             printtoGui(input, response, userImage, senpaiImage);
         } else if (response.startsWith("You got ")) {
             updateLevelProgress(0.1);
