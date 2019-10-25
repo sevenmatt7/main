@@ -73,7 +73,7 @@ public class MainApp extends Application {
     private void startMain(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("/view/MainWindow.fxml"));
         AnchorPane ap = fxmlLoader.load();
-        Scene scene = new Scene(ap, 400, 600);
+        Scene scene = new Scene(ap, 750, 900);
         stage.setScene(scene);
         fxmlLoader.<Ui>getController().setLogic(logic);
         stage.setResizable(false);

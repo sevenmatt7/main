@@ -28,9 +28,7 @@ public class HistoryCommandTest extends ApplicationTest {
         AnchorPane ap = fxmlLoader.load();
         Scene scene = new Scene(ap, 400, 600);
         stage.setScene(scene);
-        UserStats userStats = new UserStats();
-        Parser parser = new Parser();
-        Logic logic = new Logic(parser, userStats);
+        Logic logic = new Logic();
         fxmlLoader.<Ui>getController().setLogic(logic);
         stage.setResizable(false);
         stage.setTitle("AlgoSenpai Adventures");
