@@ -39,7 +39,6 @@ run {
 }
 
 dependencies {
-
     implementation 'com.itextpdf:itextpdf:5.5.10'
     implementation 'org.bouncycastle:bcprov-jdk15on:1.56'
     testImplementation 'org.testfx:testfx-core:4.0.16-alpha'
