@@ -65,6 +65,14 @@ public class Logic {
     }
 
     /**
+     * Gets the player exp level.
+     * @return the double value representing the exp level.
+     */
+    public double getPlayerExp() {
+        return this.playerExp;
+    }
+
+    /**
      * Executes the command.
      * @param input user input.
      * @return the command object to be executed.
