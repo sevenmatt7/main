@@ -8,7 +8,11 @@ import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -49,11 +53,11 @@ public class Ui extends AnchorPane {
     private double playerExp = 0.0;
     private int idleMinutesMax = 180;
 
-    private final String GREETING_MESSAGE = "Welcome to AlgoSenpai Adventures! Type 'hello' to start!";
-    private final String BOY_PROFILE_PICTURE_PATH = "/images/boyplayer.jpg";
-    private final String GIRL_PROFILE_PICTURE_PATH = "/images/girlplayer.png";
-    private final String DEFAULT_PROFILE_PICTURE_PATH = "/images/unknown.png";
-    private final String SENPAI_PROFILE_PICTURE_PATH = "/images/miku.png";
+    private static final String GREETING_MESSAGE = "Welcome to AlgoSenpai Adventures! Type 'hello' to start!";
+    private static final String BOY_PROFILE_PICTURE_PATH = "/images/boyplayer.jpg";
+    private static final String GIRL_PROFILE_PICTURE_PATH = "/images/girlplayer.png";
+    private static final String DEFAULT_PROFILE_PICTURE_PATH = "/images/unknown.png";
+    private static final String SENPAI_PROFILE_PICTURE_PATH = "/images/miku.png";
 
     private Image boyImage = new Image(this.getClass().getResourceAsStream(BOY_PROFILE_PICTURE_PATH));
     private Image girlImage = new Image(this.getClass().getResourceAsStream(GIRL_PROFILE_PICTURE_PATH));

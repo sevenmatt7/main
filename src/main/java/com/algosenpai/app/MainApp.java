@@ -22,11 +22,11 @@ import java.net.URISyntaxException;
  */
 public class MainApp extends Application {
 
-    private final String APPLICATION_TITLE = "AlgoSenpai Adventures";
-    private final int MAINWINDOW_WIDTH = 750;
-    private final int MAINWINDOW_HEIGHT = 900;
-    private final int SPLASHSCREEN_WIDTH = 600;
-    private final int SPLASHSCREEN_HEIGHT = 400;
+    private static final String APPLICATION_TITLE = "AlgoSenpai Adventures";
+    private static int MAINWINDOW_WIDTH = 750;
+    private static int MAINWINDOW_HEIGHT = 900;
+    private static int SPLASHSCREEN_WIDTH = 600;
+    private static int SPLASHSCREEN_HEIGHT = 400;
 
     //Initialise the different components here
     private Logic logic;
