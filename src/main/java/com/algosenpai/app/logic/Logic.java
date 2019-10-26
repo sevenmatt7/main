@@ -1,5 +1,3 @@
-//@@author carrieng0323852
-
 package com.algosenpai.app.logic;
 
 import com.algosenpai.app.logic.chapters.QuizGenerator;
@@ -47,14 +45,14 @@ public class Logic {
     private AtomicInteger questionNumber = new AtomicInteger(0);
     private int prevResult = 0;
 
-    // Review features;
+    // VariabReview features;
     private ArrayList<QuestionModel> archiveList;
 
     // History features;
     private ArrayList<String> historyList;
 
     /**
-     * Initializes logic for the application.
+     * Initializes logic for the application with all the different components.
      */
     public Logic() throws FileNotFoundException {
         this.parser = new Parser();
