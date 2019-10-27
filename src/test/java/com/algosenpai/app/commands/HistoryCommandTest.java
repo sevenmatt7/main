@@ -55,7 +55,8 @@ public class HistoryCommandTest extends ApplicationTest {
 
     @Test
     void testHistoryKeyPress() {
-        clickOn("#userInput").write("history").press(KeyCode.ENTER);
+        clickOn("#userInput").write("history");
+        clickOn("#sendButton");
         VBox container = find();
         DialogBox dialogBox = (DialogBox) container.getChildren().get(1);
         String actualText = dialogBox.getDialog().getText();
