@@ -23,8 +23,8 @@ import java.net.URISyntaxException;
 public class MainApp extends Application {
 
     private static final String APPLICATION_TITLE = "AlgoSenpai Adventures";
-    private static int MAINWINDOW_WIDTH = 750;
-    private static int MAINWINDOW_HEIGHT = 900;
+    private static int MAINWINDOW_WIDTH = 500;
+    private static int MAINWINDOW_HEIGHT = 650;
     private static int SPLASHSCREEN_WIDTH = 600;
     private static int SPLASHSCREEN_HEIGHT = 400;
 

@@ -25,7 +25,7 @@ public class HistoryCommandTest extends ApplicationTest {
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(HistoryCommandTest.class.getResource("/view/MainWindow.fxml"));
         AnchorPane ap = fxmlLoader.load();
-        Scene scene = new Scene(ap, 750, 900);
+        Scene scene = new Scene(ap, 500, 650);
         stage.setScene(scene);
         Logic logic = new Logic();
         fxmlLoader.<Ui>getController().setLogic(logic);
