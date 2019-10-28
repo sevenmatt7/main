@@ -79,9 +79,8 @@ public class Ui extends AnchorPane {
     public void initialize() {
         scrollPane.vvalueProperty().bind(dialogContainer.heightProperty());
         dialogContainer.getChildren().add(DialogBox.getSenpaiDialog(GREETING_MESSAGE, senpaiImage));
-
         userPic.setImage(userImage);
-        levelProgress.setProgress(playerExp);
+        levelProgress.setProgress(0);
         playerLevel.setText("You are Level 1");
         handle();
     }

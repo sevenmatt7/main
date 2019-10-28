@@ -31,8 +31,8 @@ import java.util.ArrayList;
 public class Logic {
 
     private Parser parser;
-    private UserStats userStats;
     private QuizGenerator quizMaker;
+    private UserStats userStats;
 
     //All variables for the settings of the program
     private double playerExp = 0.0;
@@ -54,9 +54,9 @@ public class Logic {
     /**
      * Initializes logic for the application with all the different components.
      */
-    public Logic() throws FileNotFoundException {
+    public Logic(UserStats stats) throws FileNotFoundException {
         this.parser = new Parser();
-        this.userStats =  new UserStats();
+        this.userStats = stats;
         quizMaker = new QuizGenerator();
         historyList = new ArrayList<>();
         archiveList = new ArrayList<>();

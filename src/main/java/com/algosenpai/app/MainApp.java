@@ -34,7 +34,7 @@ public class MainApp extends Application {
     //Initialise the different components here
     private Logic logic;
     private static MusicController musicController;
-    private UserStats stats = new UserStats();
+    private UserStats stats = new UserStats(USERSTATS_FILE_PATH);
 
     static {
         try {
@@ -49,7 +49,7 @@ public class MainApp extends Application {
 
     private void initialize() throws IOException {
         try {
-            logic = new Logic();
+            logic = new Logic(stats);
             Storage.loadData(USERSTATS_FILE_PATH);
         } catch (FileNotFoundException e) {
             e.printStackTrace();

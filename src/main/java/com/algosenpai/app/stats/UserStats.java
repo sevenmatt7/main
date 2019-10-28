@@ -1,8 +1,10 @@
 package com.algosenpai.app.stats;
 
+import com.algosenpai.app.storage.Storage;
 import com.algosenpai.app.storage.UserStorageParser;
 import javafx.util.Pair;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -28,6 +30,7 @@ public class UserStats {
     private String gender;
     private int level;
     private int expLevel;
+    private String userDataFilePath;
 
     // Array of chapter stats
     private ArrayList<ChapterStat> chapterData;
@@ -43,17 +46,14 @@ public class UserStats {
      * ChapterStat objects are passed from the parser into here to be stored into
      * their respective data structures.
      */
-    public UserStats() throws FileNotFoundException {
+    public UserStats(String userDataFilePath) throws FileNotFoundException {
         chapterData = new ArrayList<>();
         chapterNumber = new HashMap<>();
         this.username = "Name";
         this.gender = "???";
         this.level = 1;
         this.expLevel = 0;
-    }
-
-    public String getUsername() {
-        return username;
+        this.userDataFilePath = userDataFilePath;
     }
 
     /**
@@ -159,17 +159,51 @@ public class UserStats {
     }
 
     /**
-     * Checkstyle.
+     * Gets the gender of the user
+     * @return the gender of the user.
      */
     public String getGender() {
         return gender;
     }
 
     /**
-     * Checkstyle.
+     * Sets the gender of the user
+     * @param gender the String representing the gender of the user.
      */
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    /**
+     * Gets the username of the user
+     * @return the String representing the name of the user.
+     */
+    public String getUsername() {
+        return username;
+    }
+
+    /**
+     * Sets the username of the user
+     * @param username the String representing the name of the user.
+     */
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public int getUserLevel() {
+        return this.level;
+    }
+
+    public void setUserLevel(int level) {
+        this.level = level;
+    }
+
+    public int getUserExp() {
+        return this.expLevel;
+    }
+
+    public void setUserExp(int expLevel) {
+        this.expLevel = expLevel;
     }
 
     /**
@@ -196,7 +230,7 @@ public class UserStats {
         for (ChapterStat chapterStat:chapterData) {
             result += "\n" + chapterStat.toString();
         }
-        return  result;
+        return result;
     }
 
     /**
@@ -226,11 +260,6 @@ public class UserStats {
         return new UserStats(userName, gender, level, expLevel, chapterStats);
     }
 
-    public void saveUserStats() {
-        UserStorageParser userStorageParser = new UserStorageParser();
-        userStorageParser.saveUserData(this.toString());
-    }
-
     /**
      * Get the default UserStats (if the user launches the game for the first time).
      * @return The UserStats object.
@@ -238,6 +267,13 @@ public class UserStats {
     public static UserStats getDefaultUserStats() {
         // TODO Currently it returns an empty object, but it should ideally be a list of all chapters, with 0 attempts.
         return new UserStats("Name", "nil", 1, 0, new ArrayList<>());
+    }
+
+    /**
+     * Saves all the data into the text file.
+     */
+    public void saveUserStats() throws IOException {
+        Storage.saveData(userDataFilePath, this.toString());
     }
 
     public ArrayList<ChapterStat> getChapterData() {
