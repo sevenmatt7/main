@@ -23,6 +23,9 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.media' ]
 }
 
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
 group 'com.algosenpai.app'
 version '0.1.0'
 
