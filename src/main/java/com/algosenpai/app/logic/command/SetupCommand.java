@@ -19,17 +19,24 @@ public class SetupCommand extends Command {
         super(inputs);
     }
 
+    public String getUserName() {
+        return this.userName;
+    }
+
     @Override
     public String execute() {
+        String responseString;
         userName = inputs.get(1);
 
         if (inputs.get(2).equals("boy")) {
             gender = "Mr. ";
         } else if (inputs.get(2).equals("girl")) {
             gender = "Ms. ";
+        } else {
+            return "Could you enter the setup command again with the appropriate gender?";
         }
 
-        String responseString = "Hello " + gender + userName + "! You have successfully set up your profile!";
+        responseString = "Hello " + gender + userName + "!";
         return responseString;
     }
 

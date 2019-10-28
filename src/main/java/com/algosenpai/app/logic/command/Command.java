@@ -17,8 +17,7 @@ public abstract class Command {
     public Command(ArrayList<String> inputs) {
         this.inputs = inputs;
     }
-
+    
     public abstract String execute();
-
 }
 
