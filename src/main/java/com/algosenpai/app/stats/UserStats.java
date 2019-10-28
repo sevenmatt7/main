@@ -3,8 +3,13 @@ package com.algosenpai.app.stats;
 import com.algosenpai.app.storage.Storage;
 import com.algosenpai.app.storage.UserStorageParser;
 import javafx.util.Pair;
+
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -26,7 +31,7 @@ import java.util.HashMap;
  * </p>
  */
 public class UserStats {
-    private String username;
+    private String userName;
     private String gender;
     private int level;
     private int expLevel;
@@ -43,24 +48,35 @@ public class UserStats {
 
     /**
      * Constructs a new UserStats by reading in from the UserData text file.
-     * ChapterStat objects are passed from the parser into here to be stored into
-     * their respective data structures.
+     * If the text file doesn't exist, the UserStats variables are populated with default values.
+     * @param userDataFilePath the file path to the text file.
      */
-    public UserStats(String userDataFilePath) throws FileNotFoundException {
+    public UserStats(String userDataFilePath) throws IOException {
         chapterData = new ArrayList<>();
         chapterNumber = new HashMap<>();
-        this.username = "Name";
-        this.gender = "???";
-        this.level = 1;
-        this.expLevel = 0;
         this.userDataFilePath = userDataFilePath;
+
+        File file = new File(userDataFilePath);
+        if (!file.isFile()) {
+            this.userName = "Name";
+            this.gender = "???";
+            this.level = 1;
+            this.expLevel = 0;
+        } else {
+            String userStatsString = Files.readString(Paths.get(userDataFilePath), StandardCharsets.US_ASCII);
+            String [] tokens = userStatsString.split("\n",7);
+            this.userName = tokens[2];
+            this.gender = tokens[3];
+            this.level = Integer.parseInt(tokens[4]);
+            this.expLevel = Integer.parseInt(tokens[5]);
+        }
     }
 
     /**
      * Constructor. Needs no explanation.
      */
     public UserStats(String username, String gender, int level, int expLevel, ArrayList<ChapterStat> chapterData) {
-        this.username = username;
+        this.userName = username;
         this.gender = gender;
         this.level = level;
         this.expLevel = expLevel;
@@ -179,7 +195,7 @@ public class UserStats {
      * @return the String representing the name of the user.
      */
     public String getUsername() {
-        return username;
+        return this.userName;
     }
 
     /**
@@ -187,7 +203,7 @@ public class UserStats {
      * @param username the String representing the name of the user.
      */
     public void setUsername(String username) {
-        this.username = username;
+        this.userName = username;
     }
 
     public int getUserLevel() {
@@ -222,7 +238,7 @@ public class UserStats {
     public String toString() {
         String result = "";
         result += "AlgoSenpai Adventures Overall Report\n\n";
-        result += username + "\n";
+        result += userName + "\n";
         result += gender + "\n";
         result += level + "\n";
         result += expLevel + "\n";
@@ -301,7 +317,7 @@ public class UserStats {
             }
 
             return isEqual
-                    && username.equals(other.username)
+                    && userName.equals(other.userName)
                     && gender.equals(other.gender)
                     && level == other.level
                     && expLevel == other.expLevel;

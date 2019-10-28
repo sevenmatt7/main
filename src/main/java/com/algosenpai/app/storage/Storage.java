@@ -27,10 +27,9 @@ public class Storage {
             // Fill it with the default UserStats.
             UserStats newUserStats = UserStats.getDefaultUserStats();
             // Save it to the file, so the next time the function is called, valid data exists in the file.
-            saveData(filePath,newUserStats.toString());
+            saveData(filePath, newUserStats.toString());
             return newUserStats.toString();
         }
-
         return Files.readString(Paths.get(filePath), StandardCharsets.US_ASCII);
     }
 

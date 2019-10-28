@@ -44,7 +44,7 @@ public class MainApp extends Application {
         }
     }
 
-    public MainApp() throws FileNotFoundException {
+    public MainApp() throws IOException {
     }
 
     private void initialize() throws IOException {

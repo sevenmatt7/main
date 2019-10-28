@@ -56,7 +56,10 @@ public class Ui extends AnchorPane {
     private AnimationTimerController animationTimerController;
     private Logic logic;
     private UserStats stats;
-    private double playerExp = 0.0;
+//    private double userExp = stats.getUserExp()/10.0;
+//    private String userName = stats.getUsername();
+//    private int level = stats.getUserLevel();
+//    private String userGender = stats.getGender();
     private int idleMinutesMax = 180;
 
     private static final String GREETING_MESSAGE = "Welcome to AlgoSenpai Adventures! Type 'hello' to start!";
@@ -101,6 +104,8 @@ public class Ui extends AnchorPane {
             userPic.setImage(userImage);
         } else if (input.equals("girl")) {
             userImage = girlImage;
+            userPic.setImage(userImage);
+        } else {
             userPic.setImage(userImage);
         }
     }
@@ -226,8 +231,8 @@ public class Ui extends AnchorPane {
      * @param expGain the double representing the gain in EXP to be reflected.
      */
     private void updateLevelProgress(double expGain) {
-        playerExp += expGain;
-        levelProgress.setProgress(playerExp);
+//        userExp += expGain;
+//        levelProgress.setProgress(userExp);
     }
 
     /**
