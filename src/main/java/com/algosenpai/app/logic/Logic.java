@@ -90,7 +90,7 @@ public class Logic {
 
         switch (inputs.get(0)) {
         case "hello":
-            return new SetupCommand(inputs);
+            return new SetupCommand(inputs, userStats);
         case "help":
             return new HelpCommand(inputs);
         case "menu":

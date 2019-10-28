@@ -22,6 +22,7 @@ import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * Controller for MainWindow. Provides the layout for the other controls.
@@ -109,7 +110,7 @@ public class Ui extends AnchorPane {
      * onto the GUI.
      */
     @FXML
-    private void handleUserInput() {
+    private void handleUserInput() throws IOException {
         resetIdle();
         String input = userInput.getText();
         Command commandGenerated = logic.executeCommand(input);

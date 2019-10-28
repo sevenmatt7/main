@@ -2,6 +2,7 @@
 
 package com.algosenpai.app.logic.command;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -18,6 +19,6 @@ public abstract class Command {
         this.inputs = inputs;
     }
     
-    public abstract String execute();
+    public abstract String execute() throws IOException;
 }
 

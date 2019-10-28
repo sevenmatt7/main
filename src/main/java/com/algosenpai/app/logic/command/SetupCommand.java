@@ -3,6 +3,7 @@ package com.algosenpai.app.logic.command;
 import com.algosenpai.app.logic.models.QuestionModel;
 import com.algosenpai.app.stats.UserStats;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -37,7 +38,7 @@ public class SetupCommand extends Command {
     }
 
     @Override
-    public String execute() {
+    public String execute() throws IOException {
         String responseString;
         userName = inputs.get(1);
         stats.setUsername(userName);
@@ -52,6 +53,7 @@ public class SetupCommand extends Command {
             return "Could you enter the setup command again with the appropriate gender?";
         }
 
+        stats.saveUserStats();
         responseString = "Hello " + gender + userName + "!";
         return responseString;
     }
