@@ -24,16 +24,16 @@ import java.util.HashMap;
  * </p>
  */
 public class UserStats {
-
-    //username of the player
     private String username;
+    private String gender;
+    private int level;
+    private int expLevel;
+
     // Array of chapter stats
     private ArrayList<ChapterStat> chapterData;
 
     // Stats for the current chapter
     private ChapterStat currentChapter;
-
-    private String characterImagePath;
 
     //Maps the chapter names to an index value
     private HashMap<String, Integer> chapterNumber;
@@ -46,20 +46,10 @@ public class UserStats {
     public UserStats() throws FileNotFoundException {
         chapterData = new ArrayList<>();
         chapterNumber = new HashMap<>();
-        UserStorageParser userStorageParser = new UserStorageParser();
-        //Reads in redundant blank lines
-
-        userStorageParser.nextLine();
-        userStorageParser.nextLine();
-        this.username = userStorageParser.nextLine();
-        this.characterImagePath = userStorageParser.nextLine();
-
-        while (userStorageParser.hasMoreTokens()) {
-            userStorageParser.nextLine();
-            ChapterStat currStat = userStorageParser.nextChapterStat();
-            chapterData.add(currStat);
-            chapterNumber.put(currStat.chapterName, currStat.chapterNumber);
-        }
+        this.username = "Name";
+        this.gender = "???";
+        this.level = 1;
+        this.expLevel = 0;
     }
 
     public String getUsername() {
@@ -69,12 +59,14 @@ public class UserStats {
     /**
      * Constructor. Needs no explanation.
      */
-    public UserStats(String username, String characterImagePath, ArrayList<ChapterStat> chapterData) {
+    public UserStats(String username, String gender, int level, int expLevel, ArrayList<ChapterStat> chapterData) {
         this.username = username;
-        this.characterImagePath = characterImagePath;
+        this.gender = gender;
+        this.level = level;
+        this.expLevel = expLevel;
         this.chapterData = chapterData;
         chapterNumber = new HashMap<>();
-        for (ChapterStat stat: chapterData) {
+        for (ChapterStat stat : chapterData) {
             chapterNumber.put(stat.chapterName, stat.chapterNumber);
         }
     }
@@ -169,15 +161,15 @@ public class UserStats {
     /**
      * Checkstyle.
      */
-    public String getCharacterImagePath() {
-        return characterImagePath;
+    public String getGender() {
+        return gender;
     }
 
     /**
      * Checkstyle.
      */
-    public void setCharacterImagePath(String characterImagePath) {
-        this.characterImagePath = characterImagePath;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     /**
@@ -197,7 +189,9 @@ public class UserStats {
         String result = "";
         result += "AlgoSenpai Adventures Overall Report\n\n";
         result += username + "\n";
-        result += characterImagePath + "\n";
+        result += gender + "\n";
+        result += level + "\n";
+        result += expLevel + "\n";
 
         for (ChapterStat chapterStat:chapterData) {
             result += "\n" + chapterStat.toString();
@@ -215,11 +209,13 @@ public class UserStats {
         // Get the first 6 lines. 6th line contains the chapterData.
         String [] tokens = string.split("\n",6);
         String userName = tokens[2];
-        String characterImagePath = tokens[3];
+        String gender = tokens[3];
+        int level = Integer.parseInt(tokens[4]);
+        int expLevel = Integer.parseInt(tokens[5]);
 
         // No chapters in the list, so exit early, otherwise will cause parsing error.
         if (tokens.length < 6) {
-            return new UserStats(userName,characterImagePath,new ArrayList<>());
+            return new UserStats(userName, gender, level, expLevel, new ArrayList<>());
         }
         // Each chapter's data is separated by 2 newlines, so split like this to get the chapterData
         String[] chapterDataTokens = tokens[5].split("\n\n");
@@ -227,7 +223,7 @@ public class UserStats {
         for (String chapterString: chapterDataTokens) {
             chapterStats.add(ChapterStat.parseString(chapterString));
         }
-        return new UserStats(userName, characterImagePath, chapterStats);
+        return new UserStats(userName, gender, level, expLevel, chapterStats);
     }
 
     public void saveUserStats() {
@@ -241,7 +237,7 @@ public class UserStats {
      */
     public static UserStats getDefaultUserStats() {
         // TODO Currently it returns an empty object, but it should ideally be a list of all chapters, with 0 attempts.
-        return new UserStats("Name", "miku.png", new ArrayList<>());
+        return new UserStats("Name", "nil", 1, 0, new ArrayList<>());
     }
 
     public ArrayList<ChapterStat> getChapterData() {
@@ -270,7 +266,9 @@ public class UserStats {
 
             return isEqual
                     && username.equals(other.username)
-                    && characterImagePath.equals(other.characterImagePath);
+                    && gender.equals(other.gender)
+                    && level == other.level
+                    && expLevel == other.expLevel;
 
         } else {
             return false;

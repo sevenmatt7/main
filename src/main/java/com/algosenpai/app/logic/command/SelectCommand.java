@@ -24,6 +24,11 @@ public class SelectCommand extends Command {
     public String execute() {
         int index = userStats.getIndexByName(inputs.get(1));
         chapterNumber.set(index);
+        if (inputs.get(1).equals("1")) {
+
+        }
         return "You have selected Chapter " + chapterNumber.get();
     }
+
+
 }

@@ -3,6 +3,7 @@ package com.algosenpai.app.ui;
 import com.algosenpai.app.logic.Logic;
 import com.algosenpai.app.logic.command.Command;
 import com.algosenpai.app.logic.command.SetupCommand;
+import com.algosenpai.app.stats.UserStats;
 import com.algosenpai.app.ui.controller.AnimationTimerController;
 import com.algosenpai.app.ui.components.DialogBox;
 import javafx.animation.PauseTransition;
@@ -19,6 +20,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
+
+import java.io.FileNotFoundException;
 
 /**
  * Controller for MainWindow. Provides the layout for the other controls.
@@ -51,6 +54,7 @@ public class Ui extends AnchorPane {
 
     private AnimationTimerController animationTimerController;
     private Logic logic;
+    private UserStats stats;
     private double playerExp = 0.0;
     private int idleMinutesMax = 180;
 
@@ -65,6 +69,9 @@ public class Ui extends AnchorPane {
     private Image userImage = new Image(this.getClass().getResourceAsStream(DEFAULT_PROFILE_PICTURE_PATH));
     private Image senpaiImage = new Image(this.getClass().getResourceAsStream(SENPAI_PROFILE_PICTURE_PATH));
 
+    public Ui() throws FileNotFoundException {
+    }
+
     /**
      * Renders the nodes on the GUI.
      */
@@ -72,13 +79,16 @@ public class Ui extends AnchorPane {
     public void initialize() {
         scrollPane.vvalueProperty().bind(dialogContainer.heightProperty());
         dialogContainer.getChildren().add(DialogBox.getSenpaiDialog(GREETING_MESSAGE, senpaiImage));
+
         userPic.setImage(userImage);
         levelProgress.setProgress(playerExp);
+        playerLevel.setText("You are Level 1");
         handle();
     }
 
-    public void setLogic(Logic logic) {
+    public void setLogic(Logic logic, UserStats stats) {
         this.logic = logic;
+        this.stats = stats;
     }
 
     /**
@@ -112,7 +122,7 @@ public class Ui extends AnchorPane {
             clearChat();
         } else if (input.equals("exit")) {
             exit();
-        } else if (input.startsWith("hello")) {
+        } else if (input.startsWith("hello ")) {
             setPlayerGender(response);
             playerName.setText(response);
             printToGui(input, response, userImage, senpaiImage);

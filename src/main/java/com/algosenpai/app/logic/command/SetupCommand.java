@@ -19,10 +19,6 @@ public class SetupCommand extends Command {
         super(inputs);
     }
 
-    public String getUserName() {
-        return this.userName;
-    }
-
     @Override
     public String execute() {
         String responseString;

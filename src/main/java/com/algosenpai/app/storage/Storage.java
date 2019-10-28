@@ -21,7 +21,7 @@ public class Storage {
     public static String loadData(String filePath) throws IOException {
         File file = new File(filePath);
         // If the file does not exist, create it.
-        if (! file.isFile()) {
+        if (!file.isFile()) {
             file.createNewFile();
 
             // Fill it with the default UserStats.
