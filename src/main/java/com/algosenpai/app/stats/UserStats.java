@@ -174,6 +174,10 @@ public class UserStats {
         return -1;
     }
 
+    public ArrayList<String> getChapters() {
+        return new ArrayList<>(chapterNumber.keySet());
+    }
+
     /**
      * Gets the gender of the user
      * @return the gender of the user.

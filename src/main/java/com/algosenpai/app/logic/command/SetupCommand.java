@@ -1,12 +1,9 @@
 package com.algosenpai.app.logic.command;
 
-import com.algosenpai.app.logic.models.QuestionModel;
 import com.algosenpai.app.stats.UserStats;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class SetupCommand extends Command {
 
@@ -27,10 +24,7 @@ public class SetupCommand extends Command {
     /**
      * Initializes quiz command to start quiz.
      * @param inputs user inputs.
-     * @param quizList quiz.
-     * @param questionNumber question number.
-     * @param isQuizMode is quiz mode.
-     * @param isNewQuiz is quiz initialize.
+     * @param stats the UserStats object used.
      */
     public SetupCommand(ArrayList<String> inputs, UserStats stats) {
         this(inputs);

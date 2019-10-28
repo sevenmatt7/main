@@ -22,13 +22,27 @@ public class SelectCommand extends Command {
 
     @Override
     public String execute() {
-        int index = userStats.getIndexByName(inputs.get(1));
-        chapterNumber.set(index);
-        if (inputs.get(1).equals("1")) {
-
+        if (inputs.size() < 2) {
+            return getDefaultMessage();
         }
+        int index = userStats.getIndexByName(inputs.get(1));
+        if (index < 0) {
+            return getDefaultMessage();
+        }
+        chapterNumber.set(index - 1);
         return "You have selected Chapter " + chapterNumber.get();
     }
 
-
+    /**
+     * Returns default message if the select command is not called properly.
+     * @return default message to use select command.
+     */
+    public String getDefaultMessage() {
+        StringBuilder str = new StringBuilder(
+                "No such chapter found. Please select the following:\nselect <chapter name>\n");
+        for (String chapter: userStats.getChapters()) {
+            str.append(chapter).append("\n");
+        }
+        return str.toString();
+    }
 }
