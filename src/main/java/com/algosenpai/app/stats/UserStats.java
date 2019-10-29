@@ -179,7 +179,7 @@ public class UserStats {
     }
 
     /**
-     * Gets the gender of the user
+     * Gets the gender of the user.
      * @return the gender of the user.
      */
     public String getGender() {
@@ -187,7 +187,7 @@ public class UserStats {
     }
 
     /**
-     * Sets the gender of the user
+     * Sets the gender of the user.
      * @param gender the String representing the gender of the user.
      */
     public void setGender(String gender) {
@@ -195,7 +195,7 @@ public class UserStats {
     }
 
     /**
-     * Gets the username of the user
+     * Gets the username of the user.
      * @return the String representing the name of the user.
      */
     public String getUsername() {
@@ -203,7 +203,7 @@ public class UserStats {
     }
 
     /**
-     * Sets the username of the user
+     * Sets the username of the user.
      * @param username the String representing the name of the user.
      */
     public void setUsername(String username) {

@@ -1,7 +1,11 @@
 package com.algosenpai.app.ui;
 
 import com.algosenpai.app.logic.Logic;
-import com.algosenpai.app.logic.command.*;
+import com.algosenpai.app.logic.command.ByeCommand;
+import com.algosenpai.app.logic.command.ClearCommand;
+import com.algosenpai.app.logic.command.Command;
+import com.algosenpai.app.logic.command.SetupCommand;
+import com.algosenpai.app.logic.command.UndoCommand;
 import com.algosenpai.app.stats.UserStats;
 import com.algosenpai.app.logic.parser.Parser;
 import com.algosenpai.app.ui.controller.AnimationTimerController;
@@ -55,10 +59,10 @@ public class Ui extends AnchorPane {
 
     private Logic logic;
     private UserStats stats;
-//    private double userExp = stats.getUserExp()/10.0;
-//    private String userName = stats.getUsername();
-//    private int level = stats.getUserLevel();
-//    private String userGender = stats.getGender();
+    // private double userExp = stats.getUserExp()/10.0;
+    //private String userName = stats.getUsername();
+    //private int level = stats.getUserLevel();
+    //private String userGender = stats.getGender();
     private int idleMinutesMax = 180;
 
     private static final String GREETING_MESSAGE = "Welcome to AlgoSenpai Adventures! Type 'hello' to start!";
@@ -129,7 +133,7 @@ public class Ui extends AnchorPane {
             setPlayerGender(response);
             playerName.setText(response);
             printToGui(input, response, userImage, senpaiImage);
-        } else if (response.startsWith("You got ")){
+        } else if (response.startsWith("You got ")) {
             double expGain = ((double) Integer.parseInt(response.substring(8, 9)) / 10) * 5;
             updateLevelProgress(expGain);
             printToGui(input, response, userImage, senpaiImage);
@@ -238,8 +242,8 @@ public class Ui extends AnchorPane {
      * @param expGain the double representing the gain in EXP to be reflected.
      */
     private void updateLevelProgress(double expGain) {
-//        userExp += expGain;
-//        levelProgress.setProgress(userExp);
+        //userExp += expGain;
+        //levelProgress.setProgress(userExp);
     }
 
     /**

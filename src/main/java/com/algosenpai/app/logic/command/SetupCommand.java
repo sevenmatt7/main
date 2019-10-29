@@ -33,7 +33,6 @@ public class SetupCommand extends Command {
 
     @Override
     public String execute() throws IOException {
-        String responseString;
         userName = inputs.get(1);
         stats.setUsername(userName);
 
@@ -48,7 +47,7 @@ public class SetupCommand extends Command {
         }
 
         stats.saveUserStats();
-        responseString = "Hello " + gender + userName + "!";
+        String responseString = "Hello " + gender + userName + "!";
         return responseString;
     }
 
