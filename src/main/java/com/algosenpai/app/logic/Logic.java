@@ -31,7 +31,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.ArrayList;
 
 public class Logic {
-
     private Parser parser;
     private UserStats userStats;
     private QuizGenerator quizMaker;
