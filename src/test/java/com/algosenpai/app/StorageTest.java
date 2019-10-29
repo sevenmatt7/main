@@ -67,7 +67,8 @@
 //    }
 //
 //    /**
-//     * Tests if save and load works properly with an empty UserStats object (empty string parameters, no ChapterStats).
+//     * Tests if save and load works properly with an empty UserStats object
+//     * (empty string parameters, no ChapterStats).
 //     */
 //    @Test
 //    public void saveAndLoad_emptyUserStats() {
