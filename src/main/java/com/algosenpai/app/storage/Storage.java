@@ -3,9 +3,9 @@ package com.algosenpai.app.storage;
 import com.algosenpai.app.stats.UserStats;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
