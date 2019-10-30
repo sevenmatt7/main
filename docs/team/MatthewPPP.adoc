@@ -16,15 +16,16 @@ It is written in Java, and has about 10 kLoC.
 == Summary of contributions
 
 * Implemented and created the GUI layout with the colour and profile pictures and status bar layout
-* Implemented the exp gain and gamification aspect of the quiz with
+* Implemented the exp gain and gamification aspect of the quiz
 * Implemented the userstats into the main application and ensuring that the .txt file is accessible in a
 packaged jar file.
-* Did the architecture for the whole project
+* Did the architecture for the whole project.
 * Implemented the help command
-* Implemented the setup process
-* Implemented codacy and netlify
+* Implemented the setup process/command
+* Implemented codacy.
+* Implement loading of previous/saved user stats at the start of quiz
 * Wrote testcode for the setup, help, menu commands
-* W
+
 //* *Major enhancement*:  *
 //** What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command.
 //** Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them.

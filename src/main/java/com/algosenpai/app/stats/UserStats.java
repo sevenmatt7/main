@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 /**
  * Handles temporary storage of user stats while the program is running.
@@ -43,7 +44,7 @@ public class UserStats {
     private ChapterStat currentChapter;
 
     //Maps the chapter names to an index value
-    private HashMap<String, Integer> chapterNumber;
+    private HashMap<String, Integer> chapterNumber = new HashMap<>();
 
     /**
      * Constructs a new UserStats by reading in from the UserData text file.
@@ -52,26 +53,20 @@ public class UserStats {
      */
     public UserStats(String userDataFilePath) throws IOException {
         chapterData = new ArrayList<>();
-        chapterNumber = new HashMap<>();
-        chapterNumber.put("sorting", 1);
-        chapterNumber.put("linkedlist", 2);
-        chapterNumber.put("bitmask", 3);
+        this.chapterNumber.put("sorting", 1);
+        this.chapterNumber.put("linkedlist", 2);
+        this.chapterNumber.put("bitmask", 3);
         this.userDataFilePath = userDataFilePath;
 
         File file = new File(String.valueOf(userDataFilePath));
         if (!file.isFile()) {
-            this.userName = "Name";
+            this.userName = "Default";
             this.gender = "???";
             this.level = "1";
             this.expLevel = "0";
         } else {
-            String userStatsString = Files.readString(Paths.get(String.valueOf(userDataFilePath)),
-                    StandardCharsets.US_ASCII);
-            String [] tokens = userStatsString.split("\n",6);
-            this.userName = tokens[2];
-            this.gender = tokens[3];
-            this.level = tokens[4];
-            this.expLevel = tokens[5];
+            String contentsInFile = Storage.loadData(userDataFilePath);
+//            parseString(userDataFilePath);
         }
     }
 
@@ -85,7 +80,6 @@ public class UserStats {
         this.level = level;
         this.expLevel = expLevel;
         this.chapterData = chapterData;
-        chapterNumber = new HashMap<>();
         for (ChapterStat stat : chapterData) {
             chapterNumber.put(stat.chapterName, stat.chapterNumber);
         }
@@ -293,7 +287,7 @@ public class UserStats {
         chapters.add(new ChapterStat("Sorting",1,0,0,0,0,0,""));
         chapters.add(new ChapterStat("Linked List",2,0,0,0,0,0,""));
         chapters.add(new ChapterStat("Bitmask",3,0,0,0,0,0,""));
-        return new UserStats("DefaultName", "male", "1", "0", chapters);
+        return new UserStats("Default", "????", "1", "0", chapters);
     }
 
     /**

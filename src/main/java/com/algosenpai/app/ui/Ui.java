@@ -1,11 +1,7 @@
 package com.algosenpai.app.ui;
 
 import com.algosenpai.app.logic.Logic;
-import com.algosenpai.app.logic.command.ByeCommand;
-import com.algosenpai.app.logic.command.ClearCommand;
-import com.algosenpai.app.logic.command.Command;
-import com.algosenpai.app.logic.command.SetupCommand;
-import com.algosenpai.app.logic.command.UndoCommand;
+import com.algosenpai.app.logic.command.*;
 import com.algosenpai.app.stats.UserStats;
 import com.algosenpai.app.logic.parser.Parser;
 import com.algosenpai.app.ui.controller.AnimationTimerController;
@@ -59,10 +55,10 @@ public class Ui extends AnchorPane {
 
     private Logic logic;
     private UserStats stats;
-    // private double userExp = stats.getUserExp()/10.0;
-    //private String userName = stats.getUsername();
-    //private int level = stats.getUserLevel();
-    //private String userGender = stats.getGender();
+    private double userExp = 0.0;
+    private String userName = "";
+    private int level = 1;
+    private String userGender = "";
     private int idleMinutesMax = 180;
 
     private static final String GREETING_MESSAGE = "Welcome to AlgoSenpai Adventures! Type 'hello' to start!";
@@ -86,10 +82,10 @@ public class Ui extends AnchorPane {
     public void initialize() {
         scrollPane.vvalueProperty().bind(dialogContainer.heightProperty());
         dialogContainer.getChildren().add(DialogBox.getSenpaiDialog(GREETING_MESSAGE, senpaiImage));
+        handle();
         userPic.setImage(userImage);
         levelProgress.setProgress(0);
         playerLevel.setText("You are Level 1");
-        handle();
     }
 
     public void setLogic(Logic logic, UserStats stats) {
@@ -242,8 +238,8 @@ public class Ui extends AnchorPane {
      * @param expGain the double representing the gain in EXP to be reflected.
      */
     private void updateLevelProgress(double expGain) {
-        //userExp += expGain;
-        //levelProgress.setProgress(userExp);
+        userExp += expGain;
+        levelProgress.setProgress(userExp);
     }
 
     /**
