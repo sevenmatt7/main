@@ -7,7 +7,6 @@ import javafx.util.Pair;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -64,7 +63,8 @@ public class UserStats {
             this.level = "1";
             this.expLevel = "0";
         } else {
-            String userStatsString = Files.readString(Paths.get(String.valueOf(userDataFilePath)), StandardCharsets.US_ASCII);
+            String userStatsString = Files.readString(Paths.get(String.valueOf(userDataFilePath)),
+                    StandardCharsets.US_ASCII);
             String [] tokens = userStatsString.split("\n",6);
             this.userName = tokens[2];
             this.gender = tokens[3];
@@ -76,7 +76,8 @@ public class UserStats {
     /**
      * Constructor. Needs no explanation.
      */
-    public UserStats(String username, String gender, String level, String expLevel, ArrayList<ChapterStat> chapterData) {
+    public UserStats(String username, String gender, String level, String expLevel,
+                     ArrayList<ChapterStat> chapterData) {
         this.userName = username;
         this.gender = gender;
         this.level = level;
