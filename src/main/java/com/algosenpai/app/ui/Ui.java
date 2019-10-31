@@ -140,7 +140,7 @@ public class Ui extends AnchorPane {
             playerName.setText(response);
             printToGui(input, response, userImage, senpaiImage);
         } else if (response.startsWith("You got ")) {
-            double expGain = ((double) Integer.parseInt(response.substring(8, 9)) / 10) * 5;
+            double expGain = ((double) Integer.parseInt(response.substring(8, 9)) / 10.0) * 5.0;
             updateLevelProgress(expGain);
             printToGui(input, response, userImage, senpaiImage);
         } else {

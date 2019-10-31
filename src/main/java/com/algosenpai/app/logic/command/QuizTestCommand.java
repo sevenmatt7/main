@@ -61,6 +61,11 @@ public class QuizTestCommand extends QuizCommand {
 
                 //add the userinput that has been parsed as his answer.
                 if (inputs.size() > 1) {
+                    //to end the quiz in the quizmode
+                    if (inputs.get(1).equals("end")) {
+                        isQuizMode.set(false);
+                        return calculateScore();
+                    }
                     QuestionModel currQuestionDisplayed = quizList.get(questionNumber.get() - 1);
                     String userAnswer = inputs.get(1);
                     currQuestionDisplayed.setUserAnswer(userAnswer);
