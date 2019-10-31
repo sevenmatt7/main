@@ -139,9 +139,6 @@ public class Ui extends AnchorPane {
             setPlayerGender(response);
             playerName.setText(response);
             printToGui(input, response, userImage, senpaiImage);
-        } else if (commandGenerated instanceof QuizTestCommand) {
-            logic.setUserAnswer(input);
-            printToGui(input, response, userImage, senpaiImage);
         } else if (response.startsWith("You got ")) {
             double expGain = ((double) Integer.parseInt(response.substring(8, 9)) / 10) * 5;
             updateLevelProgress(expGain);

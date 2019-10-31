@@ -26,10 +26,7 @@ import com.algosenpai.app.logic.command.UndoCommand;
 import com.algosenpai.app.logic.models.QuestionModel;
 import com.algosenpai.app.logic.parser.Parser;
 import com.algosenpai.app.stats.UserStats;
-import com.algosenpai.app.storage.Storage;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -37,8 +34,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Logic {
     private UserStats userStats;
     private QuizGenerator quizMaker = new QuizGenerator();
-
-    //All variables for the settings of the program
 
     //All variables for the quiz function
     private AtomicInteger chapterNumber = new AtomicInteger(-1);
@@ -60,20 +55,6 @@ public class Logic {
     public Logic(UserStats stats) {
         this.userStats = stats;
     }
-
-    /**
-     * Add the user answer to the quiz.
-     * @param userAnswer answer to the question.
-     */
-    public void setUserAnswer(String userAnswer) {
-        if (questionNumber.get() > 0) {
-            int currentQuestionNumber = questionNumber.get() - 1;
-            QuestionModel questionModel = quizList.get(currentQuestionNumber);
-            questionModel.setUserAnswer(userAnswer);
-            quizList.set(currentQuestionNumber, questionModel);
-        }
-    }
-
 
     /**
      * Executes the command.
@@ -138,8 +119,7 @@ public class Logic {
             if (inputs.get(0).equals("quiz")) {
                 if (inputs.size() < 2) {
                     return new QuizCommand(inputs);
-                }
-                if (inputs.get(1).equals("next") || inputs.get(1).equals("back")) {
+                } else if (inputs.get(1).equals("next") || inputs.get(1).equals("back")) {
                     return new QuizNextCommand(inputs, quizList, questionNumber);
                 } else {
                     return new QuizTestCommand(

@@ -63,6 +63,7 @@ public class UserStats {
         } else {
             //String contentsInFile = Storage.loadData(userDataFilePath);
             // parseString(userDataFilePath);
+            UserStats.parseString(Storage.loadData("./UserData.txt"));
         }
     }
 
