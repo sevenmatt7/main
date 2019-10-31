@@ -4,14 +4,9 @@ import com.algosenpai.app.storage.Storage;
 
 import javafx.util.Pair;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
 
 /**
  * Handles temporary storage of user stats while the program is running.
@@ -33,9 +28,8 @@ import java.util.Scanner;
 public class UserStats {
     private String userName;
     private String gender;
-    private String level;
-    private String expLevel;
-    private String userDataFilePath;
+    private int level;
+    private int expLevel;
 
     // Array of chapter stats
     private ArrayList<ChapterStat> chapterData;
@@ -47,6 +41,7 @@ public class UserStats {
     private HashMap<String, Integer> chapterNumber = new HashMap<>();
 
     /**
+<<<<<<< HEAD
      * Constructs a new UserStats by reading in from the UserData text file.
      * If the text file doesn't exist, the UserStats variables are populated with default values.
      * @param userDataFilePath the file path to the text file.
@@ -62,8 +57,8 @@ public class UserStats {
         if (!file.isFile()) {
             this.userName = "Default";
             this.gender = "???";
-            this.level = "1";
-            this.expLevel = "0";
+            this.level = 1
+            this.expLevel = "0"
         } else {
             //String contentsInFile = Storage.loadData(userDataFilePath);
             // parseString(userDataFilePath);
@@ -73,7 +68,7 @@ public class UserStats {
     /**
      * Constructor. Needs no explanation.
      */
-    public UserStats(String username, String gender, String level, String expLevel,
+    public UserStats(String username, String gender, int level, int expLevel,
                      ArrayList<ChapterStat> chapterData) {
         this.userName = username;
         this.gender = gender;
@@ -110,15 +105,13 @@ public class UserStats {
     }
 
     /**
-     * Update the stats for the current Chapter according to whether the user answered correctly or incorrectly.
-     * @param wasAnsweredCorrectly Whether the user answered correctly or incorrectly.
+     * TODO.
      */
-    public void updateCurrentChapter(boolean wasAnsweredCorrectly) {
-        currentChapter.totalAnswered++;
-        if (wasAnsweredCorrectly) {
-            currentChapter.correctAnswers++;
-        }
-        currentChapter.recalculateStats();
+    public void updateChapter(int index, int totalAnswered, int correct) {
+        chapterData.get(index).totalAnswered += totalAnswered;
+        chapterData.get(index).correctAnswers += correct;
+        chapterData.get(index).attempts++;
+        chapterData.get(index).recalculateStats();
     }
 
     /**
@@ -209,18 +202,18 @@ public class UserStats {
     }
 
     public int getUserLevel() {
-        return Integer.parseInt(this.level);
+        return this.level;
     }
 
-    public void setUserLevel(String level) {
+    public void setUserLevel(int level) {
         this.level = level;
     }
 
     public int getUserExp() {
-        return Integer.parseInt(this.expLevel);
+        return this.expLevel;
     }
 
-    public void setUserExp(String expLevel) {
+    public void setUserExp(int expLevel) {
         this.expLevel = expLevel;
     }
 
@@ -259,18 +252,18 @@ public class UserStats {
      */
     public static UserStats parseString(String string) {
         // Get the first 6 lines. 6th line contains the chapterData.
-        String [] tokens = string.split("\n",6);
+        String [] tokens = string.split("\n",8);
         String userName = tokens[2];
         String gender = tokens[3];
-        String level = tokens[4];
-        String expLevel = tokens[5];
+        int level = Integer.parseInt(tokens[4]);
+        int expLevel = Integer.parseInt(tokens[5]);
 
         // No chapters in the list, so exit early, otherwise will cause parsing error.
-        if (tokens.length < 6) {
+        if (tokens.length < 8) {
             return new UserStats(userName, gender, level, expLevel, new ArrayList<>());
         }
         // Each chapter's data is separated by 2 newlines, so split like this to get the chapterData
-        String[] chapterDataTokens = tokens[5].split("\n\n");
+        String[] chapterDataTokens = tokens[7].split("\n\n");
         ArrayList<ChapterStat> chapterStats = new ArrayList<>();
         for (String chapterString: chapterDataTokens) {
             chapterStats.add(ChapterStat.parseString(chapterString));
@@ -287,13 +280,13 @@ public class UserStats {
         chapters.add(new ChapterStat("Sorting",1,0,0,0,0,0,""));
         chapters.add(new ChapterStat("Linked List",2,0,0,0,0,0,""));
         chapters.add(new ChapterStat("Bitmask",3,0,0,0,0,0,""));
-        return new UserStats("Default", "????", "1", "0", chapters);
+        return new UserStats("DefaultName", "male", 1, 0, chapters);
     }
 
     /**
      * Saves all the data into the text file.
      */
-    public void saveUserStats() throws IOException {
+    public void saveUserStats(String userDataFilePath) {
         Storage.saveData(userDataFilePath, this.toString());
     }
 
