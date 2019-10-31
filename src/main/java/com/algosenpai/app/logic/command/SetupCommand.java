@@ -36,19 +36,19 @@ public class SetupCommand extends Command {
     @Override
     public String execute() {
         if (inputs.size() < 3) {
-            File userData = new File("./UserData.txt");
-            if (!userData.isFile()) {
-                return "Could you type out the command in the correct format of 'hello NAME GENDER (boy/girl)' please";
+            UserStats previousStats = stats.parseString(Storage.loadData("./UserData.txt"));
+            if (previousStats.getUsername().equals("Default")) {
+                return "Hmm.. seems like you have no previous data... \n"
+                + "Could you type out the command in the correct format of 'hello NAME GENDER (boy/girl)' please";
             } else {
-                UserStats previousStats = stats.parseString(Storage.loadData("./UserData.txt"));
                 if (previousStats.getGender().equals("boy")) {
                     gender = "Mr. ";
                     userName = previousStats.getUsername();
-                    return "Hello " + gender + userName + "!";
+                    return "Welcome back " + gender + userName + "!";
                 } else {
                     gender = "Ms. ";
                     userName = previousStats.getUsername();
-                    return "Hello " + gender + userName + "!";
+                    return "Welcome back " + gender + userName + "!";
                 }
             }
         }
