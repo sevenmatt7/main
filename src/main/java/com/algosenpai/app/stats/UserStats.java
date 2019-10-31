@@ -7,6 +7,7 @@ import javafx.util.Pair;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.io.File;
 
 /**
  * Handles temporary storage of user stats while the program is running.
@@ -26,6 +27,7 @@ import java.util.HashMap;
  * </p>
  */
 public class UserStats {
+    private String userDataFilePath;
     private String userName;
     private String gender;
     private int level;
@@ -41,7 +43,6 @@ public class UserStats {
     private HashMap<String, Integer> chapterNumber = new HashMap<>();
 
     /**
-<<<<<<< HEAD
      * Constructs a new UserStats by reading in from the UserData text file.
      * If the text file doesn't exist, the UserStats variables are populated with default values.
      * @param userDataFilePath the file path to the text file.
@@ -57,8 +58,8 @@ public class UserStats {
         if (!file.isFile()) {
             this.userName = "Default";
             this.gender = "???";
-            this.level = 1
-            this.expLevel = "0"
+            this.level = 1;
+            this.expLevel = 0;
         } else {
             //String contentsInFile = Storage.loadData(userDataFilePath);
             // parseString(userDataFilePath);
@@ -280,7 +281,7 @@ public class UserStats {
         chapters.add(new ChapterStat("Sorting",1,0,0,0,0,0,""));
         chapters.add(new ChapterStat("Linked List",2,0,0,0,0,0,""));
         chapters.add(new ChapterStat("Bitmask",3,0,0,0,0,0,""));
-        return new UserStats("DefaultName", "male", 1, 0, chapters);
+        return new UserStats("Default", "????", 1, 0, chapters);
     }
 
     /**
