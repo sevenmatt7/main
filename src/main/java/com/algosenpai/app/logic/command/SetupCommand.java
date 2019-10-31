@@ -50,7 +50,6 @@ public class SetupCommand extends Command {
                 }
             }
         }
-
         userName = inputs.get(1);
         stats.setUsername(userName);
 
@@ -72,5 +71,4 @@ public class SetupCommand extends Command {
         String responseString = "Hello " + gender + userName + "!";
         return responseString;
     }
-
 }
