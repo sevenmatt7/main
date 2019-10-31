@@ -30,8 +30,8 @@ public class UserStats {
     private String userDataFilePath;
     private String userName;
     private String gender;
-    private int level;
-    private int expLevel;
+    private String level;
+    private String expLevel;
 
     // Array of chapter stats
     private ArrayList<ChapterStat> chapterData;
@@ -58,8 +58,8 @@ public class UserStats {
         if (!file.isFile()) {
             this.userName = "Default";
             this.gender = "???";
-            this.level = 1;
-            this.expLevel = 0;
+            this.level = "1";
+            this.expLevel = "0";
         } else {
             //String contentsInFile = Storage.loadData(userDataFilePath);
             // parseString(userDataFilePath);
@@ -69,7 +69,7 @@ public class UserStats {
     /**
      * Constructor. Needs no explanation.
      */
-    public UserStats(String username, String gender, int level, int expLevel,
+    public UserStats(String username, String gender, String level, String expLevel,
                      ArrayList<ChapterStat> chapterData) {
         this.userName = username;
         this.gender = gender;
@@ -203,19 +203,19 @@ public class UserStats {
     }
 
     public int getUserLevel() {
-        return this.level;
+        return Integer.parseInt(this.level);
     }
 
     public void setUserLevel(int level) {
-        this.level = level;
+        this.level = Integer.toString(level);
     }
 
     public int getUserExp() {
-        return this.expLevel;
+        return Integer.parseInt(this.expLevel);
     }
 
     public void setUserExp(int expLevel) {
-        this.expLevel = expLevel;
+        this.expLevel = Integer.toString(expLevel);
     }
 
     /**
@@ -256,8 +256,8 @@ public class UserStats {
         String [] tokens = string.split("\n",8);
         String userName = tokens[2];
         String gender = tokens[3];
-        int level = Integer.parseInt(tokens[4]);
-        int expLevel = Integer.parseInt(tokens[5]);
+        String level = tokens[4];
+        String expLevel = tokens[5];
 
         // No chapters in the list, so exit early, otherwise will cause parsing error.
         if (tokens.length < 8) {
@@ -281,7 +281,7 @@ public class UserStats {
         chapters.add(new ChapterStat("Sorting",1,0,0,0,0,0,""));
         chapters.add(new ChapterStat("Linked List",2,0,0,0,0,0,""));
         chapters.add(new ChapterStat("Bitmask",3,0,0,0,0,0,""));
-        return new UserStats("Default", "????", 1, 0, chapters);
+        return new UserStats("Default", "????", "1", "0", chapters);
     }
 
     /**
