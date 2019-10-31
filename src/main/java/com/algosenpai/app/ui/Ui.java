@@ -71,10 +71,10 @@ public class Ui extends AnchorPane {
     private static final String GREETING_MESSAGE = "Welcome to AlgoSenpai Adventures!"
                                                    + " Type 'hello' followed by your name and gender"
                                                    + " (boy or girl) to start!";
-    private static final String BOY_PROFILE_PICTURE_PATH = "/images/boyplayer.jpg";
-    private static final String GIRL_PROFILE_PICTURE_PATH = "/images/girlplayer.png";
+    private static final String BOY_PROFILE_PICTURE_PATH = "/images/boychar.png";
+    private static final String GIRL_PROFILE_PICTURE_PATH = "/images/girlchar.png";
     private static final String DEFAULT_PROFILE_PICTURE_PATH = "/images/unknown.png";
-    private static final String SENPAI_PROFILE_PICTURE_PATH = "/images/miku.png";
+    private static final String SENPAI_PROFILE_PICTURE_PATH = "/images/algosenpai.png";
 
     private Image boyImage = new Image(this.getClass().getResourceAsStream(BOY_PROFILE_PICTURE_PATH));
     private Image girlImage = new Image(this.getClass().getResourceAsStream(GIRL_PROFILE_PICTURE_PATH));
@@ -101,22 +101,6 @@ public class Ui extends AnchorPane {
     public void setLogic(Logic logic, UserStats stats) {
         this.logic = logic;
         this.stats = stats;
-    }
-
-    /**
-     * Changes the user Image.
-     * @param input the input of the user which will either be "boy" or "girl".
-     */
-    public void changeUserImage(String input) {
-        if (input.equals("boy")) {
-            userImage = boyImage;
-            userPic.setImage(userImage);
-        } else if (input.equals("girl")) {
-            userImage = girlImage;
-            userPic.setImage(userImage);
-        } else {
-            userPic.setImage(userImage);
-        }
     }
 
     /**
@@ -258,9 +242,11 @@ public class Ui extends AnchorPane {
      */
     private void setPlayerGender(String response) {
         if (response.substring(6, 9).equals("Mr.")) {
-            changeUserImage("boy");
-        } else if (response.substring(6, 9).equals("Mrs")) {
-            changeUserImage("girl");
+            userImage = boyImage;
+            userPic.setImage(userImage);
+        } else if (response.substring(6, 9).equals("Ms.")) {
+            userImage = girlImage;
+            userPic.setImage(userImage);
         }
     }
 }
