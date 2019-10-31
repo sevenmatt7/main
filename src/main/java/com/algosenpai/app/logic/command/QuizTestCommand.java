@@ -75,11 +75,11 @@ public class QuizTestCommand extends QuizCommand {
                         + quizList.get(questionNumber.get()).getUserAnswer();
             } else {
                 // Updating all the user stats one shot in here
-//                UserStats userStats = UserStats.parseString(Storage.loadData("UserData.txt"));
-//                userStats.updateChapter(chapterNumber,10,userQuizScore);
-//                userStats.setUserExp(userStats.getUserExp() + userQuizScore);
-//                userStats.setUserLevel(userStats.getUserExp() / 20);
-//                userStats.saveUserStats("UserData.txt");
+                //UserStats userStats = UserStats.parseString(Storage.loadData("UserData.txt"));
+                //userStats.updateChapter(chapterNumber,10,userQuizScore);
+                //userStats.setUserExp(userStats.getUserExp() + userQuizScore);
+                //userStats.setUserLevel(userStats.getUserExp() / 20);
+                //userStats.saveUserStats("UserData.txt");
                 // End of updating
                 reset();
                 return calculateScore();
