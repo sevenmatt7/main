@@ -54,7 +54,7 @@ public class UserStats {
         this.chapterNumber.put("bitmask", 3);
         this.userDataFilePath = userDataFilePath;
 
-        File file = new File(String.valueOf(userDataFilePath));
+        File file = new File(userDataFilePath);
         if (!file.isFile()) {
             this.userName = "Default";
             this.gender = "???";

@@ -1,7 +1,9 @@
 package com.algosenpai.app.logic.command;
 
 import com.algosenpai.app.stats.UserStats;
+import com.algosenpai.app.storage.Storage;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -32,9 +34,23 @@ public class SetupCommand extends Command {
     }
 
     @Override
-    public String execute() throws IOException {
+    public String execute() {
         if (inputs.size() < 3) {
-            return "Could you type out the command in the correct format of 'hello NAME GENDER (boy/girl)' please";
+            File userData = new File("./UserData.txt");
+            if (!userData.isFile()) {
+                return "Could you type out the command in the correct format of 'hello NAME GENDER (boy/girl)' please";
+            } else {
+                UserStats previousStats = stats.parseString(Storage.loadData("./UserData.txt"));
+                if (previousStats.getGender().equals("boy")) {
+                    gender = "Mr. ";
+                    userName = previousStats.getUsername();
+                    return "Hello " + gender + userName + "!";
+                } else {
+                    gender = "Ms. ";
+                    userName = previousStats.getUsername();
+                    return "Hello " + gender + userName + "!";
+                }
+            }
         }
 
         userName = inputs.get(1);

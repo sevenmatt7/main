@@ -70,7 +70,9 @@ public class Ui extends AnchorPane {
 
     private static final String GREETING_MESSAGE = "Welcome to AlgoSenpai Adventures!"
                                                    + " Type 'hello' followed by your name and gender"
-                                                   + " (boy/girl) to start!";
+                                                   + " (boy/girl) to start!\n \n"
+                                                   + "If you have been here before,"
+                                                   + " type 'hello' to load your previous user data!";
     private static final String BOY_PROFILE_PICTURE_PATH = "/images/boychar.png";
     private static final String GIRL_PROFILE_PICTURE_PATH = "/images/girlchar.png";
     private static final String DEFAULT_PROFILE_PICTURE_PATH = "/images/unknown.png";
