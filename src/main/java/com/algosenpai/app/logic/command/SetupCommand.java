@@ -33,6 +33,10 @@ public class SetupCommand extends Command {
 
     @Override
     public String execute() throws IOException {
+        if (inputs.size() < 3) {
+            return "Could you type out the command in the correct format of 'hello NAME GENDER (boy/girl)' please";
+        }
+
         userName = inputs.get(1);
         stats.setUsername(userName);
 

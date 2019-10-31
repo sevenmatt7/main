@@ -105,8 +105,6 @@ public class Logic {
         default:
             return new InvalidCommand(inputs);
         }
-
-
     }
 
     /**
