@@ -1,7 +1,6 @@
 AlgoSenpai Adventures Overall Report
 
-abcde
-boy
 
-null
-null
+
+0
+0

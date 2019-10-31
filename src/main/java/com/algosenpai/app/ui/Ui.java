@@ -9,6 +9,7 @@ import com.algosenpai.app.logic.command.UndoCommand;
 import com.algosenpai.app.logic.command.QuizTestCommand;
 import com.algosenpai.app.stats.UserStats;
 import com.algosenpai.app.logic.parser.Parser;
+import com.algosenpai.app.storage.Storage;
 import com.algosenpai.app.ui.controller.AnimationTimerController;
 import com.algosenpai.app.ui.components.DialogBox;
 import javafx.animation.PauseTransition;
@@ -94,6 +95,7 @@ public class Ui extends AnchorPane {
         userPic.setImage(userImage);
         levelProgress.setProgress(0);
         playerLevel.setText("You are Level 1");
+        handle();
     }
 
     public void setLogic(Logic logic, UserStats stats) {
