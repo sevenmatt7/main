@@ -35,7 +35,7 @@ get started. Enjoy!
 time you start it.
 
 +
-image::Ui.png[width="790"]
+image::Ui.png[width="650"]
 +
 .  Type the command in the command box and press kbd:[Enter] to execute it. +
    e.g. typing *`menu`* and pressing kbd:[Enter] will list out all the commands that are recognised in the
