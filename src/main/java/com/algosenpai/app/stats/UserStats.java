@@ -65,8 +65,8 @@ public class UserStats {
             this.level = "1";
             this.expLevel = "0";
         } else {
-            String contentsInFile = Storage.loadData(userDataFilePath);
-//            parseString(userDataFilePath);
+            //String contentsInFile = Storage.loadData(userDataFilePath);
+            // parseString(userDataFilePath);
         }
     }
 
