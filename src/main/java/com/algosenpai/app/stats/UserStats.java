@@ -60,10 +60,28 @@ public class UserStats {
             this.gender = "???";
             this.level = "1";
             this.expLevel = "0";
+            chapterData.add(new ChapterStat("Sorting",1,0,0,0,0,0,""));
+            chapterData.add(new ChapterStat("Linked List",2,0,0,0,0,0,""));
+            chapterData.add(new ChapterStat("Bitmask",3,0,0,0,0,0,""));
+            Storage.saveData("./UserData.txt", this.toString());
         } else {
-            //String contentsInFile = Storage.loadData(userDataFilePath);
-            // parseString(userDataFilePath);
-            UserStats.parseString(Storage.loadData("./UserData.txt"));
+            String fileContents = Storage.loadData("./UserData.txt");
+
+            // Get the first 6 lines. 6th line contains the chapterData.
+            String [] tokens = fileContents.split("\n",8);
+            this.userName = tokens[2];
+            this.gender = tokens[3];
+            this.level = tokens[4];
+            this.expLevel = tokens[5];
+
+            // No chapters in the list, so exit early, otherwise will cause parsing error.
+            if (tokens.length > 7) {
+                // Each chapter's data is separated by 2 newlines, so split like this to get the chapterData
+                String[] chapterDataTokens = tokens[7].split("\n\n");
+                for (String chapterString: chapterDataTokens) {
+                    this.chapterData.add(ChapterStat.parseString(chapterString));
+                }
+            }
         }
     }
 
@@ -277,12 +295,12 @@ public class UserStats {
      * Get the default UserStats (if the user launches the game for the first time).
      * @return The UserStats object.
      */
-    public static UserStats getDefaultUserStats() {
+    public static UserStats getDefaultUserStats(String username, String gender) {
         ArrayList<ChapterStat> chapters = new ArrayList<>();
         chapters.add(new ChapterStat("Sorting",1,0,0,0,0,0,""));
         chapters.add(new ChapterStat("Linked List",2,0,0,0,0,0,""));
         chapters.add(new ChapterStat("Bitmask",3,0,0,0,0,0,""));
-        return new UserStats("Default", "????", "1", "0", chapters);
+        return new UserStats(username, gender, "1", "0", chapters);
     }
 
     /**

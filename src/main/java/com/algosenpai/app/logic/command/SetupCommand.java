@@ -43,9 +43,13 @@ public class SetupCommand extends Command {
         if (inputs.get(2).equals("boy")) {
             gender = "Mr. ";
             stats.setGender("boy");
+            stats.setUserLevel(1);
+            stats.setUserExp(0);
         } else if (inputs.get(2).equals("girl")) {
             gender = "Ms. ";
             stats.setGender("girl");
+            stats.setUserLevel(1);
+            stats.setUserExp(0);
         } else {
             return "Could you enter the setup command again with the appropriate gender?";
         }
