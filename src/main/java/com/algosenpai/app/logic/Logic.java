@@ -73,7 +73,7 @@ public class Logic {
         case "hello":
             return new SetupCommand(inputs, userStats);
         case "help":
-            return new HelpCommand(inputs);
+            return new HelpCommand(inputs, userStats);
         case "menu":
             return new MenuCommand(inputs);
         case "select":
