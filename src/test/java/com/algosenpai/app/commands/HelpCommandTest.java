@@ -47,9 +47,8 @@ public class HelpCommandTest extends ApplicationTest {
     }
 
     @Test
-    void testHelpMousePress() {
-        clickOn("#userInput").write("help sorting");
-        clickOn("#sendButton");
+    void testHelpKeyPress() {
+        clickOn("#userInput").write("help sorting").press(KeyCode.ENTER);
         VBox container = find();
         DialogBox dialogBox = (DialogBox) container.getChildren().get(1);
         String actualText = dialogBox.getDialog().getText();
@@ -57,8 +56,9 @@ public class HelpCommandTest extends ApplicationTest {
     }
 
     @Test
-    void testHelpKeyPress() {
-        clickOn("#userInput").write("help sorting").press(KeyCode.ENTER);
+    void testHelpMousePress() {
+        clickOn("#userInput").write("help sorting");
+        clickOn("#sendButton");
         VBox container = find();
         DialogBox dialogBox = (DialogBox) container.getChildren().get(1);
         String actualText = dialogBox.getDialog().getText();
