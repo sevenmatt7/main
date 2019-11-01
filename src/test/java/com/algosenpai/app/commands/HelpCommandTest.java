@@ -54,16 +54,7 @@ public class HelpCommandTest extends ApplicationTest {
         String actualText = dialogBox.getDialog().getText();
         Assertions.assertEquals("help sorting", actualText);
     }
-
-    @Test
-    void testHelpMousePress() {
-        clickOn("#userInput").write("help sorting");
-        clickOn("#sendButton");
-        VBox container = find();
-        DialogBox dialogBox = (DialogBox) container.getChildren().get(1);
-        String actualText = dialogBox.getDialog().getText();
-        Assertions.assertEquals("help sorting", actualText);
-    }
+    
 
     @Test
     void testHelpWithSpace() {
