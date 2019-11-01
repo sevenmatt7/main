@@ -7,8 +7,6 @@ plugins {
     id 'jacoco'
 }
 
-
-
 checkstyle {
     toolVersion = '8.23'
 }
@@ -45,23 +43,22 @@ run {
 }
 
 dependencies {
-    String javaFxVersion = '11'
-
-    implementation group: 'org.openjfx', name: 'javafx-base', version: javaFxVersion, classifier: 'win'
-    implementation group: 'org.openjfx', name: 'javafx-base', version: javaFxVersion, classifier: 'mac'
-    implementation group: 'org.openjfx', name: 'javafx-base', version: javaFxVersion, classifier: 'linux'
-    implementation group: 'org.openjfx', name: 'javafx-controls', version: javaFxVersion, classifier: 'win'
-    implementation group: 'org.openjfx', name: 'javafx-controls', version: javaFxVersion, classifier: 'mac'
-    implementation group: 'org.openjfx', name: 'javafx-controls', version: javaFxVersion, classifier: 'linux'
-    implementation group: 'org.openjfx', name: 'javafx-fxml', version: javaFxVersion, classifier: 'win'
-    implementation group: 'org.openjfx', name: 'javafx-fxml', version: javaFxVersion, classifier: 'mac'
-    implementation group: 'org.openjfx', name: 'javafx-fxml', version: javaFxVersion, classifier: 'linux'
-    implementation group: 'org.openjfx', name: 'javafx-graphics', version: javaFxVersion, classifier: 'win'
-    implementation group: 'org.openjfx', name: 'javafx-graphics', version: javaFxVersion, classifier: 'mac'
-    implementation group: 'org.openjfx', name: 'javafx-graphics', version: javaFxVersion, classifier: 'linux'
-    implementation group: 'org.openjfx', name: 'javafx-media', version: javaFxVersion, classifier: 'win'
-    implementation group: 'org.openjfx', name: 'javafx-media', version: javaFxVersion, classifier: 'mac'
-    implementation group: 'org.openjfx', name: 'javafx-media', version: javaFxVersion, classifier: 'linux'
+    
+    implementation group: 'org.openjfx', name: 'javafx-base', version: '11', classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-base', version: '11', classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-base', version: '11', classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-controls', version: '11', classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-controls', version: '11', classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-controls', version: '11', classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-fxml', version: '11', classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-fxml', version: '11', classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-fxml', version: '11', classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-graphics', version: '11', classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-graphics', version: '11', classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-graphics', version: '11', classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-media', version: '11', classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-media', version: '11', classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-media', version: '11', classifier: 'linux'
 
     implementation 'com.itextpdf:itextpdf:5.5.10'
     implementation 'org.bouncycastle:bcprov-jdk15on:1.56'
