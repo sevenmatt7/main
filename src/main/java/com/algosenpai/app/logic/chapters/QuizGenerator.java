@@ -30,7 +30,8 @@ public class QuizGenerator {
             for (int i = 7; i < 10; i++) {
                 questionList.add(ChapterBitmask.generateQuestions());
             }
-        } if (selectedChapters == 1) {
+        }
+        if (selectedChapters == 1) {
             //generate only sorting questions
             for (int i = 0; i < 10; i++) {
                 questionList.add(ChapterSorting.generateQuestions());
