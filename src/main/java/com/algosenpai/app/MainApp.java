@@ -1,7 +1,6 @@
 package com.algosenpai.app;
 
 import com.algosenpai.app.stats.UserStats;
-;
 import com.algosenpai.app.ui.Ui;
 import com.algosenpai.app.ui.controller.MusicController;
 import javafx.animation.PauseTransition;
