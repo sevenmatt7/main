@@ -66,3 +66,125 @@ test {
     systemProperty 'testfx.setup.timeout', '2500'
 
 }
+
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'checkstyle'
+    id 'com.github.kt3k.coveralls' version '2.4.0'
+    id 'com.github.johnrengelman.shadow' version '4.0.4'
+    id 'org.asciidoctor.convert' version '1.5.6'
+    id 'application'
+}
+
+// Specifies the entry point of the application
+mainClassName = 'seedu.address.Main'
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+}
+
+checkstyle {
+    toolVersion = '8.1'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    String jUnitVersion = '5.4.0'
+    String javaFxVersion = '11'
+
+    implementation group: 'org.openjfx', name: 'javafx-base', version: javaFxVersion, classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-base', version: javaFxVersion, classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-base', version: javaFxVersion, classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-controls', version: javaFxVersion, classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-controls', version: javaFxVersion, classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-controls', version: javaFxVersion, classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-fxml', version: javaFxVersion, classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-fxml', version: javaFxVersion, classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-fxml', version: javaFxVersion, classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-graphics', version: javaFxVersion, classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-graphics', version: javaFxVersion, classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-graphics', version: javaFxVersion, classifier: 'linux'
+
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.7.0'
+    implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.7.4'
+
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: jUnitVersion
+
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: jUnitVersion
+}
+
+shadowJar {
+    archiveName = 'addressbook.jar'
+
+    destinationDir = file("${buildDir}/jar/")
+}
+
+task coverage(type: JacocoReport) {
+    sourceDirectories.from files(sourceSets.main.allSource.srcDirs)
+    classDirectories.from files(sourceSets.main.output)
+    executionData.from files(jacocoTestReport.executionData)
+    afterEvaluate {
+        classDirectories.from files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: ['**/*.jar'])
+        })
+    }
+    reports {
+        html.enabled = true
+        xml.enabled = true
+    }
+}
+
+asciidoctor {
+    backends 'html5'
+    sourceDir 'docs'
+    outputDir "${buildDir}/docs"
+
+    options = [
+            template_dirs: [file("${sourceDir}/templates")],
+    ]
+
+    attributes = [
+            linkcss: true,
+            stylesheet: 'gh-pages.css',
+            'source-highlighter': 'coderay',
+            icons: 'font',
+            experimental: true,
+            sectlinks: true,
+            idprefix: '',  // for compatibility with GitHub preview
+            idseparator: '-',
+            'site-root': "${sourceDir}",  // must be the same as sourceDir, do not modify
+            'site-name': 'AlgoSenpai Adventures',
+            'site-githuburl': 'https://github.com/AY1920S1-CS2113T-T09-3/main',
+    ]
+
+    options['template_dirs'].each {
+        inputs.files fileTree(it)
+    }
+}
+
+// Copies stylesheets into the directory containing generated HTML files as
+// Asciidoctor does not copy linked CSS files to the output directory when rendering.
+// This is needed for linked stylesheets and embedded stylesheets which import other files.
+task copyStylesheets(type: Copy) {
+    from "${asciidoctor.sourceDir}/stylesheets"
+    into "${asciidoctor.outputDir}/html5/stylesheets"
+}
+asciidoctor.dependsOn copyStylesheets
+
+defaultTasks 'clean', 'test', 'coverage', 'asciidoctor'
