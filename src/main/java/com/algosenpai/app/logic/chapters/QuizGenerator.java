@@ -19,7 +19,7 @@ public class QuizGenerator {
     public ArrayList<QuestionModel> generateQuiz(int selectedChapters, ArrayList<QuestionModel> questionList) {
         questionList = new ArrayList<>();
 
-        if (selectedChapters == 0) {
+        if (selectedChapters == 1) {
             //by default, generate questions from all the chapters
             for (int i = 0; i < 4; i++) {
                 questionList.add(ChapterSorting.generateQuestions());
@@ -30,7 +30,7 @@ public class QuizGenerator {
             for (int i = 7; i < 10; i++) {
                 questionList.add(ChapterBitmask.generateQuestions());
             }
-        } else if (selectedChapters == 1) {
+        } if (selectedChapters == 1) {
             //generate only sorting questions
             for (int i = 0; i < 10; i++) {
                 questionList.add(ChapterSorting.generateQuestions());

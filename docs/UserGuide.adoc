@@ -230,23 +230,29 @@ Format : `exit`
 
 == Command Summary
 
-* *Menu* `menu`
-* *Start* : `start`
-* *Select* : `select CHAPTER` +
+* *hello* `hello`
+* *menu* : `menu`
+* *quiz* : `quiz`
+* *quiz ANSWER* : `quiz ANSWER`
+* *quiz BACK* : `quiz back`
+* *quiz NEXT* : `quiz next`
+* *quiz END* : `quiz end`
+* *select* : `select CHAPTER` +
 e.g. `select sorting`
-* *Result* : `result`
-* *Report* : `report`
-* *Back* : `back`
-* *History* : `history NUMBER` +
+* *result* : `result`
+* *history* : `history NUMBER` +
 e.g. `history 5`
-* *Undo* : `undo`
-* *Clear* : `clear CHAPTER` +
-e.g.`clear 2`
-* *Reset* : `reset`
-* *Save* : `save`
+* *Undo* : `undo NUMBER` +
+e.g. `undo 1`
+* *Clear* : `clear`
 * *Help* : `help CHAPTER` +
 e.g. `help sorting`
+* *Volume* : `volume LEVEL_NUMBER` +
+e.g. `volume 1`
+* *Print* : `print DATA_SOURCE FILENAME` +
+e.g `print user MyData`
+* *Archive* : `archive QUESTION_NUMBER` +
+e.g. `archive 1`
+* *Save* : `save`
+* *Reset* : `reset`
 * *Exit* : `exit`
-* *Print* : `print`
-* *Archive* : `archive`
-
