@@ -25,8 +25,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
@@ -60,7 +58,7 @@ public class Ui extends AnchorPane {
 
     private Logic logic;
     private UserStats stats;
-    private int maxuserExp = 50;
+    private int maxuserExp = 8;
     private int userExp = 0;
     private int idleMinutesMax = 180;
     private int userLevel = 1;

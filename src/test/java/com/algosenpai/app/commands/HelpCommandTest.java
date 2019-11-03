@@ -54,6 +54,7 @@ public class HelpCommandTest extends ApplicationTest {
         String actualText = dialogBox.getDialog().getText();
         Assertions.assertEquals("help sorting", actualText);
     }
+    
 
 
     @Test
