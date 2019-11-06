@@ -10,6 +10,7 @@ import com.algosenpai.app.stats.UserStats;
 import com.algosenpai.app.logic.parser.Parser;
 import com.algosenpai.app.ui.controller.AnimationTimerController;
 import com.algosenpai.app.ui.components.DialogBox;
+import com.algosenpai.app.utility.AutoCompleteHelper;
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -21,11 +22,14 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Set;
 
 /**
  * Controller for MainWindow. Provides the layout for the other controls.
@@ -62,6 +66,11 @@ public class Ui extends AnchorPane {
     private int userExp = 0;
     private int idleMinutesMax = 180;
     private int userLevel = 1;
+
+    private boolean keyPressed = false;
+    // How many inputs in the past the user wants to access
+    private int inputHistoryOffset = 0;
+
     private static final String GREETING_MESSAGE = "Welcome to AlgoSenpai Adventures!"
                                                    + " Type 'hello' followed by your name and gender"
                                                    + " (boy/girl) to start!\n \n"
@@ -77,18 +86,37 @@ public class Ui extends AnchorPane {
     private Image userImage = new Image(this.getClass().getResourceAsStream(DEFAULT_PROFILE_PICTURE_PATH));
     private Image senpaiImage = new Image(this.getClass().getResourceAsStream(SENPAI_PROFILE_PICTURE_PATH));
 
+    
     /**
      * Renders the nodes on the GUI.
      */
     @FXML
     public void initialize() {
         scrollPane.vvalueProperty().bind(dialogContainer.heightProperty());
-        dialogContainer.getChildren().add(DialogBox.getSenpaiDialog(GREETING_MESSAGE, senpaiImage));
+        String response = new SetupCommand(new ArrayList<>()).execute();
+        if (response.contains("Welcome back")) {
+            new SetupCommand(new ArrayList<>());
+            userLevel = SetupCommand.getLevel();
+            maxuserExp = maxuserExp << (userLevel - 1);
+            userExp = SetupCommand.getExpLevel();
+            String gender = SetupCommand.getGender();
+            updateLevelProgress(0);
+            String username = "Username : " + SetupCommand.getUserName();
+            setPlayerGender(gender);
+            playerName.setText(username);
+        }
+        dialogContainer.getChildren().add(DialogBox.getSenpaiDialog(response, senpaiImage));
         handle();
         userPic.setImage(userImage);
-        userInput.setPromptText("Enter a command (Enter \"menu\" to see a list of commands");
-        levelProgress.setProgress(0);
-        playerLevel.setText("You are Level 1");
+        userInput.setPromptText("Enter a command (Enter \"menu\" to see a list of commands)");
+        // Add a listener to monitor for Arrow keys and Tab.
+        userInput.setOnKeyPressed(keyEvent -> {
+            if (!keyPressed) {
+                handleKeyPress(keyEvent.getCode());
+                keyPressed = true;
+            }
+        });
+        userInput.setOnKeyReleased(keyEvent -> keyPressed = false);
         handle();
     }
 
@@ -102,20 +130,33 @@ public class Ui extends AnchorPane {
      */
     @FXML
     private void handleUserInput() throws IOException {
+
         resetIdle();
         String input = userInput.getText();
         Command commandGenerated = logic.executeCommand(input);
         String response = commandGenerated.execute();
 
         if (commandGenerated instanceof UndoCommand) {
-            undoChat(response, input, response);
+            if (dialogContainer.getChildren().isEmpty()) {
+                printSenpaiText("There are no more chats to undo!", senpaiImage);
+                handleUndoAfterClear();
+            } else {
+                undoChat(response, input, response);
+            }
         } else if (commandGenerated instanceof ClearCommand) {
             clearChat();
         } else if (commandGenerated instanceof ByeCommand) {
+            printToGui(input, response, userImage, senpaiImage);
             exit();
         } else if (commandGenerated instanceof SetupCommand) {
-            setPlayerGender(response);
-            playerName.setText(response);
+            setPlayerGender(SetupCommand.getGender());
+            userLevel = SetupCommand.getLevel();
+            maxuserExp = 8 << (userLevel - 1);
+            userExp = SetupCommand.getExpLevel();
+            System.out.println(userLevel);
+            System.out.println(maxuserExp);
+            updateLevelProgress(0);
+            playerName.setText("Username : " + SetupCommand.getUserName());
             printToGui(input, response, userImage, senpaiImage);
         } else if (response.startsWith("You got ")) {
             String[] resp = response.split(" ");
@@ -125,6 +166,36 @@ public class Ui extends AnchorPane {
         } else {
             printToGui(input, response, userImage, senpaiImage);
         }
+    }
+
+    @FXML
+    private void handleKeyPress(KeyCode k) {
+        // Get the previous and next commands from the historyList inside logic.
+        if (k == KeyCode.UP) {
+            userInput.setText(logic.getPreviousCommand());
+            // Puts the cursor to the front of the text, overriding the default behaviour of arrow keys.
+            userInput.positionCaret(userInput.getText().length());
+        } else if (k == KeyCode.DOWN) {
+            userInput.setText(logic.getNextCommand());
+            userInput.positionCaret(userInput.getText().length());
+        } else if (k == KeyCode.TAB) {
+            // Replace text with autocomplete best match.
+            // If no match is found, text is unchanged.
+            userInput.setText(AutoCompleteHelper.autoCompleteCommand(userInput.getText()));
+            // Bring focus back to textfield to prevent the default behaviour of tab.
+            userInput.requestFocus();
+
+            // Un select the text (selected by default).
+            userInput.deselect();
+            // Puts the cursor to the front of the text.
+            userInput.positionCaret(userInput.getText().length());
+
+
+        }
+
+
+
+
     }
 
     /**
@@ -222,6 +293,20 @@ public class Ui extends AnchorPane {
         animationTimerController.start();
     }
 
+    private void handleUndoAfterClear() {
+        AnimationTimerController animationTimerController = new AnimationTimerController(1000) {
+            @Override
+            public void handle() {
+                if (idleMinutesMax > 170) {
+                    idleMinutesMax--;
+                } else {
+                    clearChat();
+                }
+            }
+        };
+        animationTimerController.start();
+    }
+
     /**
      * Update the EXP Level of the user in the progress bar in the GUI.
      * @param expGain the double representing the gain in EXP to be reflected.
@@ -231,11 +316,10 @@ public class Ui extends AnchorPane {
         if (userExp > maxuserExp) {
             userExp -= maxuserExp;
             userLevel++;
-            playerLevel.setText("You are Level " + userLevel + ".");
             maxuserExp *= 2;
         }
+        playerLevel.setText("You are Level " + userLevel + ".");
         double userProgress = (double) userExp / maxuserExp;
-
         levelProgress.setProgress(userProgress);
     }
 
@@ -244,10 +328,10 @@ public class Ui extends AnchorPane {
      * @param response the response string generated by the program.
      */
     private void setPlayerGender(String response) {
-        if (response.substring(6, 9).equals("Mr.")) {
+        if (response.equals("boy")) {
             userImage = boyImage;
             userPic.setImage(userImage);
-        } else if (response.substring(6, 9).equals("Ms.")) {
+        } else if (response.equals("girl")) {
             userImage = girlImage;
             userPic.setImage(userImage);
         }

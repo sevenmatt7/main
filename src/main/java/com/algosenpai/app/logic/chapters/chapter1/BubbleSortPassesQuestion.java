@@ -1,7 +1,6 @@
 package com.algosenpai.app.logic.chapters.chapter1;
 
 import com.algosenpai.app.logic.chapters.Question;
-import com.algosenpai.app.logic.models.QuestionModel;
 import com.algosenpai.app.logic.models.ReviewTracingListModel;
 
 import java.util.ArrayList;
@@ -53,10 +52,10 @@ public class BubbleSortPassesQuestion extends Question {
         question = "An array of " + arraySize + " elements underwent the following Bubble Sort Algorithm : "
                 + initialArray + "\n";
         question += "What would be the new configuration of the elements after " + passes + " passes?\n"
-                + "Please provide your answer in comma-separated format. e.g. x, y, z, ...\n\n";
+                + "Please provide your answer in space-separated format. e.g. x y z ...\n\n";
         question += "for (int i = 0; i < passes; i++) {\n" + "   for (int j = 0; j < arr.size - 1 - i; j ++) {\n"
                 + "       if (arr[j] > arr[j + 1]) {\n" + "            swap (arr[j], arr[j+1]);\n" + "       }\n"
-                + "   }\n" + "}\n\n";
+                + "   }\n" + "}\n";
     }
 
     /**
@@ -82,24 +81,24 @@ public class BubbleSortPassesQuestion extends Question {
      */
     private static void bubbleSort(ArrayList<Integer> arr, int passes) {
         rtlm = new ReviewTracingListModel();
-        rtlm.addReviewTracingModel("This is the array at the start.");
-        rtlm.addReviewTracingModel(arr.toString());
+        rtlm.addReviewStep("This is the array at the start.");
+        rtlm.addReviewStep(arr.toString());
         for (int i = 0; i < passes; i++) {
-            rtlm.addReviewTracingModel("Pass " + (i + 1) + " : ");
+            rtlm.addReviewStep("Pass " + (i + 1) + " : ");
             for (int j = 0; j < arr.size() - 1 - i; j++) {
                 int first = arr.get(j);
                 int second = arr.get(j + 1);
                 if (first > second) {
-                    rtlm.addReviewTracingModel("Since " + first + " is smaller than " + second + ", swap.");
+                    rtlm.addReviewStep("Since " + first + " is smaller than " + second + ", swap.");
                     arr.set(j, second);
                     arr.set(j + 1, first);
                 } else {
-                    rtlm.addReviewTracingModel("Since " + first + " is larger than " + second + ", ignore.");
+                    rtlm.addReviewStep("Since " + first + " is larger than " + second + ", ignore.");
                 }
-                rtlm.addReviewTracingModel(arr.toString());
+                rtlm.addReviewStep(arr.toString());
             }
-            rtlm.addReviewTracingModel("This is the array after " + (i + 1) + " pass");
-            rtlm.addReviewTracingModel(arr.toString());
+            rtlm.addReviewStep("This is the array after " + (i + 1) + " pass");
+            rtlm.addReviewStep(arr.toString());
         }
     }
 }

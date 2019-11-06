@@ -2,7 +2,10 @@
 
 package com.algosenpai.app.logic.command;
 
-import com.algosenpai.app.logic.constant.Commands;
+import com.algosenpai.app.logic.constant.CommandsEnum;
+import com.algosenpai.app.logic.parser.Parser;
+import com.algosenpai.app.stats.UserStats;
+import com.algosenpai.app.storage.Storage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,13 +22,25 @@ public class InvalidCommand extends Command {
 
     @Override
     public String execute() {
-        String input = "";
-        for (String i : inputs) {
-            if (!Commands.isInteger(i)) {
-                input += i;
+        UserStats previousStats = UserStats.parseString(Storage.loadData("UserData.txt"));
+        if (previousStats.getUsername().equals("Default")) {
+            return "Hello there! Welcome to the world of DATA STRUCTURES AND ALGORITHMS.\n"
+                    + "Can I have your name and gender in the format : 'hello NAME GENDER (boy/girl)' please.";
+        } else {
+            String input = "";
+            for (String i : inputs) {
+                if (Parser.allCharacters(i)) {
+                    input += i.toLowerCase();
+                }
+            }
+            if (!compare(input).isEmpty()) {
+                return "OOPS!!! Error occurred. Please input a valid command. Did you mean... " + compare(input) + "?";
+            } else {
+                return "Sorry please input a valid command. "
+                        + "Enter `menu` to view our list of commands "
+                        + "and `menu <command> to find out how to use them!";
             }
         }
-        return "Sorry please input a valid command. Did you mean... " + compare(input);
     }
 
     /**
@@ -36,22 +51,30 @@ public class InvalidCommand extends Command {
 
     private static String compare(String input) {
         int num = 100;
-        List<String> name = Commands.getNames();
+        List<String> name = CommandsEnum.getNames();
         ArrayList<String> strings = new ArrayList<>();
 
         for (String s: name) {
-            int temp = editDist(input, s, input.length(), s.length());
-            if (temp < num) {
-                num = temp;
+            if (s.startsWith(input)) {
                 if (!strings.isEmpty()) {
                     clear(strings);
                 }
                 strings.add(s);
-            } else if (temp == num) {
-                strings.add(s);
+                break;
+            } else {
+                int temp = editDist(input, s, input.length(), s.length());
+                if (temp < num) {
+                    num = temp;
+                    if (!strings.isEmpty()) {
+                        clear(strings);
+                    }
+                    strings.add(s);
+                } else if (temp == num) {
+                    strings.add(s);
+                }
             }
         }
-        return strings.toString();
+        return strings.toString().replace("[", "").replace("]","");
     }
 
     /**
@@ -77,7 +100,6 @@ public class InvalidCommand extends Command {
         if (input.charAt(x - 1) == known.charAt(y - 1)) {
             return editDist(input, known, x - 1, y - 1);
         }
-
         return 1 + minimum(editDist(input, known, x, y - 1), editDist(input, known, x - 1, y),
         editDist(input, known, x - 1, y - 1));
     }
