@@ -1,11 +1,11 @@
 package com.algosenpai.app.ui;
 
 import com.algosenpai.app.logic.Logic;
-import com.algosenpai.app.logic.command.ByeCommand;
-import com.algosenpai.app.logic.command.ClearCommand;
+import com.algosenpai.app.logic.command.critical.ByeCommand;
+import com.algosenpai.app.logic.command.utility.ClearCommand;
 import com.algosenpai.app.logic.command.Command;
-import com.algosenpai.app.logic.command.SetupCommand;
-import com.algosenpai.app.logic.command.UndoCommand;
+import com.algosenpai.app.logic.command.utility.SetupCommand;
+import com.algosenpai.app.logic.command.utility.UndoCommand;
 import com.algosenpai.app.stats.UserStats;
 import com.algosenpai.app.logic.parser.Parser;
 import com.algosenpai.app.ui.controller.AnimationTimerController;
@@ -29,7 +29,6 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Set;
 
 /**
  * Controller for MainWindow. Provides the layout for the other controls.
@@ -67,15 +66,10 @@ public class Ui extends AnchorPane {
     private int idleMinutesMax = 180;
     private int userLevel = 1;
 
+    // A flag to prevent a key *held down* from being interpreted as multiple key Presses.
+    // Once keyPressed is true, subsequent keypress events are ignored.
     private boolean keyPressed = false;
-    // How many inputs in the past the user wants to access
-    private int inputHistoryOffset = 0;
 
-    private static final String GREETING_MESSAGE = "Welcome to AlgoSenpai Adventures!"
-                                                   + " Type 'hello' followed by your name and gender"
-                                                   + " (boy/girl) to start!\n \n"
-                                                   + "If you have been here before,"
-                                                   + " type 'hello' to load your previous user data!";
     private static final String BOY_PROFILE_PICTURE_PATH = "/images/boychar.jpg";
     private static final String GIRL_PROFILE_PICTURE_PATH = "/images/girlchar.jpg";
     private static final String DEFAULT_PROFILE_PICTURE_PATH = "/images/unknown.png";
@@ -108,14 +102,18 @@ public class Ui extends AnchorPane {
         dialogContainer.getChildren().add(DialogBox.getSenpaiDialog(response, senpaiImage));
         handle();
         userPic.setImage(userImage);
-        userInput.setPromptText("Enter a command (Enter \"menu\" to see a list of commands)");
+
+        userInput.setPromptText("Enter a command (Enter \"menu\" to see a list of commands");
+
         // Add a listener to monitor for Arrow keys and Tab.
         userInput.setOnKeyPressed(keyEvent -> {
             if (!keyPressed) {
                 handleKeyPress(keyEvent.getCode());
+                // Set flag to true to ignore any more keypress events when that key is helld down.
                 keyPressed = true;
             }
         });
+        // Reset the flag when the key is released.
         userInput.setOnKeyReleased(keyEvent -> keyPressed = false);
         handle();
     }
@@ -149,18 +147,10 @@ public class Ui extends AnchorPane {
             printToGui(input, response, userImage, senpaiImage);
             exit();
         } else if (commandGenerated instanceof SetupCommand) {
-            setPlayerGender(SetupCommand.getGender());
-            userLevel = SetupCommand.getLevel();
-            maxuserExp = 8 << (userLevel - 1);
-            userExp = SetupCommand.getExpLevel();
-            System.out.println(userLevel);
-            System.out.println(maxuserExp);
-            updateLevelProgress(0);
-            playerName.setText("Username : " + SetupCommand.getUserName());
+            setupPlayer();
             printToGui(input, response, userImage, senpaiImage);
         } else if (response.startsWith("You got ")) {
-            String[] resp = response.split(" ");
-            int expGain = Integer.parseInt(resp[7]);
+            int expGain = Integer.parseInt(response.split(" ")[7]);
             updateLevelProgress(expGain);
             printToGui(input, response, userImage, senpaiImage);
         } else {
@@ -168,6 +158,24 @@ public class Ui extends AnchorPane {
         }
     }
 
+    /**
+     * Sets up the user's information such as gender, level, exp.
+     * Updates the level on the UI, as well as the username.
+     */
+    private void setupPlayer() {
+        setPlayerGender(SetupCommand.getGender());
+        userLevel = SetupCommand.getLevel();
+        maxuserExp = 8 << (userLevel - 1);
+        userExp = SetupCommand.getExpLevel();
+        updateLevelProgress(0);
+        playerName.setText("Username : " + SetupCommand.getUserName());
+    }
+
+    /**
+     * Handles any keypresses when the userInput is in focus. Currently it responds to UP/DOWN to navigate through
+     * history and TAB to auto complete words. Other keys are ignored.
+     * @param k The Keycode of the key pressed.
+     */
     @FXML
     private void handleKeyPress(KeyCode k) {
         // Get the previous and next commands from the historyList inside logic.
@@ -189,13 +197,7 @@ public class Ui extends AnchorPane {
             userInput.deselect();
             // Puts the cursor to the front of the text.
             userInput.positionCaret(userInput.getText().length());
-
-
         }
-
-
-
-
     }
 
     /**
