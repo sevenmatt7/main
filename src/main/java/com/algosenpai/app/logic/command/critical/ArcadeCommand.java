@@ -10,6 +10,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class ArcadeCommand extends Command {
 
     private static int highScore = 0;
+    private static int currArcadeScore = 0;
     private AtomicBoolean isArcadeMode;
     private QuizGenerator quizGenerator = new QuizGenerator();
 
@@ -31,10 +32,10 @@ public class ArcadeCommand extends Command {
     public String execute() {
         if (!isArcadeMode.get()) {
             isArcadeMode.set(true);
-            String question = currQuestion.getQuestion();
+            String questionToBeDisplayed = currQuestion.getQuestion();
             previousQuestion = currQuestion.copy();
             currQuestion = quizGenerator.generateQuestion();
-            return question;
+            return questionToBeDisplayed;
         } else {
             if (inputs.size() > 0) {
                 String userAnswer = extractUserAnswerFromInput();
@@ -42,7 +43,7 @@ public class ArcadeCommand extends Command {
                 if (previousQuestion.checkAnswer()) {
                     previousQuestion = currQuestion.copy();
                     currQuestion = quizGenerator.generateQuestion();
-                    highScore++;
+                    currArcadeScore++;
                     return previousQuestion.getQuestion();
                 } else {
                     return reset();
@@ -57,9 +58,16 @@ public class ArcadeCommand extends Command {
         isArcadeMode.set(false);
         previousQuestion = null;
         currQuestion = null;
-        int currentScore = highScore;
-        highScore = 0;
-        return "Your Arcade High Score is : " + currentScore;
+        if (currArcadeScore > highScore) {
+            highScore = currArcadeScore;
+            currArcadeScore = 0;
+            return "Your arcade score is: " + currArcadeScore
+                    + "\nCongratulations! You set a new high score!";
+        } else {
+            currArcadeScore = 0;
+            return "Your arcade score is : " + currArcadeScore
+                    + "\nYour arcade high score is: " + highScore;
+        }
     }
 
     /**
