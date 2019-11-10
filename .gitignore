@@ -20,3 +20,4 @@ bin/
 ./*.pdf
 ./*.txt
 UserData.txt
+./*.jar
