@@ -42,7 +42,13 @@ public class UserStats {
     private ChapterStat currentChapter;
 
     //Maps the chapter names to an index value
-    private HashMap<String, Integer> chapterNumber = new HashMap<>();
+    private HashMap<String, Integer> chapterNumber = new HashMap<>() {
+        {
+            put("sorting", 1);
+            put("linkedlist", 2);
+            put("bitmask", 3);
+        }
+    };
 
     /**
      * Constructs a new UserStats by reading in from the UserData text file.
@@ -51,9 +57,6 @@ public class UserStats {
      */
     public UserStats(String userDataFilePath) throws FileParsingException {
         chapterData = new ArrayList<>();
-        this.chapterNumber.put("sorting", 1);
-        this.chapterNumber.put("linkedlist", 2);
-        this.chapterNumber.put("bitmask", 3);
         this.userDataFilePath = userDataFilePath;
 
         File file = new File(userDataFilePath);
