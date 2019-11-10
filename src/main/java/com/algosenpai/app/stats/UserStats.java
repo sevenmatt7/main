@@ -254,6 +254,11 @@ public class UserStats {
         this.expLevel = expLevel;
     }
 
+    public double getPercentageofQuestionsCorrect(int index) {
+        ChapterStat currentChapter = chapterData.get(index);
+        return currentChapter.getPercentage();
+    }
+
     /**
      * Gets the statistics for the current chapter.
      * @return a pair containing the number of correct answers and the total questions answered.
