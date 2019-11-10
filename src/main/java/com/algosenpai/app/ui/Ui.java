@@ -1,5 +1,6 @@
 package com.algosenpai.app.ui;
 
+import com.algosenpai.app.exceptions.FileParsingException;
 import com.algosenpai.app.logic.Logic;
 import com.algosenpai.app.logic.command.critical.ByeCommand;
 import com.algosenpai.app.logic.command.critical.ResetCommand;
@@ -143,7 +144,7 @@ public class Ui extends AnchorPane {
      * Handles user inputs and renders outputs on screen.
      */
     @FXML
-    private void handleUserInput() throws IOException {
+    private void handleUserInput() throws IOException, FileParsingException {
         resetIdle();
         String input = userInput.getText();
         Command commandGenerated = logic.executeCommand(input);

@@ -1,8 +1,10 @@
 package com.algosenpai.app.logic.command;
 
+import com.algosenpai.app.exceptions.FileParsingException;
 import com.algosenpai.app.stats.UserStats;
 import com.algosenpai.app.storage.Storage;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class HelpCommand extends Command {
@@ -19,12 +21,16 @@ public class HelpCommand extends Command {
     }
 
     @Override
-    public String execute() {
+    public String execute()  {
         if (inputs.size() < 2) {
             return getDefaultMessage();
         } else {
             int index = userStats.getIndexByName(inputs.get(1));
-            userStats = userStats.parseString(Storage.loadData("UserData.txt"));
+            try {
+                userStats = UserStats.parseString(Storage.loadData("UserData.txt"));
+            } catch (FileNotFoundException | FileParsingException e) {
+                e.printStackTrace();
+            }
             double percentageStat;
             switch (index) {
             case 1:

@@ -293,7 +293,6 @@ public class UserStats {
      */
     public static UserStats parseString(String string) throws FileParsingException {
         try {
-
             // Get the first 6 lines. 6th line contains the chapterData.
             String [] tokens = string.split("\n",8);
             String userName = tokens[2];
@@ -312,10 +311,9 @@ public class UserStats {
                 chapterStats.add(ChapterStat.parseString(chapterString));
             }
             return new UserStats(userName, gender, level, expLevel, chapterStats);
-        } catch (Exception ignored) {
+        } catch (Exception e) {
             throw new FileParsingException();
         }
-
     }
 
     /**
