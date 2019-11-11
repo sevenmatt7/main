@@ -74,7 +74,7 @@ public class HelpCommandTest extends ApplicationTest {
         DialogBox dialogBox = (DialogBox) container.getChildren().get(2);
         String actualText = dialogBox.getDialog().getText();
         Assertions.assertEquals("Try solving these problems on Kattis:\n"
-                + "cups, lineup, mjehuric, sidewayssorting", actualText);
+                + "lineup, mjehuric, sidewayssorting", actualText);
     }
 
     @Test
@@ -84,7 +84,7 @@ public class HelpCommandTest extends ApplicationTest {
         DialogBox dialogBox = (DialogBox) container.getChildren().get(2);
         String actualText = dialogBox.getDialog().getText();
         Assertions.assertEquals("Try solving these problems on Kattis:\n"
-                + "coconut, integerlists, joinstrings", actualText);
+                + "evenup, pairingsocks, coconut", actualText);
     }
 
     @Test
