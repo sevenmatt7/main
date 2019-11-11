@@ -47,10 +47,11 @@ The rest of the App consists of four components.
 * <<Design-Model,*`Stats`*>>: Holds the relevant user statistics and settings in memory.
 * <<Design-Storage,*`Storage`*>>: Reads data from, and writes data to, the hard disk.
 
-//TOTOTOTOTOTOTOTOOT
+
 [discrete]
 ==== How the architecture components interact with each other
-TODOTODOODODODO
+
+
 The _Sequence Diagram_ below shows how the components interact with each other for the scenario where the user enters the command `lecture sorting`.
 
 .Component interactions for `help` command
@@ -241,9 +242,17 @@ IMPORTANT: When editing the `toString` method, make sure to edit the correspondi
 
 [discrete]
 ==== How to use `UserStats`
-* Use the `currentChapter` object to hold stats for the current chapter while it is being played. Afterwards,
-use `saveCurrentChapterToChapterData` to transfer the relevant data from `currentChapter` to the appropriate
-element in the `chapterData` ArrayList.
+* After each quiz, use the `updateChapter` method to update that chapter's chapter data. Thereafter,
+use the `saveUserStats` method to save those changes to permanent storage. In the current
+implementation, "UserData.txt" is the hardcoded destination for saving user data
+
+[discrete]
+==== Handling an invalid String while parsing
+
+If the String that is passed to `parseString` is not a valid object string, the `parseString` method
+throws `FileParsingException`. You can choose to handle that exception by displaying an error message and/or
+fixing the data file and/or silently ignoring it.
+
 
 == Implementation
 
@@ -365,7 +374,7 @@ the user, which makes it significantly harder for new users to use our applicati
 
 ===== Aspect: How the improvised parser works
 
-* ** Current Choice :** The current parser returns `???!` to the user.
+* ** Current Choice :** The original parser returns `???!` to the user.
 ** Pros: The user understands that the input command was not read correctly by the application.
 ** Cons: There is no help being provided to the user on the possible syntax of the command he wishes to use.
 * ** Alternative :** It will be implemented under the invalid command, where the input string will be compared with our existing commands,
@@ -601,7 +610,7 @@ Use case ends.
 
 [discrete]
 ==== UC10: Undo my answers
-. User enters the `undo` command
+. User enters the `delete` command
 . System  the previous action done by the user
 
 Use case ends.
