@@ -15,6 +15,8 @@ public class LoadCommand extends Command {
 
     private static final String ERROR_MESSAGE = "Please enter in the format:\n load <filename>.txt";
 
+
+
     /**
      * Create new command.
      */

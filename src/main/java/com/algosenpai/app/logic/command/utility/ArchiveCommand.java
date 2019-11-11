@@ -24,6 +24,9 @@ public class ArchiveCommand extends Command {
 
     @Override
     public String execute() {
+        if (inputs.size() < 2 || quizList.size() < 10) {
+            return "You cannot use this command now.";
+        }
         archiveList.add(quizList.get(Integer.parseInt(inputs.get(1))).copy());
         return "Archived!";
     }
