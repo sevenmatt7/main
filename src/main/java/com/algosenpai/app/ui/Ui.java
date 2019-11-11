@@ -1,6 +1,5 @@
 package com.algosenpai.app.ui;
 
-import com.algosenpai.app.MainApp;
 import com.algosenpai.app.exceptions.FileParsingException;
 import com.algosenpai.app.logic.Logic;
 import com.algosenpai.app.logic.command.critical.ByeCommand;
@@ -12,7 +11,6 @@ import com.algosenpai.app.logic.command.utility.LoadCommand;
 import com.algosenpai.app.logic.command.utility.SetupCommand;
 import com.algosenpai.app.stats.UserStats;
 import com.algosenpai.app.logic.parser.Parser;
-import com.algosenpai.app.storage.Storage;
 import com.algosenpai.app.ui.controller.AnimationTimerController;
 import com.algosenpai.app.ui.components.DialogBox;
 import com.algosenpai.app.utility.AutoCompleteHelper;

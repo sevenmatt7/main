@@ -3223,3 +3223,77 @@ Nov 11, 2019 4:07:27 PM com.algosenpai.app.stats.UserStats parseString
 INFO: User Stats have been parsed successfully!
 Nov 11, 2019 4:07:27 PM com.algosenpai.app.stats.UserStats getPercentageofQuestionsCorrect
 INFO: The percentage stat parsed is 0.0
+Nov 11, 2019 8:38:05 PM com.algosenpai.app.MainApp <clinit>
+INFO: Starting music controller.....
+Nov 11, 2019 8:38:05 PM com.algosenpai.app.MainApp initialize
+INFO: ==========================[ Initializing AlgoSenpai Adventures ]========================
+Nov 11, 2019 8:38:05 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 8:38:05 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 8:38:05 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 8:38:05 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 8:38:05 PM com.algosenpai.app.MainApp initialize
+INFO: User Stats have been successfully loaded.
+Nov 11, 2019 8:38:07 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 8:38:07 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 8:38:07 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 8:38:08 PM com.algosenpai.app.MainApp startMain
+INFO: Main GUI screen successfully rendered.
+Nov 11, 2019 8:38:14 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 8:38:19 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 8:38:19 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 8:38:19 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 8:38:21 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 8:38:21 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 8:38:21 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 8:38:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 8:38:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 8:38:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 8:38:39 PM com.algosenpai.app.stats.UserStats getPercentageofQuestionsCorrect
+INFO: The percentage stat parsed is 0.0
+Nov 11, 2019 8:38:51 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 8:38:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 8:38:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 8:39:41 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 8:39:43 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 8:39:43 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 8:39:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 8:39:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 8:39:47 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 8:39:49 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 8:39:52 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 8:39:56 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 8:39:58 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 8:39:58 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 8:39:58 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
