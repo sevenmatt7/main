@@ -249,24 +249,45 @@ public class UserStats {
         this.userName = username;
     }
 
+    /**
+     * Gets the level of the user.
+     * @return the int value which is the user's level.
+     */
     public int getUserLevel() {
         return this.level;
     }
 
+    /**
+     * Sets the level of the user.
+     * @param level the int value representing the level of the user.
+     */
     public void setUserLevel(int level) {
         this.level = level;
     }
 
+    /**
+     * Gets the user experience points of the user.
+     * @return the user experience points.
+     */
     public int getUserExp() {
         return this.expLevel;
     }
 
+    /**
+     * Sets the user experience points of the user.
+     * @param expLevel the user experience points.
+     */
     public void setUserExp(int expLevel) {
         this.expLevel = expLevel;
     }
 
-    public double getPercentageofQuestionsCorrect(int index) {
-        int chapterNumber = index - 1;
+    /**
+     * Gets the percentage of questions correct statistic for the chapter specified.
+     * @param chapterIndex the index number of the chapter according to the HashMap of chapters.
+     * @return the double value representing the percentage of questions correct.
+     */
+    public double getPercentageofQuestionsCorrect(int chapterIndex) {
+        int chapterNumber = chapterIndex - 1;
         ChapterStat currentChapter = chapterData.get(chapterNumber);
         logger.info("The percentage stat parsed is " + currentChapter.getPercentage());
         return currentChapter.getPercentage();
