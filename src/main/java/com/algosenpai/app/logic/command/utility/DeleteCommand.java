@@ -28,7 +28,7 @@ public class DeleteCommand extends Command {
             int number =  Integer.parseInt(inputs.get(1));
             return Integer.toString(number < 0 ? -number : number);
         } else {
-            return "Not a valid number";
+            return "Sorry, you did not enter a valid number (ᵟ︵ ᵟ)";
         }
     }
 }
