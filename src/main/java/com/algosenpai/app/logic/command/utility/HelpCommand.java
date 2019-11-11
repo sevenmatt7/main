@@ -69,25 +69,25 @@ public class HelpCommand extends Command {
         if (index == 1) {
             if (percentageStat < 40.0) {
                 return responseString += "lineup, mjehuric, sidewayssorting";
-            } else if (percentageStat > 40.0 && percentageStat < 60.0) {
+            } else if (percentageStat < 60.0) {
                 return responseString += "chartingprogress, classy, dyslectionary";
-            } else if (percentageStat > 60.0) {
+            } else {
                 return responseString += "lawnmower, sortofsorting, musicyourway";
             }
         } else if (index == 2) {
             if (percentageStat < 40.0) {
                 return responseString += "evenup, pairingsocks, coconut";
-            } else if (percentageStat > 40.0 && percentageStat < 60.0) {
+            } else if (percentageStat < 60.0) {
                 return responseString += "throwns, integerlists, joinstrings";
-            } else if (percentageStat > 60.0) {
+            } else  {
                 return responseString += "restaurant, ferryloading4, teque";
             }
         } else if (index == 3) {
             if (percentageStat < 40.0) {
                 return responseString += "committeeassignment, pebblesolitaire";
-            } else if (percentageStat > 40.0 && percentageStat < 60.0) {
+            } else if (percentageStat < 60.0) {
                 return responseString += "pebblesolitaire2, equalsumeasy";
-            } else if (percentageStat > 60.0) {
+            } else {
                 return responseString += "robotturtles, hidingchickens";
             }
         }
