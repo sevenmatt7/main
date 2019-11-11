@@ -71,7 +71,7 @@ public class QuizGenerator {
      * @return A single question model.
      */
     public QuestionModel generateQuestion() {
-        logger.info("Generating question for arcade mode....");
+        logger.fine("Generating question for arcade mode....");
         Random random = new Random();
         int chapterToPick = random.nextInt(3);
         switch (chapterToPick) {

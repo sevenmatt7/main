@@ -1,11 +1,14 @@
 package com.algosenpai.app.logic.command.critical;
 
+import com.algosenpai.app.logic.chapters.LectureGenerator;
 import com.algosenpai.app.logic.chapters.QuizGenerator;
 import com.algosenpai.app.logic.command.Command;
 import com.algosenpai.app.logic.models.QuestionModel;
+import com.algosenpai.app.utility.LogCenter;
 
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.logging.Logger;
 
 public class ArcadeCommand extends Command {
 
@@ -13,6 +16,7 @@ public class ArcadeCommand extends Command {
     private static int currArcadeScore = 0;
     private AtomicBoolean isArcadeMode;
     private QuizGenerator quizGenerator = new QuizGenerator();
+    private static final Logger logger = LogCenter.getLogger(ArcadeCommand.class);
 
     private static QuestionModel previousQuestion;
     private static QuestionModel currQuestion;
@@ -32,6 +36,7 @@ public class ArcadeCommand extends Command {
     public String execute() {
         if (!isArcadeMode.get()) {
             isArcadeMode.set(true);
+            logger.info("Player is now in arcade mode.");
             String questionToBeDisplayed = currQuestion.getQuestion();
             previousQuestion = currQuestion.copy();
             currQuestion = quizGenerator.generateQuestion();
@@ -58,6 +63,7 @@ public class ArcadeCommand extends Command {
         isArcadeMode.set(false);
         previousQuestion = null;
         currQuestion = null;
+        logger.info("Player is now exiting arcade mode....");
         if (currArcadeScore > highScore) {
             highScore = currArcadeScore;
             currArcadeScore = 0;

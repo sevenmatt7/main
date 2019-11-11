@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 public class LectureGenerator {
 
     private static HashMap<String, ArrayList<String>> lectureSlides = new HashMap<>();
-    private static final Logger logger = LogCenter.getLogger(QuizGenerator.class);
+    private static final Logger logger = LogCenter.getLogger(LectureGenerator.class);
     /**
      * Instantiates the lecture by loading all the lecture slides.
      */
