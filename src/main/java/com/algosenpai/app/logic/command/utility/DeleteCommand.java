@@ -5,13 +5,13 @@ import com.algosenpai.app.logic.parser.Parser;
 
 import java.util.ArrayList;
 
-public class UndoCommand extends Command {
+public class DeleteCommand extends Command {
 
     /**
      * Initializes command to undo chat.
      * @param inputs input from user.
      */
-    public UndoCommand(ArrayList<String> inputs) {
+    public DeleteCommand(ArrayList<String> inputs) {
         super(inputs);
     }
 

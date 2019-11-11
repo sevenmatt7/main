@@ -1,1 +1,13 @@
 
+Nov 11, 2019 11:25:02 AM com.algosenpai.app.MainApp <clinit>
+INFO: Starting music controller.....
+Nov 11, 2019 11:25:03 AM com.algosenpai.app.MainApp initialize
+INFO: ==========================[ Initializing AlgoSenpai Adventures ]========================
+Nov 11, 2019 11:25:03 AM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 11:25:03 AM com.algosenpai.app.MainApp initialize
+INFO: User Stats have been successfully loaded.
+Nov 11, 2019 11:25:05 AM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 11:25:05 AM com.algosenpai.app.MainApp startMain
+INFO: Main GUI screen successfully rendered.
