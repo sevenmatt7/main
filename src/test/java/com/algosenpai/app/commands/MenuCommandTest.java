@@ -20,8 +20,6 @@ import org.junit.jupiter.api.Test;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit5.ApplicationTest;
 
-import java.awt.*;
-
 public class MenuCommandTest extends ApplicationTest {
 
     @Override
@@ -208,7 +206,8 @@ public class MenuCommandTest extends ApplicationTest {
         VBox container = find();
         DialogBox dialogBox = (DialogBox) container.getChildren().get(2);
         String actualText = dialogBox.getDialog().getText();
-        Assertions.assertEquals("This command allows you to delete a particular number of chat bubbles on the screen.\n"
+        Assertions.assertEquals("This command allows you to delete a particular number of chat bubbles "
+                + "on the screen.\n"
                 + "Format :\n"
                 + "`delete 5` will delete the past 5 chat bubbles on the screen.\n"
                 + "**Tips\n"
@@ -222,7 +221,8 @@ public class MenuCommandTest extends ApplicationTest {
         VBox container = find();
         DialogBox dialogBox = (DialogBox) container.getChildren().get(2);
         String actualText = dialogBox.getDialog().getText();
-        Assertions.assertEquals("This command will recommend you problems that you can find on Kattis that are suitable to\n"
+        Assertions.assertEquals("This command will recommend you problems that you can find on Kattis that "
+                + "are suitable to\n"
                 + "your current proficiency level. Your proficiency is measured by the percentage of questions that\n"
                 + "you get correct for that particular chapter.\n"
                 + "Format :\n"
@@ -230,7 +230,8 @@ public class MenuCommandTest extends ApplicationTest {
                 + "that can help you to improve and enhance your understanding on the topic.\n"
                 + "**Tips\n"
                 + "You can practise the questions available after doing the quizzes and attempting the lectures\n"
-                + " so that you will be able to apply the concepts you've learnt to solve algorithmic problems.\n", actualText);
+                + " so that you will be able to apply the concepts you've learnt to solve algorithmic problems.\n",
+                actualText);
     }
 
     @Test
