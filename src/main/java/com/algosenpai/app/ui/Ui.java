@@ -1,5 +1,6 @@
 package com.algosenpai.app.ui;
 
+import com.algosenpai.app.MainApp;
 import com.algosenpai.app.exceptions.FileParsingException;
 import com.algosenpai.app.logic.Logic;
 import com.algosenpai.app.logic.command.critical.ByeCommand;
@@ -15,6 +16,7 @@ import com.algosenpai.app.storage.Storage;
 import com.algosenpai.app.ui.controller.AnimationTimerController;
 import com.algosenpai.app.ui.components.DialogBox;
 import com.algosenpai.app.utility.AutoCompleteHelper;
+import com.algosenpai.app.utility.LogCenter;
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -33,6 +35,7 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 /**
  * Controller for MainWindow. Provides the layout for the other controls.
@@ -85,7 +88,8 @@ public class Ui extends AnchorPane {
     private Image userImage = new Image(this.getClass().getResourceAsStream(DEFAULT_PROFILE_PICTURE_PATH));
     private Image senpaiImage = new Image(this.getClass().getResourceAsStream(SENPAI_PROFILE_PICTURE_PATH));
 
-
+    private static final Logger logger = LogCenter.getLogger(Ui.class);
+    
     /**
      * Renders the nodes on the GUI.
      */
@@ -133,7 +137,7 @@ public class Ui extends AnchorPane {
         // If the datafile was corrupted, notify the user that their data has been reset.
         if (wasDatafileCorrupted) {
             clearChat();
-            printSenpaiText("Data file was corrupted! Data has been reset!",senpaiImage);
+            printSenpaiText("Data file was corrupted! Data has been reset!", senpaiImage);
             printSenpaiText("\"Hello there! Welcome to the world of DATA STRUCTURES AND ALGORITHMS.\\n\"\n"
                       + "\"Can I have your name and gender in the format : 'hello NAME GENDER (boy/girl)' please.\";",
                     senpaiImage);
@@ -156,9 +160,11 @@ public class Ui extends AnchorPane {
                 printSenpaiText("There are no more chats to delete!", senpaiImage);
                 handleUndoAfterClear();
             } else {
+                logger.info("Deleting selected chat bubbles on screen..");
                 deleteChat(response, input, response);
             }
         } else if (commandGenerated instanceof ClearCommand) {
+            logger.info("Clearing ALL chat bubbles on screen...");
             clearChat();
         } else if (commandGenerated instanceof ResetCommand || commandGenerated instanceof LoadCommand) {
             userLevel = stats.getUserLevel();
@@ -296,6 +302,7 @@ public class Ui extends AnchorPane {
      * Closes the application.
      */
     private void exit() {
+        logger.info("==========================[ Closing AlgoSenpai Adventures ]========================");
         PauseTransition pause = new PauseTransition(Duration.seconds(1));
         pause.setOnFinished(event -> {
             Platform.exit();

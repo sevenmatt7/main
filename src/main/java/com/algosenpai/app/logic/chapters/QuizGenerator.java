@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 public class QuizGenerator {
 
     private static final Logger logger = LogCenter.getLogger(QuizGenerator.class);
+
     /**
      * Generates the quiz according to the chapters specified by the user.
      * By default, all the chapters will be selected.

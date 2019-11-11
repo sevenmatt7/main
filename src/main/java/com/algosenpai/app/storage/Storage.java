@@ -16,6 +16,7 @@ import java.util.logging.Logger;
 public class Storage {
 
     private static final Logger logger = LogCenter.getLogger(Storage.class);
+
     /**
      * Load data from file.
      * @param filePath path to file.
