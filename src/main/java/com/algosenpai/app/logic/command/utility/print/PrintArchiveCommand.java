@@ -1,4 +1,4 @@
-package com.algosenpai.app.logic.command.utility;
+package com.algosenpai.app.logic.command.utility.print;
 
 import com.algosenpai.app.logic.chapters.LectureGenerator;
 import com.algosenpai.app.logic.models.QuestionModel;
@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 public class PrintArchiveCommand extends PrintCommand {
 
     /**
-     * List of questions and answers.
+     * List of archived questions and answers.
      */
     private ArrayList<QuestionModel> archiveList;
 
@@ -28,7 +28,7 @@ public class PrintArchiveCommand extends PrintCommand {
      * @param inputs user inputs.
      * @param archiveList list of questions to write to pdf.
      */
-    public PrintArchiveCommand(ArrayList<String> inputs, ArrayList<QuestionModel> archiveList) {
+    PrintArchiveCommand(ArrayList<String> inputs, ArrayList<QuestionModel> archiveList) {
         super(inputs);
         this.archiveList = archiveList;
         this.paragraphs = new ArrayList<>();
@@ -50,7 +50,7 @@ public class PrintArchiveCommand extends PrintCommand {
     }
 
     /**
-     * Writes quiz to pdf and returns status message.
+     * Writes archived questions and answers to pdf and returns status message.
      * @return status message
      */
     @Override
