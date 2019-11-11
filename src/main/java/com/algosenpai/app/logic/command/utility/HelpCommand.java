@@ -93,5 +93,5 @@ public class HelpCommand extends Command {
         }
         return getDefaultMessage();
     }
-    
+
 }
