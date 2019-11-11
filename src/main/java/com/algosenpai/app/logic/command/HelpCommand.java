@@ -76,7 +76,7 @@ public class HelpCommand extends Command {
                 return "Try solving these problems on Kattis:\n"
                         + "restaurant, ferryloading4, teque";
             }
-        } else {
+        } else if (index == 3){
             if (percentageStat < 40.0) {
                 return "Try solving these problems on Kattis:\n"
                         + "committeeassignment, pebblesolitaire";

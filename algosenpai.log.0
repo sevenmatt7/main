@@ -1,0 +1,6 @@
+Nov 11, 2019 10:18:37 AM com.algosenpai.app.MainApp <clinit>
+INFO: Starting music controller.....
+Nov 11, 2019 10:18:37 AM com.algosenpai.app.MainApp initialize
+INFO: User Stats have been successfully loaded.
+Nov 11, 2019 10:18:39 AM com.algosenpai.app.MainApp startMain
+INFO: Main GUI screen successfully rendered.
