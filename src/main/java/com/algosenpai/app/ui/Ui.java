@@ -155,7 +155,7 @@ public class Ui extends AnchorPane {
         if (commandGenerated instanceof DeleteCommand) {
             if (dialogContainer.getChildren().isEmpty()) {
                 idleMinutes = 60;
-                printSenpaiText("There are no more chats to undo!", senpaiImage);
+                printSenpaiText("There are no more chats to delete!", senpaiImage);
                 handleUndoAfterClear();
             } else {
                 logger.info("Deleting selected chat bubbles on screen..");

@@ -105,7 +105,7 @@ public class DeleteCommandTest extends ApplicationTest {
         Logic logic = new Logic(stats);
         Command command = logic.executeCommand("delete testing");
         String actualText = command.execute();
-        Assertions.assertEquals("Not a valid number", actualText);
+        Assertions.assertEquals("Sorry, you did not enter a valid number (ᵟ︵ ᵟ)", actualText);
     }
 
     @Test
