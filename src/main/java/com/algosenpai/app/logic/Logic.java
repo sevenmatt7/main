@@ -4,7 +4,7 @@ import com.algosenpai.app.logic.chapters.LectureGenerator;
 import com.algosenpai.app.logic.chapters.QuizGenerator;
 import com.algosenpai.app.logic.command.ChaptersCommand;
 import com.algosenpai.app.logic.command.Command;
-import com.algosenpai.app.logic.command.HelpCommand;
+import com.algosenpai.app.logic.command.utility.HelpCommand;
 import com.algosenpai.app.logic.command.QuizNextCommand;
 import com.algosenpai.app.logic.command.critical.ArcadeCommand;
 import com.algosenpai.app.logic.command.critical.ByeCommand;
@@ -34,13 +34,17 @@ import com.algosenpai.app.logic.constant.CommandsEnum;
 import com.algosenpai.app.logic.models.QuestionModel;
 import com.algosenpai.app.logic.parser.Parser;
 import com.algosenpai.app.stats.UserStats;
+import com.algosenpai.app.utility.LogCenter;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Logger;
 
 public class Logic {
+
+    private static final Logger logger = LogCenter.getLogger(Logic.class);
 
     /**
      * The different modes.
@@ -191,6 +195,7 @@ public class Logic {
         lectureSlides = new LectureGenerator().generateLecture(lectureChapterNumber.get());
         isNewLecture.set(false);
         isLectureMode.set(true);
+        logger.info("Lecture mode has been initiated.");
         return new LectureCommand(parsedUserInputs, lectureSlides, isLectureMode,lectureSlideNumber, isNewLecture);
     }
 
@@ -236,6 +241,7 @@ public class Logic {
      * @return The command for the quiz.
      */
     private Command setupNewQuiz() {
+        logger.info("Quiz mode has been initiated");
         quizList = new QuizGenerator().generateQuiz(quizChapterNumber.get());
         isNewQuiz.set(false);
         isQuizMode.set(true);

@@ -1,8 +1,10 @@
 package com.algosenpai.app.stats;
 
+import com.algosenpai.app.MainApp;
 import com.algosenpai.app.exceptions.FileParsingException;
 import com.algosenpai.app.storage.Storage;
 
+import com.algosenpai.app.utility.LogCenter;
 import javafx.util.Pair;
 
 import java.io.FileNotFoundException;
@@ -10,6 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.io.File;
+import java.util.logging.Logger;
 
 /**
  * Handles temporary storage of user stats while the program is running.
@@ -50,6 +53,8 @@ public class UserStats {
         }
     };
 
+    private static final Logger logger = LogCenter.getLogger(UserStats.class);
+
     /**
      * Constructs a new UserStats by reading in from the UserData text file.
      * If the text file doesn't exist, the UserStats variables are populated with default values.
@@ -61,6 +66,7 @@ public class UserStats {
 
         File file = new File(userDataFilePath);
         if (!file.isFile()) {
+            logger.info("UserData.txt file not found, creating new UserData.txt with default stats");
             this.userName = "Default";
             this.gender = "????";
             this.level = 1;
@@ -73,19 +79,21 @@ public class UserStats {
         } else {
             String fileContents = null;
             try {
+                logger.info("Reading User Stats from UserData.txt.....");
                 fileContents = Storage.loadData(userDataFilePath);
             } catch (FileNotFoundException ignored) {
+                logger.severe("UserData.txt could not be read due to error.");
                 throw new FileParsingException("The file does not exist!");
             }
-            UserStats dummy = UserStats.parseString(fileContents);
+            UserStats statsLoadedfromFile = UserStats.parseString(fileContents);
 
             // Call the parsing method and copy over the values.
             // Idk any better way to do this.
-            this.userName = dummy.userName;
-            this.gender = dummy.gender;
-            this.level = dummy.level;
-            this.expLevel = dummy.expLevel;
-            this.chapterData = dummy.chapterData;
+            this.userName = statsLoadedfromFile.userName;
+            this.gender = statsLoadedfromFile.gender;
+            this.level = statsLoadedfromFile.level;
+            this.expLevel = statsLoadedfromFile.expLevel;
+            this.chapterData = statsLoadedfromFile.chapterData;
         }
     }
 
@@ -105,7 +113,7 @@ public class UserStats {
     }
 
     /**
-     * Takes reference from the previous userstats.
+     * Creates a new UserStats object from another UserStats object passed in.
      * @param previousStats The old userstats.
      */
     public UserStats(UserStats previousStats) {
@@ -258,7 +266,9 @@ public class UserStats {
     }
 
     public double getPercentageofQuestionsCorrect(int index) {
-        ChapterStat currentChapter = chapterData.get(index);
+        int chapterNumber = index - 1;
+        ChapterStat currentChapter = chapterData.get(chapterNumber);
+        logger.info("The percentage stat parsed is " + currentChapter.getPercentage());
         return currentChapter.getPercentage();
     }
 
@@ -296,6 +306,7 @@ public class UserStats {
      */
     public static UserStats parseString(String string) throws FileParsingException {
         try {
+            logger.info("Parsing User Stats from text file..");
             // Get the first 6 lines. 6th line contains the chapterData.
             String [] tokens = string.split("\n",8);
             String userName = tokens[2];
@@ -313,8 +324,10 @@ public class UserStats {
             for (String chapterString: chapterDataTokens) {
                 chapterStats.add(ChapterStat.parseString(chapterString));
             }
+            logger.info("User Stats have been parsed successfully!");
             return new UserStats(userName, gender, level, expLevel, chapterStats);
         } catch (Exception e) {
+            logger.severe("User Stats could not be parsed successfully from text file");
             throw new FileParsingException();
         }
     }

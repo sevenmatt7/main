@@ -89,7 +89,7 @@ public class Ui extends AnchorPane {
     private Image senpaiImage = new Image(this.getClass().getResourceAsStream(SENPAI_PROFILE_PICTURE_PATH));
 
     private static final Logger logger = LogCenter.getLogger(Ui.class);
-    
+
     /**
      * Renders the nodes on the GUI.
      */

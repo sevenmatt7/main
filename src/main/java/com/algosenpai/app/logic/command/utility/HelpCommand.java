@@ -1,6 +1,7 @@
-package com.algosenpai.app.logic.command;
+package com.algosenpai.app.logic.command.utility;
 
 import com.algosenpai.app.exceptions.FileParsingException;
+import com.algosenpai.app.logic.command.Command;
 import com.algosenpai.app.stats.UserStats;
 import com.algosenpai.app.storage.Storage;
 
@@ -12,8 +13,9 @@ public class HelpCommand extends Command {
     private UserStats userStats;
 
     /**
-     * Create new command.
+     * Create new Help command.
      * @param inputs input from user.
+     * @param userStats the userStats object used.
      */
     public HelpCommand(ArrayList<String> inputs, UserStats userStats) {
         super(inputs);
