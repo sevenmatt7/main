@@ -59,7 +59,7 @@ public class PrintArchiveCommand extends PrintCommand {
             return "Wrong file extension";
         }
         if (isEmpty(paragraphs)) {
-            return "Nothing in quiz";
+            return "Nothing in archive";
         }
         try {
             pdfWriter.saveToPdf(paragraphs, inputs.get(2));
