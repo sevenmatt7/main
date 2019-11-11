@@ -253,19 +253,15 @@ image::postundo.png[width=""650"]
 
 === Provides questions for improvement : `help`
 
-This command provides a suggestion of problems (targeted at respective chapters) that you may wish to attempt to brush up on weaker concepts +
+This command provides a suggestion of problems (targeted at respective chapters) that you may wish to attempt to apply the
+concepts you have learnt in the application to solve an algorithmic problem. The problems that are recommended are based
+on your proficiency level so do not worry if you think that the questions might be too hard for you! +
 Format : `help CHAPTER` +
 
 ====
 Example : +
 `help sorting` will list a few problems from Kattis that the user can attempt to increase their
-understanding of the chapter selected.
-=====
-*Expected outcome*
-
-image::helpsorting.png[width="650"]
-
-=====
+understanding of the chapter selected, the problems recommended will be tailored to their level of understanding.
 ====
 
 === Print questions or user information : `print`

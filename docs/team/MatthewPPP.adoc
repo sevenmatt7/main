@@ -24,61 +24,41 @@ implementation of the various commands that are detailed below.
 
 == Summary of contributions
 
-This section highlights my code, documentation and other contributions to the team project.
-
-=== Features implemented
-
+* Created the codebase for the project and the various components.
 * Implemented and created the GUI layout.
-* Implemented the user profile pictures and the experience points gain.
-* Implemented the
+* Implemented the user profile creation function for the GUI.
 * Implemented the UserStats into the main application and ensuring that the .txt file is accessible in a
 packaged jar file.
 * Implemented the setup command so that the user can set up his/her profile and also load data from the .txt file
-if there was already previous data
+if there was already previous data.
 * Implemented the `help` command.
 This command helps users by recommending them questions based on their proficiency level as determined in the application.
 They will improve as they will have to apply the concepts that they have learnt in the application to solve an algorithmic problem.
-* Wrote testcode for the setup, help, menu commands
+* Created the QuizGenerator for the `quiz` command so that the questions can be generated for the quiz.
+
+The code that I have contributed to this project can be viewed via the link below. +
+https://nuscs2113-ay1920s1.github.io/dashboard/#search=sevenmatt7&sort=groupTitle&sortWithin=title&since=2019-09-21&timeframe=commit&mergegroup=false&groupSelect=groupByRepos&breakdown=false&tabOpen=false%5BCode%20Contributed%5D[Code Contributed]
 
 * *Other contributions*:
 
 ** Project management:
-*** Managed releases `v1.3` (3 releases) and Issue Tracker on GitHub.
+*** Managed releases `v1.1`-`v1.3` (3 releases) and Issue Tracker on GitHub.
 *** Added the Codacy status badge from Codacy on README.adoc.
 *** Setup Codacy to monitor code quality of the repository.
 *** Setup Netlify to publish documentation and preview documention during pull requests.
 
 
 ** Documentation:
-*** Updated the FAQ and Command Summary in User Guide.
-*** Updated the class diagrams and user flow diagrams review functionality
-*** Updated CONTRIBUTORS.md to follow proper commits and submission guidelines.
-** Community:
-*** Reviewed PRs (with non-trivial review comments):
-https://github.com/AY1920S1-CS2113T-T09-3/main/pull/238[#238],
-https://github.com/AY1920S1-CS2113T-T09-3/main/pull/239[#239])
-*** Setup code and test cases that was adopted and followed by other teammates
-(https://github.com/AY1920S1-CS2113T-T09-3/main/pull/129[#129],
-https://github.com/AY1920S1-CS2113T-T09-3/main/pull/229[#229])
-
-
-** Project management:
-*** Managed releases `v1.2` - `v1.3` (2 releases) on GitHub
-*** Updated the GUI color scheme
-***
-
-
-
-** Documentation:
-*** Did the layout for the documentation (User Guide and Developer Guide).
+*** Wrote the DevOps, Documentation, SettingUp and Testing sections in the developer guide.
+*** Wrote the architecture, logic, and Ui sections of the developer guide.
+*** Updated README.MD in the dev guide to include the proper information.
 
 ** Community:
-*** PRs reviewed (with non-trivial review comments)
-*** Wrote a setting up and contributing guide that was used by other teams
+*** Helped a course mate solve a multi-platform JAR bug which was used by others as well
+https://github.com/nusCS2113-AY1920S1/forum/issues/84#issuecomment-548707737[#84],
 
-** Tools:
-*** Installed Codacy in the project repository to track code quality.
-*** Installed Netlify to enable document preview when a pull request is made.
+*** Implemented netlify successfully into the repository which method was also used by other teams
+https://github.com/AY1920S1-CS2113T-T09-3/main/pull/165[#165]
 
 
 == Contributions to the User Guide
@@ -87,37 +67,65 @@ https://github.com/AY1920S1-CS2113T-T09-3/main/pull/229[#229])
 |_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._
 |===
 
-=== Provides suggestions to users to improve : `help`
-This command provides a suggestion of problems that you can solve to improve at a particular chapter. +
+== Introduction
+
+AlgoSenpai Adventures (ASA) is for students taking CS2040 or any similar data structures and algorithms module who
+want to reinforce their understanding of the topics in a fast and engaging way, rather than through rote memorisation.
+More importantly, ASA is optimized for those who prefer to work with a Command Line Interface (CLI) while still having
+the benefits of a Graphical User Interface (GUI). If you can type fast, ASA can be a more time-efficient solution to
+practice your understanding as compared to VisuAlgo (which uses clicking). Interested? Jump to the <<Quick Start>> to
+get started. Enjoy!
+
+== Quick Start
+
+.  Ensure you have Java `11` or above installed in your Computer.
+.  Download the latest `AlgoSenpaiAdventures.jar` link:{repoURL}/releases[here].
+.  Copy the file to the folder you want to use as the home folder for the application.
+.  Double-click the file to start the app. The GUI should appear in a few seconds.
+.  A `UserData.txt` file will be automatically created in the folder of the application the first
+time you start it.
+
++
+image::Ui.png[width="650"]
++
+
+.  To begin, just type in `hello name gender` to put in your username and gender and press kbd:[Enter] to start your adventure.
+
++
+image::Start.PNG[width="650"]
++
+.  To see a list of commands you can use, just type `menu` and press kbd:[Enter].
+
++
+image::menu.png[width="650]
++
+
+.  To explore the syntax of each command, simply type `menu command` and press kbd:[Enter].
+
++
+image::menuexample.png[width="650"]
++
+
+.  You are now ready to start your adventure. +
+    Some example commands you can try:
+
+* *`lecture`* *`sorting`* : starts a lecture on sorting.
+* *`quiz`* *`linkedlist`* : starts quiz on linked lists.
+* *`exit`* : exits the game.
+
+.  Refer to <<Features>> for details of each command.
+
+=== Provides questions for improvement : `help`
+
+This command provides a suggestion of problems (targeted at respective chapters) that you may wish to attempt to apply the
+concepts you have learnt in the application to solve an algorithmic problem. The problems that are recommended are based
+on your proficiency level so do not worry if you think that the questions might be too hard for you! +
 Format : `help CHAPTER` +
+
+
 Example : +
 `help sorting` will list a few problems from Kattis that the user can attempt to increase their
-understanding of the chapter selected.
-
-=== Choose a chapter : `select`
-
-This command allows you to choose the chapter of the game to be run. The CHAPTERS that are available
-to be selected in the program are `Sorting`, `LinkedList` and `Bitmask`. +
-Format: `select CHAPTER` +
-
-Example : +
-`select sorting` will select the chapter on Sorting for the quiz.
-
-=== Entering a quiz answer : `quiz`
-This command can only be used when you are playing the quiz itself. +
-Format: `quiz ANSWER` +
-
-Example: +
-`quiz 60, 40, 30` will mean that you want to enter the answer `60, 40, 30` for the current question
-in the quiz. +
-`quiz 2` will mean that you want to enter the answer `2` for the current question in the quiz.
-
-=== View all the commands available : `menu`
-
-This command is for new users, users who are still learning the console commands, or have forgotten a particular command.
-`menu` will list all the commands that are available in the program. +
-Format: `menu`
-
+understanding of the chapter selected, the problems recommended will be tailored to their level of understanding.
 
 == Contributions to the Developer Guide
 
@@ -125,33 +133,41 @@ Format: `menu`
 |_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._
 |===
 
+== Setting up
+
+Refer to the guide <<SettingUp#, here>>.
+
+== Design
+
+[[Design-Architecture]]
 === Architecture
 
 .Architecture Diagram
 image::ArchitectureDiagram.png[]
 
-The *_Architecture Diagram_* given above explains the high-level design of the application. Given below is a quick overview of each component.
+The *_Architecture Diagram_* given above explains the high-level design of AlgSenpai Adventures.
+AlgoSenpai Adventures has an event-driven architecture. We used a Modified Model-View-Controller (MVC) design pattern
+combined with the Command design pattern to create AlgoSenpai Adventures.
+
+Given below is a quick overview of each component.
 
 
-`Main` has two classes called link:https://github.com/AY1920S1-CS2113T-T09-3/main/blob/master/src/main/java/com/algosenpai/app/Launcher.java[`Launcher`] and link:https://github.com/AY1920S1-CS2113T-T09-3/main/blob/master/src/main/java/com/algosenpai/app/MainApp.java[`MainApp`]. It is responsible for,
+`Main` has two classes called link:https://github.com/AY1920S1-CS2113T-T09-3/main/blob/master/src/main/java/com/algosenpai/app/Launcher.java[`Launcher`]
+and link:https://github.com/AY1920S1-CS2113T-T09-3/main/blob/master/src/main/java/com/algosenpai/app/MainApp.java[`MainApp`]. It is responsible for,
 
-* At app launch: Initialising the components in the correct sequence, and connects them up with each other.
-* At shut down: Shuts down the components and invokes cleanup method where necessary.
+* At app launch: Initialising the components in the correct sequence, and connecting them up with each other.
+* At shut down: Shutting down the components and invoking any cleanup methods where necessary.
+
+`LogCenter` is a class that is used by many classes to write log messages to the application's log files. The log files
+can be used during debugging to determine when and where the error occured during the running of the application.
 
 The rest of the App consists of four components.
 
 * <<Design-Ui,*`Ui`*>>: The UI of the App.
 * <<Design-Logic,*`Logic`*>>: The command executor and the question generator.
-* <<Design-Model,*`Stats`*>>: Holds the relevant user statistics and settings in memory.
+* <<Design-Model,*`Stats`*>>: Holds the relevant user statistics and settings in the application.
 * <<Design-Storage,*`Storage`*>>: Reads data from, and writes data to, the hard disk.
 
-[discrete]
-==== How the architecture components interact with each other
-
-The _Sequence Diagram_ below shows how the components interact with each other for the scenario where the user issues the command `help`.
-
-.Component interactions for `help` command
-image::HelpSequenceDiagram.png[]
 
 The sections below give more details of each component.
 
@@ -161,15 +177,20 @@ The sections below give more details of each component.
 .Structure of the UI Component
 image::UiClassDiagram.png[]
 
-*API* : link:https://github.com/AY1920S1-CS2113T-T09-3/main/blob/master/src/main/java/com/algosenpai/app/ui/Ui.java[`Ui.java`]
+*Class* : link:https://github.com/AY1920S1-CS2113T-T09-3/main/blob/master/src/main/java/com/algosenpai/app/ui/Ui.java[`Ui.java`]
 
-The UI consists of a `MainWindow` that is made up of parts e.g.`DialogBox`, `DialogBoxUser`.
+The *_view_* component of the Ui consists of a `MainWindow` that is composed of three parts; `DialogBox`, `DialogBoxUser` and `StatusBox`.
 
-The `UI` component uses JavaFx UI framework. The layout of these UI parts are defined in matching `.fxml` files that are in the `src/main/resources/view` folder. For example, the layout of the link:https://github.com/AY1920S1-CS2113T-T09-3/main/blob/master/src/main/java/com/algosenpai/app/ui/Ui.java[`MainWindow`] is specified in link:https://github.com/AY1920S1-CS2113T-T09-3/main/blob/master/src/main/resources/view/MainWindow.fxml[`MainWindow.fxml`]
+The `UI` component uses the JavaFx UI framework. The layout of these UI parts are defined in matching `.fxml` files that are in the
+`src/main/resources/view` folder. For example, the layout of the `MainWindow` is specified in link:https://github.com/AY1920S1-CS2113T-T09-3/main/blob/master/src/main/resources/view/MainWindow.fxml[`MainWindow.fxml`]
 
-The `UI` component,
+The `Ui.java` class is the controller class for the `.fxml` files. It handles any commands or input that the user has typed
+on the GUI which then passes it on to the `Logic` component to be parsed and executed.
 
-* Executes user commands using the `Logic` component.
+The `MusicController` class handles the playing of the background music as the application is run.
+
+The `AnimationTimerController` class measures how much time the user is idle (e.g not typing any commands or scrolling)
+as the application is run.
 
 [[Design-Logic]]
 === Logic component
@@ -178,40 +199,182 @@ The `UI` component,
 .Structure of the Logic Component
 image::LogicClassDiagram.png[]
 
-*API* :
+*Class* :
 link:https://github.com/AY1920S1-CS2113T-T09-3/main/blob/master/src/main/java/com/algosenpai/app/logic/Logic.java[`Logic.java`]
 
 .  `Logic` uses the `Parser` class to parse the user command.
-.  This results in a `Command` object which is executed by the `Logic`.
+.  This results in a `XYZCommand` object which is executed by the `Logic`.
 .  The command execution will result in the `Ui` to generate a `DialogBox` on the screen.
 .  The quiz is generated by the `QuizGenerator` using the `Chapter` classes in the `chapters` package.
-
-=== Launch and Shutdown
-
-. Initial launch
-
-.. Download the jar file and copy into an empty folder
-.. Double-click the jar file +
-   Expected: Shows the splash screen initially and then the main window will show with the welcome message. The window should be fixed.
-
-. Exiting the program
-
-.. Type `exit` into the user input box.
-.. Expected: Application will shut down and close itself. +
+.  The lecture slides are generated by the `LectureGenerator` using the `Chapter` classes in the `chapters` package.
 
 
-=== Playing the quiz
 
-. Starting and playing the quiz
+== Setting Up
 
-.. Prerequisites: The user must not be in the quiz mode yet. Start the quiz mode using the `start` command.
-.. Test case: `1` +
-   Expected: The quiz will consume the user input as it will identify the input as the answer to the current question
-displayed and then show the next question in the quiz.
-.. Test case: `back` +
-   Expected: The previous question of the current quiz will be displayed. The user can then enter the
-answer to the current question.
+== Prerequisites
 
+. *JDK `11`* or above
+. *IntelliJ* IDE
++
+[NOTE]
+IntelliJ by default has Gradle and JavaFx plugins installed. +
+Do not disable them. If you have disabled them, go to `File` > `Settings` > `Plugins` to re-enable them.
+
+== Setting up the project in your computer
+
+. Fork this repo, and clone the fork to your computer
+. Open IntelliJ (if you are not in the welcome screen, click `File` > `Close Project` to close the existing project dialog first)
+. Set up the correct JDK version for Gradle (The project uses JDK `11`)
+.. Click `Configure` > `Project Defaults` > `Project Structure`
+.. Click `New...` and find the directory of the JDK
+. Click `Import Project`
+. Locate the `build.gradle` file and select it. Click `OK`
+. Click `Open as Project`
+. Click `OK` to accept the default settings.
+
+== Verifying the setup
+
+. Run the `com.algosenpai.app.Launcher` and try a few commands
+. <<Testing#,Run the tests>> to ensure they all pass.
+
+== Configurations to do before writing code
+
+=== Configuring the coding style
+
+This project follows https://github.com/oss-generic/process/blob/master/docs/CodingStandards.adoc[oss-generic coding standards]. IntelliJ's default style is mostly compliant with ours but it uses a different import order from ours. To rectify,
+
+. Go to `File` > `Settings...` (Windows/Linux), or `IntelliJ IDEA` > `Preferences...` (macOS)
+. Select `Editor` > `Code Style` > `Java`
+. Click on the `Imports` tab to set the order
+
+* For `Class count to use import with '\*'` and `Names count to use static import with '*'`: Set to `999` to prevent IntelliJ from contracting the import statements
+* For `Import Layout`: The order is `import static all other imports`, `import java.\*`, `import javax.*`, `import org.\*`, `import com.*`, `import all other imports`. Add a `<blank line>` between each `import`
+
+
+=== Updating documentation to match your fork
+
+After forking the repo, the documentation will still have the AY1920S1-CS2113T-T09-3 branding and refer to the `AY1920S1-CS2113T-T09-3/main` repo.
+
+If you plan to develop this fork as a separate product (i.e. instead of contributing to `AY1920S1-CS2113T-T09-3/main`), you should do the following:
+
+. Configure the site-wide documentation settings in link:{repoURL}/build.gradle[`build.gradle`], such as the `site-name`, to suit your own project.
+
+. Replace the URL in the attribute `repoURL` in link:{repoURL}/docs/DeveloperGuide.adoc[`DeveloperGuide.adoc`] and link:{repoURL}/docs/UserGuide.adoc[`UserGuide.adoc`] with the URL of your fork.
+
+
+=== Getting started with coding
+
+When you are ready to start coding, we recommend that you get some sense of the overall design by reading about <<DeveloperGuide#Design-Architecture, ALgoSenpai Adventures' architecture>>.
+
+== DevOps
+== Build Automation
+
+We use Gradle to automate builds of AlgoSenpai Adventures.
+
+== Continuous Integration
+
+We use https://travis-ci.org/[Travis CI] and https://www.appveyor.com/[AppVeyor] to perform _Continuous Integration_ on our projects.
+
+== Coverage Reporting
+
+We use https://coveralls.io/[Coveralls] and _Jacoco_ to track the code coverage of our projects.
+
+== Documentation Previews
+
+When a pull request has changes to the asciidoc files, https://www.netlify.com/[Netlify] is used to preview the HTML version
+of the modified asciidoc files.
+
+== Making a Release
+
+Here are the steps to create a new release.
+
+.  Update the version number in the issue tracker.
+.  Generate a JAR file using Gradle by running the `gradle build` command.
+.  The JAR file can then be found in the `build/libs` folder.
+.  Rename the JAR file to include the version number e.g `AlgoSenpaiAdventures-v1.0`
+.  Tag the repo with the version number. e.g. `v1.0`
+.  https://help.github.com/articles/creating-releases/[Create a new release using GitHub] and upload the JAR file you created.
+
+== Managing Dependencies
+
+Gradle downloads the dependencies automatically.
+
+== Testing
+
+== Running Tests
+
+There are two ways to run tests.
+
+*Method 1: Using IntelliJ JUnit test runner or Gradle in IntelliJ*
+
+* To run all the tests, right-click on the `src/test/java` folder and choose `Run 'All Tests'`
+* To run a subset of tests, you can right-click on a test package, test class, or a test and choose `Run ABCCommandTest`
+* Alternatively, you can `Edit Configurations` in the top right hand corner of IntelliJ and make it such that
+Gradle will run execute `test` task as shown in the screenshot below.
+
+image::testingscreen.png[]
+
+*Method 2: Using Gradle (on the console/terminal)*
+
+* Open a console and run the command `gradlew test` (Mac/Linux: `./gradlew test`)
+
+== Types of tests
+
+We have three types of tests:
+
+.  _Unit tests_ targeting the lowest level methods/classes. +
+e.g. `com.algosenpai.app.commands.parser.ParserCheckIntegerTest`
+.  _Integration tests_ that are checking the integration of multiple code units (the lower level code units are assumed
+to be working). +
+e.g. `com.algosenpai.app.StorageTest`
+.  Hybrids of unit and integration tests. These tests are checking multiple code units as they work together to execute
+the desired action. +
+e.g. `com.algosenpai.app.commands.ClearCommandTest`
+
+
+== Troubleshooting Testing
+**Problem: Running the GUI tests using Gradle (using console commands or IntelliJ) result in an error on Windows.**
+
+* Reason: It is known that the using `TestFX 11` framework on Windows to execute the tasks in _headless_ mode will
+result in an error.
+* Solution: The GUI tests need to be configured to run in _non-headless_ mode on Windows to execute and run the tests
+successfully. Therefore, comment out the portion of code in the `build.gradle` file as shown in the screenshot below.
+After this is done, run the tests again and the GUI should appear on the screen for testing. Do not move the mouse
+cursor as the tests are being executed as it might interfere with the outcome of the tests.
+
+image::commentscreen.png[width="400"]
+
+== Documentation
+== Introduction
+
+We use asciidoc for writing documentation.
+
+== Editing Documentation
+
+You can download the AsciiDoc plugin for IntelliJ, which allows you to preview the changes you have made to your `.adoc` files in real-time.
+
+== Editing Diagrams
+
+We used `draw.io` to create and update the UML diagrams in the developer guide. The `.drawio` files can be found
+in the `docs/diagrams` folder.
+
+== Publishing Documentation
+
+We publish our documentation to this website https://algosenpaiadventures.netlify.com/[AlgoSenpai Adventures]
+using Netlify.
+
+== Converting Documentation to PDF format
+
+We use https://www.google.com/chrome/browser/desktop/[Google Chrome] for converting documentation to PDF format,
+as Chrome's PDF engine preserves the hyperlinks in the documents.
+
+Here are the steps to convert the project documentation files to PDF format.
+
+.  Open a console and type in `gradle asciidoctor` to convert the AsciiDoc files in the `docs/` directory to HTML format.
+.  Go to your generated HTML files in the `build/docs` folder, right click on them and select `Open with` -> `Google Chrome`.
+.  Within Chrome, click on the `Print` option in Chrome's menu.
+.  Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format.
 
 
 
