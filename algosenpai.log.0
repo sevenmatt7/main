@@ -1789,3 +1789,1371 @@ Nov 11, 2019 12:58:42 PM com.algosenpai.app.stats.UserStats parseString
 INFO: Parsing User Stats from text file..
 Nov 11, 2019 12:58:42 PM com.algosenpai.app.stats.UserStats parseString
 INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:32 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 12:59:32 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:32 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:32 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:33 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:33 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:33 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:34 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:34 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:34 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:36 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:36 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:36 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:38 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:38 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:38 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:40 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Clearing ALL chat bubbles on screen...
+Nov 11, 2019 12:59:40 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:40 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:40 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:40 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:40 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:40 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:42 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Clearing ALL chat bubbles on screen...
+Nov 11, 2019 12:59:42 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:42 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 12:59:42 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:44 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:44 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:44 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:46 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 12:59:47 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:47 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 12:59:47 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:48 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:48 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:48 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:50 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:53 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Clearing ALL chat bubbles on screen...
+Nov 11, 2019 12:59:55 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:55 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 12:59:55 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:57 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 12:59:57 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:57 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:57 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:57 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 12:59:57 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 12:59:57 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 12:59:57 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 12:59:59 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 1:00:00 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:00 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:00 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:00 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:00 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:00 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:00 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:01 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:01 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:01 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:03 PM com.algosenpai.app.ui.Ui handleUserInput
+INFO: Deleting selected chat bubbles on screen..
+Nov 11, 2019 1:00:04 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:04 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:04 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:04 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:04 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:04 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:04 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:06 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:06 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:06 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:06 PM com.algosenpai.app.stats.UserStats getPercentageofQuestionsCorrect
+INFO: The percentage stat parsed is 0.0
+Nov 11, 2019 1:00:07 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:07 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:07 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:07 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:07 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:07 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:07 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:08 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:08 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:08 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:08 PM com.algosenpai.app.stats.UserStats getPercentageofQuestionsCorrect
+INFO: The percentage stat parsed is 0.0
+Nov 11, 2019 1:00:09 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:09 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:09 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:09 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:09 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:09 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:09 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:11 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:11 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:11 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:11 PM com.algosenpai.app.stats.UserStats getPercentageofQuestionsCorrect
+INFO: The percentage stat parsed is 0.0
+Nov 11, 2019 1:00:11 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:11 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:11 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:11 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:11 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:11 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:11 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:14 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:14 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:14 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:14 PM com.algosenpai.app.stats.UserStats getPercentageofQuestionsCorrect
+INFO: The percentage stat parsed is 0.0
+Nov 11, 2019 1:00:14 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:14 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:14 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:14 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:14 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:14 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:14 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:17 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:17 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:17 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:17 PM com.algosenpai.app.stats.UserStats getPercentageofQuestionsCorrect
+INFO: The percentage stat parsed is 0.0
+Nov 11, 2019 1:00:17 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:17 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:17 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:17 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:17 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:17 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:17 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:20 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:20 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:20 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:20 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:20 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:20 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:20 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:22 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:22 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:22 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:24 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:26 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:28 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:28 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:28 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:28 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:28 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:28 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:28 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:30 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:30 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:30 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:30 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:30 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:30 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:30 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:32 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:32 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:32 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:32 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:32 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:32 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:32 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:33 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:33 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:33 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:35 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:35 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:35 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:37 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:37 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:37 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:40 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:40 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:40 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:41 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:41 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:41 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:41 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:41 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:41 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:41 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:42 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:42 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:42 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:42 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:45 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:45 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:45 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:45 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:45 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:45 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:45 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:45 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:45 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:45 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.storage.Storage saveData
+INFO: Successfully saved data to file.
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.storage.Storage saveData
+INFO: Successfully saved data to file.
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.logic.chapters.LectureGenerator <init>
+INFO: Loading lecture data from the text files...
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.logic.chapters.LectureGenerator generateLecture
+INFO: Lecture on Sorting is chosen.
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.logic.Logic setupNewLecture
+INFO: Lecture mode has been initiated.
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.storage.Storage saveData
+INFO: Successfully saved data to file.
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:47 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:48 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:48 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:48 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:48 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:48 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:48 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:48 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:50 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:50 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:50 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:50 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:50 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:50 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:50 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:53 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:53 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:53 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:53 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:53 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:53 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:53 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:55 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:55 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:55 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:57 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:57 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:57 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:00:57 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:00:57 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:00:57 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:00:57 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:00 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:00 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:00 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:00 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:00 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:00 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:00 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:02 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:02 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:02 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:02 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:02 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:02 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:02 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:05 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:05 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:05 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:05 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:05 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:05 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:05 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:07 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:07 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:07 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:07 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:07 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:07 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:07 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:09 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:09 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:09 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:09 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:09 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:09 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:09 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:12 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:12 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:12 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:12 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:12 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:12 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:12 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:14 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:14 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:14 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:14 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:14 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:14 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:14 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:17 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:17 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:17 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:17 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:17 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:17 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:17 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:19 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:19 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:19 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:19 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:19 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:19 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:19 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:21 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:21 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:21 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:21 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:21 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:21 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:21 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:23 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:23 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:23 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:23 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:23 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:23 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:23 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:25 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:25 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:25 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:25 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:27 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:27 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:27 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:27 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:27 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:27 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:27 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:30 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:30 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:30 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:30 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:30 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:30 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:30 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:32 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:32 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:32 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:32 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:32 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:32 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:32 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:34 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:34 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:34 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:34 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:34 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:34 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:34 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:38 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:38 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:38 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:38 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:38 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:38 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:38 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:38 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:39 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:40 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:40 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:40 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:40 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:40 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:40 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:40 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:42 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:42 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:42 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:42 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:42 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:42 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:43 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:43 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:43 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:43 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:44 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:44 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:44 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:44 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:44 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:44 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:44 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:46 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:46 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:46 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:46 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:48 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:48 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:48 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:48 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:48 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:48 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:48 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.storage.Storage saveData
+INFO: Successfully saved data to file.
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:50 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:51 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:51 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:51 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:51 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:52 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:52 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:52 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:52 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:52 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:52 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:52 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:54 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:54 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:54 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:54 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:54 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:54 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:54 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:55 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:55 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:55 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:55 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats <init>
+INFO: Reading User Stats from UserData.txt.....
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:56 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:57 PM com.algosenpai.app.storage.Storage saveData
+INFO: Successfully saved data to file.
+Nov 11, 2019 1:01:57 PM com.algosenpai.app.storage.Storage saveData
+INFO: Successfully saved data to file.
+Nov 11, 2019 1:01:57 PM com.algosenpai.app.storage.Storage saveData
+INFO: Successfully saved data to file.
+Nov 11, 2019 1:01:57 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:57 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.storage.Storage saveData
+INFO: Successfully saved data to file.
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.storage.Storage saveData
+INFO: Successfully saved data to file.
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.stats.UserStats parseString
+SEVERE: User Stats could not be parsed successfully from text file
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.storage.Storage saveData
+INFO: Successfully saved data to file.
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.storage.Storage loadData
+INFO: Loading data from file specified..
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.stats.UserStats parseString
+INFO: Parsing User Stats from text file..
+Nov 11, 2019 1:01:58 PM com.algosenpai.app.stats.UserStats parseString
+INFO: User Stats have been parsed successfully!
